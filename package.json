@@ -1,0 +1,52 @@
+{
+  "name": "shtrm-app",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "http://shtrm.ru",
+  "license": "MIT",
+  "devDependencies": {
+    "custom-react-scripts": "^0.2.2",
+    "gh-pages": "^1.0.0"
+  },
+  "dependencies": {
+    "create-react-class": "^15.6.3",
+    "history": "^4.7.2",
+    "marked": "^0.5.1",
+    "mobx": "^5.5.3",
+    "mobx-react": "^5.3.5",
+    "moment": "^2.22.2",
+    "promise.prototype.finally": "^3.1.0",
+    "prop-types": "^15.6.2",
+    "webpack": "^4.27.1",
+    "query-string": "^6.2.0",
+    "react": "^16.6.3",
+    "react-scripts": "^2.1.1",
+    "react-dom": "^16.6.0",
+    "react-helmet": "^5.2.0",
+    "react-native": "^0.57.3",
+    "react-router-dom": "^4.3.1",
+    "superagent": "^4.0.0-beta.5",
+    "superagent-promise": "^1.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "start-prod": "NODE_ENV=production react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaFeatures": {
+        "legacyDecorators": true
+      }
+    }
+  }
+}
