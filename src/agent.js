@@ -11,6 +11,7 @@ const requests = {
     get: url =>
         superagent
             .get(`${API_ROOT}${url}`)
+            //.setHeader('')
             .then(responseBody)
 };
 
@@ -35,8 +36,10 @@ const Projects = {
         requests.get(`projects?${filter}_id=${id}&expand=projectImages.image`),
     get: id =>
         requests.get(`projects/${id}?expand=projectImages.image`),
+    tags: id =>
+        requests.get(`projects/${id}/tags`),
     all: (lim = 10, page = 0) =>
-        requests.get(`projects?expand=projectImages.image`),
+        requests.get(`projects`),
 };
 
 const Tags = {

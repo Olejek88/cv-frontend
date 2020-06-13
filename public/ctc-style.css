@@ -63,7 +63,7 @@ a.ref-learnmore {
 
 .tag-span {
     margin: 20px 0;
-    display: none;
+    display: block;
 }
 
 .post-span {
@@ -160,7 +160,7 @@ a.ref-learnmore {
 
 .blog-page {
     display: inline-flex;
-    margin-left: 260px;
+    margin-left: 30%;
     margin-bottom: 20px;
 }
 

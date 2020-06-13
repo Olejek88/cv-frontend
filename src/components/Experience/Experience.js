@@ -1,5 +1,6 @@
 import React from 'react';
 import {inject} from "mobx-react/index";
+import Tag from "../Home/Tag";
 
 class Experience extends React.Component {
     constructor(props) {
@@ -16,33 +17,14 @@ class Experience extends React.Component {
 
     componentWillMount() {
         let self = this;
+        let tags = [];
         if (this.props.project) {
             this.setState({project: this.props.project});
-            /*
-                        if (this.props.p project.projectImages[0])
-                            this.setState({
-                                project_image: {
-                                    title: this.props.project.projectImages[0].image.title,
-                                    path: this.props.commonStore.apiServer + this.props.project.projectImages[0].image.path
-                                }
-                            });
-                        else {
-                            this.setState({
-                                project_image: {
-                                    title: 'no', path: 'images/no_image.jpg'
-                                }
-                            });
-                        }
-
-                        const customer = this.props.userStore.currentCustomer;
-                        if (customer) {
-                            this.setState({customer: customer});
-                        }
-                        this.props.projectListingStore.loadprojectListing(this.props.project).then(function (projectListing) {
-                            let price = self.props.projectListingStore.loadprojectListingMinimumPrice(projectListing);
-                            self.setState({projectPrice: price});
-                        });
-            */
+            console.log(this.props.project);
+            this.props.project.tags.forEach(function (tag, i) {
+                tags.push(<Tag tag={tag.title} key={i}/>);
+            });
+            self.state.tags = tags;
         }
     }
 
@@ -58,23 +40,11 @@ class Experience extends React.Component {
                     </a>
                     <div className="container cardcontent">
                         <div className="title post-head-title">
-                            <a className="" href={"#"} rel="bookmark">
-                                Wiredelta &amp; Philip Morris – From Collaboration
-                                to an Exclusive Partnership </a></div>
-                        <div className="newscontent">In today’s fast-paced world, the “do it
-                            alone”
-                            approach becomes less and less effective. Companies have to think
-                            outside the box and take opportunities to drive collaborative
-                            innovation
-                            that delivers
-                        </div>
+                            <a className="" href={"#"} rel="bookmark">{this.state.project.title}</a></div>
+                        <div className="newscontent">{this.state.project.description}</div>
                         <div className="tag-span">
-                            <span>Web Development</span><span>Web Design</span><span>Mobile responsive</span><span>programming languages</span><span>javascript</span><span>Communication channels</span><span>CMS</span><span>Mobile friendly</span><span>Business cards</span><span>Business referral strategies</span><span>Custom business cards</span><span>Philip Morris</span><span>Philip Morris International</span><span>PMI</span><span>Referral code schemes</span><span>Referral codes systems</span><span>SQL databases</span><span>Unique business cards</span><span>MySQL databases</span>
+                            {this.state.tags}
                         </div>
-                        {this.state.tags}
-                        <a className="ref-learnmore"
-                           href={"#"}>Learn More <i className="fa fa-arrow-right" aria-hidden="true"></i>
-                        </a>
                     </div>
                 </div>
             </div>
@@ -82,4 +52,4 @@ class Experience extends React.Component {
     }
 }
 
-export default inject('projectListingStore', 'projectStore')(Experience);
+export default inject('projectStore')(Experience);

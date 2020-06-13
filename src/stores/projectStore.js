@@ -13,6 +13,7 @@ export class ProjectStore {
             title: 'Проект #1',
             images: imageStore.images,
             description: 'Описание проекта',
+            tags: []
         };
 
     clear() {
@@ -40,12 +41,6 @@ export class ProjectStore {
         return this.$req()
             .then(action((projects) => {
                 this.projectsRegistry.clear();
-                projects = [];
-                projects.push(this.defaultData);
-                projects.push(this.defaultData);
-                projects.push(this.defaultData);
-                projects.push(this.defaultData);
-                console.log(projects);
                 projects.forEach(project => this.projectsRegistry.set(project.id, project));
             }))
             .finally(action(() => {
