@@ -20,7 +20,7 @@ class Experience extends React.Component {
         let tags = [];
         if (this.props.project) {
             this.setState({project: this.props.project});
-            console.log(this.props.project);
+            //console.log(this.props.project);
             this.props.project.tags.forEach(function (tag, i) {
                 tags.push(<Tag tag={tag.title} key={i}/>);
             });
@@ -35,12 +35,12 @@ class Experience extends React.Component {
                     <a href="/">
                         <img src={'images/aoc.png'} alt="Avatar" style={{width: '100%'}}/>
                     </a>
-                    <a className="ima_clickable" href="#" rel="bookmark">
+                    <a className="ima_clickable" href="/" rel="bookmark">
                         <img className="link-img" src={"images/link.png"} alt="" width="52" height="52"/>
                     </a>
                     <div className="container cardcontent">
                         <div className="title post-head-title">
-                            <a className="" href={"#"} rel="bookmark">{this.state.project.title}</a></div>
+                            <a className="" href={"/"} rel="bookmark">{this.state.project.title}</a></div>
                         <div className="newscontent">{this.state.project.description}</div>
                         <div className="tag-span">
                             {this.state.tags}

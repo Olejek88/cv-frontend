@@ -118,7 +118,7 @@ class SiteMenu extends React.Component {
                                     <div className="row">
                                         <div className="col-md-4 getfooter-insigh">
                                             <div className="popupaoc-image-popup"><a
-                                                className="paoc-popup popupaoc-link-image" href=""
+                                                className="paoc-popup popupaoc-link-image" href="/"
                                                 data-target="popuppaoc-modal-7826"
                                                 data-conf="{&quot;content&quot;:{ &quot;target&quot; : &quot;#paoc-modal-2&quot;, &quot;effect&quot;: &quot;fadein&quot;, &quot;positionX&quot;: &quot;center&quot;, &quot;positionY&quot;: &quot;center&quot;, &quot;fullscreen&quot;: false, &quot;speedIn&quot;: 300, &quot;speedOut&quot;: 300, &quot;delay&quot;: 150, &quot;width&quot;: &quot;60%&quot; },&quot;loader&quot;:{&quot;active&quot;: true},&quot;overlay&quot;:{&quot;active&quot;: true}}"><img
                                                 className="popupaoc-img" src={"images/mail-icon.png"} alt=""/></a></div>
@@ -126,7 +126,7 @@ class SiteMenu extends React.Component {
                                         </div>
                                         <div className="col-md-4 showreel-footer">
                                             <div className="popupaoc-image-popup"><a
-                                                className="paoc-popup popupaoc-link-image" href=""
+                                                className="paoc-popup popupaoc-link-image" href="/"
                                                 data-target="popuppaoc-modal-4245"
                                                 data-conf="{&quot;content&quot;:{ &quot;target&quot; : &quot;#paoc-modal-3&quot;, &quot;effect&quot;: &quot;fadein&quot;, &quot;positionX&quot;: &quot;center&quot;, &quot;positionY&quot;: &quot;center&quot;, &quot;fullscreen&quot;: false, &quot;speedIn&quot;: 300, &quot;speedOut&quot;: 300, &quot;delay&quot;: 150, &quot;width&quot;: &quot;60%&quot; },&quot;loader&quot;:{&quot;active&quot;: true},&quot;overlay&quot;:{&quot;active&quot;: true}}"><img
                                                 className="popupaoc-img" src={"images/1-1.png"} alt=""/></a></div>
@@ -134,7 +134,7 @@ class SiteMenu extends React.Component {
                                         </div>
                                         <div className="col-md-4 working-footer">
                                             <div className="popupaoc-image-popup"><a
-                                                className="paoc-popup popupaoc-link-image" href=""
+                                                className="paoc-popup popupaoc-link-image" href="/"
                                                 data-target="popuppaoc-modal-4548"
                                                 data-conf="{&quot;content&quot;:{ &quot;target&quot; : &quot;#paoc-modal-4&quot;, &quot;effect&quot;: &quot;fadein&quot;, &quot;positionX&quot;: &quot;center&quot;, &quot;positionY&quot;: &quot;center&quot;, &quot;fullscreen&quot;: false, &quot;speedIn&quot;: 300, &quot;speedOut&quot;: 300, &quot;delay&quot;: 150, &quot;width&quot;: &quot;60%&quot; },&quot;loader&quot;:{&quot;active&quot;: true},&quot;overlay&quot;:{&quot;active&quot;: true}}"><img
                                                 className="popupaoc-img" src={"images/work-footer.png"} alt=""/></a>

@@ -60,6 +60,7 @@ class CategoryHeader extends React.Component {
                                                                     <button className="letschat-btn"> Contact Me
                                                                         <img
                                                                             src={"images/arrow-pointing-to-right-3.png"}
+                                                                            alt={""}
                                                                             className="right-img-arrow"/>
                                                                     </button>
                                                                 </div>

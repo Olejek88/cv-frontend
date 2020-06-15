@@ -18,7 +18,7 @@ class SiteMenu extends React.Component {
                 let categoriesList = [];
                 for (let category of Array.from(self.props.categoryStore.categoryRegistry.values())) {
                     categoriesList.push(<MenuLink link={"/#/activities/category/" + category.id}
-                                                  text={category.title}/>);
+                                                  text={category.title} key={category.id}/>);
                 }
                 self.setState({categoriesList: categoriesList});
             });
@@ -85,7 +85,7 @@ class SiteMenu extends React.Component {
                         </li>
                         <li id="menu-item-10299"
                             className="menu-button estimate-menu menu-item menu-item-type-custom menu-item-object-custom menu-item-10299">
-                            <a href="">CONTACT ME</a>
+                            <a href="/">CONTACT ME</a>
                         </li>
                     </ul>
                 </div>
