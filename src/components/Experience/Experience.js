@@ -1,6 +1,7 @@
 import React from 'react';
 import {inject} from "mobx-react/index";
 import Tag from "../Home/Tag";
+import {Link} from "react-router-dom";
 
 class Experience extends React.Component {
     constructor(props) {
@@ -32,15 +33,18 @@ class Experience extends React.Component {
         return (
             <div className="col-md-4">
                 <div className="card" data-aos="fade-up">
-                    <a href="/">
+                    <Link to={"/project/" + this.state.project.id}>
                         <img src={'images/aoc.png'} alt="Avatar" style={{width: '100%'}}/>
-                    </a>
-                    <a className="ima_clickable" href="/" rel="bookmark">
+                    </Link>
+                    <Link to={"/project/" + this.state.project.id} className="ima_clickable" rel="bookmark">
                         <img className="link-img" src={"images/link.png"} alt="" width="52" height="52"/>
-                    </a>
+                    </Link>
                     <div className="container cardcontent">
                         <div className="title post-head-title">
-                            <a className="" href={"/"} rel="bookmark">{this.state.project.title}</a></div>
+                            <Link to={"/project/" + this.state.project.id} className="" rel="bookmark">
+                                {this.state.project.title}
+                            </Link>
+                        </div>
                         <div className="newscontent">{this.state.project.description}</div>
                         <div className="tag-span">
                             {this.state.tags}
