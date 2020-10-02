@@ -12,6 +12,7 @@ import imageStore from './stores/imageStore';
 import tagStore from "./stores/tagStore";
 import categoryStore from "./stores/categoryStore";
 
+const ROOT = 'http://svc.shtrm88.ru/uploads/';
 
 const stores = {
     projectStore,
@@ -34,3 +35,5 @@ ReactDOM.render((
         </HashRouter>
     </Provider>
 ), document.getElementById('page'));
+
+export default ROOT;

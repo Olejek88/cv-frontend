@@ -2,6 +2,7 @@ import React from 'react';
 import {inject} from "mobx-react/index";
 import Tag from "../Home/Tag";
 import {Link} from "react-router-dom";
+import ROOT from "../../index";
 
 class Experience extends React.Component {
     constructor(props) {
@@ -11,7 +12,7 @@ class Experience extends React.Component {
             description: 'description',
             isMounted: false,
             project: '',
-            project_image: '',
+            photo: '',
             tags: []
         };
     }
@@ -24,6 +25,7 @@ class Experience extends React.Component {
             //console.log(this.props.project);
             this.props.project.tags.forEach(function (tag, i) {
                 tags.push(<Tag tag={tag.title} key={i}/>);
+                tags.push(' ');
             });
             self.state.tags = tags;
         }
@@ -34,7 +36,7 @@ class Experience extends React.Component {
             <div className="col-md-4">
                 <div className="card" data-aos="fade-up">
                     <Link to={"/project/" + this.state.project.id}>
-                        <img src={'images/aoc.png'} alt="Avatar" style={{width: '100%'}}/>
+                        <img src={ROOT + this.state.project.photo} alt="img" style={{width: '100%'}}/>
                     </Link>
                     <Link to={"/project/" + this.state.project.id} className="ima_clickable" rel="bookmark">
                         <img className="link-img" src={"images/link.png"} alt="" width="52" height="52"/>

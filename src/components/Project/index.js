@@ -14,6 +14,11 @@ class Project extends React.Component {
                 id: 1,
                 title: "loading",
                 description: "loading",
+                stack: "loading",
+                link: "loading",
+                role: "loading",
+                usage: "loading",
+                git: "loading",
                 created_at: "loading",
                 years: "loading"
             },
@@ -22,7 +27,6 @@ class Project extends React.Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        console.log(nextProps);
         this.loadProject(nextProps.match.params.id);
     }
 
@@ -76,7 +80,7 @@ class Project extends React.Component {
                                                     <span className="byline">
                                     <span className="author vcard">
                                         <Link to={"/project/" + this.state.project.id} className="url fn n">
-                                            Olejek
+                                            {this.state.project.stack}
                                         </Link>
                                     </span>
                                 </span>
@@ -88,8 +92,8 @@ class Project extends React.Component {
                                     </div>
                                     <div className="entry-content">
                                         <p><span style={{fontWeight: 400}}>
-                        {this.state.project.description}
-                        </span>
+                                        {this.state.project.description}
+                                        </span>
                                         </p>
                                         <p><img src={'images/aoc.png'} alt="Avatar"
                                                 style={{width: '1024', height: '768'}}

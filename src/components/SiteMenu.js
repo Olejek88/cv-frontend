@@ -51,9 +51,9 @@ class SiteMenu extends React.Component {
                                                             data-widget_type="image.default">
                                                             <div className="elementor-widget-container">
                                                                 <div className="elementor-image">
-                                                                    <img src={"images/bg-footer-new.png"}
+                                                                    <img src={"images/bg-footer-new2.png"}
                                                                          className="attachment-large size-large" alt=""
-                                                                         srcSet={"images/bg-footer-new.png"}
+                                                                         srcSet={"images/bg-footer-new2.png"}
                                                                          width="1024" height="541"/>
                                                                 </div>
                                                             </div>
@@ -108,7 +108,8 @@ class SiteMenu extends React.Component {
                                     <p className="language-left"><a href="mailto:olejek8@yandex.ru"
                                                                     rel="noopener noreferrer">Mail me</a> | <a
                                         href="http://olejek8@yandex.ru" rel="noopener noreferrer">Old site</a></p>
-                                    <p className="copy-right">COPYRIGHT © 2020 OLEJEK. ALL RIGHTS RESERVED.</p>
+                                    <p className="copy-right">COPYRIGHT © 2020 OLEJEK. This page based on Front
+                                        [React/Redux], Back [Laravel]</p>
                                 </div>
                             </aside>
                         </div>
@@ -151,8 +152,8 @@ class SiteMenu extends React.Component {
                                         <p className="mobile-policy-right"><a href="mailto:olejek8@yandex.ru">Mail
                                             me</a> | <a href="http://shtrm.ru" rel="noopener noreferrer">Old Site</a>
                                         </p>
-                                        <p className="mobile-copy-right">COPYRIGHT © 2020 OLEJEK. ALL RIGHTS
-                                            RESERVED.</p>
+                                        <p className="mobile-copy-right">COPYRIGHT © 2020 OLEJEK. This site based on
+                                            Front [React/Redux], Back [Laravel].</p>
                                     </div>
                                 </div>
                             </aside>

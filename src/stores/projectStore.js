@@ -11,8 +11,17 @@ export class ProjectStore {
         {
             id: 1,
             title: 'Проект #1',
+            title_en: 'Project #1',
+            title_de: 'Project #1',
             images: imageStore.images,
             description: 'Описание проекта',
+            description_en: 'Project description',
+            description_de: 'Projektbeschreibung',
+            git: '',
+            link: '',
+            stack: '',
+            role: '',
+            usage: '',
             tags: []
         };
 
