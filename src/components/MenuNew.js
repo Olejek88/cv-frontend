@@ -27,15 +27,35 @@ class SiteMenu extends React.Component {
             });
     }
 
+    componentDidMount() {
+        const {cookies} = this.props;
+        let lang = cookies.get('lang');
+        if (lang === "ru") {
+            document.getElementById("ru").style.display = '';
+            document.getElementById("en").style.display = 'none';
+            document.getElementById("de").style.display = 'none';
+        }
+        if (lang === "de") {
+            document.getElementById("ru").style.display = 'none';
+            document.getElementById("en").style.display = 'none';
+            document.getElementById("de").style.display = '';
+        }
+        if (lang === "en") {
+            document.getElementById("ru").style.display = 'none';
+            document.getElementById("en").style.display = '';
+            document.getElementById("de").style.display = 'none';
+        }
+    }
+
     render() {
-        const {t, i18n, cookies} = this.props;
+        const {i18n, cookies} = this.props;
         const changeLanguage = lng => {
             i18n.changeLanguage(lng);
             let d = new Date();
             d.setTime(d.getTime() + (200 * 60 * 1000));
-            cookies.set('lang', lng, {path: "/", expires: d, SameSite: 'None'});
+            cookies.set('lang', lng, {path: "/", expires: d, SameSite: 'Secure'});
             this.setState({lng});
-            document.cookie = "lang = " + lng + "; expires = " + d.toDateString();
+            document.cookie = "lang = " + lng + "; expires = " + d.toDateString() + "; SameSite = " + "Secure";
         };
 
         return (
@@ -79,21 +99,26 @@ class SiteMenu extends React.Component {
                             </ul>
                         </li>
                         <li className="pll-parent-menu-item menu-item menu-item-type-custom menu-item-object-custom current-menu-parent menu-item-has-children menu-item-3378">
-                            <a href="/"><span style={{marginLeft: '0.3em'}}><span role="img"
-                                                                                  aria-label="ru">&#127479;&#127482;&nbsp;</span>Русский</span></a>
+                            <a href="/" id="ru"><span style={{marginLeft: '0.3em'}}><span role="img"
+                                                                                          aria-label="ru">&#127479;&#127482;&nbsp;</span>Русский</span></a>
+                            <a href="/" id="de" style={{display: 'none'}}><span style={{marginLeft: '0.3em'}}><span
+                                role="img" aria-label="de">&#127465;&#127466;&nbsp;</span>Deutsch</span></a>
+                            <a href="/" id="en" style={{display: 'none'}}><span style={{marginLeft: '0.3em'}}><span
+                                role="img" aria-label="en">&#127468;&#127463;&nbsp;</span>English</span></a>
                             <ul className="sub-menu">
-                                <li className="lang-item lang-item-57 lang-item-ru current-lang lang-item-first menu-item menu-item-type-custom menu-item-object-custom menu-item-3378-en">
-                                    <a onClick={() => changeLanguage('ru')} style={{cursor: 'pointer'}}><span
-                                        style={{marginLeft: '0.3em'}}><span role="img"
-                                                                            aria-label="ru">&#127479;&#127482;&nbsp;</span>Русский</span></a>
+                                <li className="lang-item lang-item-ru menu-item menu-item-type-custom menu-item-object-custom">
+                                    <a onClick={() => changeLanguage('ru')} href="#" style={{cursor: 'pointer'}}>
+                                        <span style={{marginLeft: '0.3em'}}>
+                                            <span role="img" aria-label="ru">&#127479;&#127482;&nbsp;</span>Русский
+                                        </span></a>
                                 </li>
-                                <li className="lang-item lang-item-60 lang-item-en menu-item menu-item-type-custom menu-item-object-custom menu-item-3378-da">
-                                    <a onClick={() => changeLanguage('de')} style={{cursor: 'pointer'}}><span
+                                <li className="lang-item lang-item-en current-lang lang-item-first menu-item menu-item-type-custom menu-item-object-custom">
+                                    <a onClick={() => changeLanguage('de')} href="#" style={{cursor: 'pointer'}}><span
                                         style={{marginLeft: '0.3em'}}><span role="img"
                                                                             aria-label="de">&#127465;&#127466;&nbsp;</span>Deutsch</span></a>
                                 </li>
-                                <li className="lang-item lang-item-60 lang-item-de menu-item menu-item-type-custom menu-item-object-custom menu-item-3378-da">
-                                    <a onClick={() => changeLanguage('en')} style={{cursor: 'pointer'}}><span
+                                <li className="lang-item lang-item-de menu-item menu-item-type-custom menu-item-object-custom">
+                                    <a onClick={() => changeLanguage('en')} href="#" style={{cursor: 'pointer'}}><span
                                         style={{marginLeft: '0.3em'}}><span role="img"
                                                                             aria-label="en">&#127468;&#127463;&nbsp;</span>English</span></a>
                                 </li>

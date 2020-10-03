@@ -39,7 +39,6 @@ class Project extends React.Component {
         let tags = [];
         this.props.projectStore.loadProject(id)
             .then((project) => {
-                console.log(project);
                 self.setState({project: project});
                 project.tags.forEach(function (tag, i) {
                     tags.push(<Tag tag={tag.title} key={i}/>);

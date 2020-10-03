@@ -35,7 +35,7 @@ Updated: 2019-01-22 10:46:07
 
 .newspage .card {
     margin-bottom: 30px;
-    padding: 0px 0px 5px 0px;
+    padding: 0 0 5px 0;
     border-radius: 20px 20px 20px 20px;
     box-shadow: 0px 11px 10px 0px rgba(219, 219, 219, 0.91);
     min-height: 576px;
@@ -45,20 +45,10 @@ Updated: 2019-01-22 10:46:07
 .card span {
     color: #898989;
     background-color: #f4f4f4;
-    border-radius: 20px 20px 20px 20px;
-    padding: 5px 23px 5px 23px;
-    margin: 5px;
-}
-
-a.ref-learnmore {
-    color: #36afe2;
-    font-size: 16px;
-    font-family: Helvetica, "myriad pro regular";
-    text-transform: uppercase;
-    clear: both;
-    position: absolute;
-    bottom: 20px;
-    padding: 0 10px;
+    border-radius: 7px;
+    padding: 0 5px 0 5px;
+    margin: 2px;
+    display: inline-table;
 }
 
 .tag-span {
@@ -120,42 +110,12 @@ a.ref-learnmore {
     font-weight: bold;
 }
 
-.ref-pagination .prev:hover:before, .ref-pagination .next:hover:before, .ref-pagination a:hover, .ref-pagination span:hover, .ref-pagination .page-numbers.current {
-    opacity: 1;
-    color: #7a7a7a;
-}
-
-.ref-pagination .prev.page-numbers, .ref-pagination .next.page-numbers {
-    color: #b5b5b5;
-    margin: 0 20px;
-    display: block;
-    float: left;
-}
-
-.ref-pagination .prev.page-numbers:before {
-    font-family: FontAwesome;
-    font-size: 32px;
-    line-height: 1;
-    opacity: .75;
-    -webkit-font-smoothing: antialiased;
-    content: "\f104";
-}
-
 .prevlinknews:hover a, .newsnextlink:hover a {
     box-shadow: 0px 6px 6px 0px rgba(219, 219, 219, 0.91);
 }
 
 .prevlinknews:hover a:before, .newsnextlink:hover a:before {
     opacity: 1;
-}
-
-.ref-pagination .next.page-numbers:before {
-    font-family: FontAwesome;
-    font-size: 35px;
-    line-height: 1;
-    opacity: .75;
-    -webkit-font-smoothing: antialiased;
-    content: "\f105";
 }
 
 .blog-page {
@@ -241,11 +201,6 @@ img.footer-img-blog {
     color: #58b6a2;
 }
 
-.team-about .tmm .tmm_member .tmm_photo {
-    border: 0px solid whitesmoke;
-    border-radius: 90px !important;
-}
-
 #myTab img {
     margin-top: 16px;
 }
@@ -286,12 +241,6 @@ img.footer-img-blog {
     display: block;
 }
 
-.estimate-top-right .estimate-inner {
-    width: 60%;
-    text-align: center;
-    margin: 80px;
-}
-
 .estimate-top-right .estimate-inner p {
     font-family: "Montserrat", myriad pro regular;
     color: #fff;
@@ -313,11 +262,6 @@ img.footer-img-blog {
     display: block;
     width: 170px;
     margin: 20px auto 0;
-}
-
-.estimate-section, .estimate-contact-section {
-    display: table;
-    width: 100%;
 }
 
 .estimate-heading-sec {
@@ -411,42 +355,6 @@ img.footer-img-blog {
     cursor: pointer;
 }
 
-.checkmark {
-    position: absolute;
-    top: -8px;
-    right: -5px;
-    width: 25px;
-    height: 25px;
-    border-radius: 100%;
-    cursor: pointer;
-}
-
-.post-content input#check-box-post:checked ~ .checkmark {
-    background-color: #58b6a2;
-}
-
-.post-content input#check-box-post:checked ~ .checkmark:after {
-    display: block;
-}
-
-.checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
-
-.post-content .checkmark:after {
-    left: 10px;
-    top: 3px;
-    width: 7px;
-    height: 14px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
-
 .post-content img {
     margin-bottom: 10px;
 }
@@ -510,9 +418,6 @@ img.footer-img-blog {
 }
 
 @media (max-width: 1024px) {
-    .estimate-top-right .estimate-inner {
-        margin: 80px 0 0 35px;
-    }
 
     .estimate-top-right .estimate-inner p {
         font-size: 24px;
@@ -544,10 +449,6 @@ img.footer-img-blog {
 @media (max-width: 767px) {
     .estimate-top-left img {
         margin: 90 auto 0;
-    }
-
-    .estimate-top-right .estimate-inner {
-        margin: 85px 0 0 20px;
     }
 
     .estimate-top-right .estimate-inner p {
@@ -584,9 +485,6 @@ img.footer-img-blog {
 }
 
 @media (max-width: 544px) {
-    .estimate-top-right .estimate-inner {
-        margin: 80px 0 0 10px;
-    }
 
     .estimate-top-right .estimate-inner p {
         font-size: 18px;
@@ -610,9 +508,6 @@ img.footer-img-blog {
         width: 100%;
     }
 
-    .estimate-contact-section label.phone_number, .estimate-contact-section label.country {
-        padding-left: 0px;
-    }
 }
 
 /*Estimate page custom template CSS ends here*/
@@ -677,10 +572,6 @@ img.footer-img-blog {
 
 .post-cart h3 {
     margin: 40px 15px 10px 15px;
-}
-
-.home-posts a.ref-learnmore {
-    margin-left: 10px;
 }
 
 .archive a.cat_post_img img {
@@ -796,10 +687,6 @@ div#comments {
     background-position: center;
 }
 
-.estimate-section {
-    margin-top: 200px;
-}
-
 .comments-link, .cat-links {
     display: none;
 }
@@ -811,31 +698,6 @@ div#comments {
 .page-template-services .elementor-widget:not(:last-child),
 .tools .elementor-widget:not(:last-child) {
     margin-bottom: 0px;
-}
-
-.web-section .elementor-text-editor {
-    height: 235px;
-    overflow: hidden;
-}
-
-.mob-section .elementor-text-editor {
-    height: 170px;
-    overflow: hidden;
-}
-
-.more-section .elementor-text-editor {
-    height: 215px;
-    overflow: hidden;
-}
-
-.more-add-section .elementor-text-editor {
-    height: 245px;
-    overflow: hidden;
-}
-
-.tool-more-section .elementor-text-editor {
-    height: 260px;
-    overflow: hidden;
 }
 
 div#cookie-notice {
@@ -918,10 +780,6 @@ ul.sub-menu {
     right: auto !important;
 }
 
-.paoc-popup-modal {
-    width: 853 !important;
-}
-
 body {
     overflow-x: hidden !important;
 }
@@ -945,39 +803,14 @@ body {
     margin: 0px 13px;
 }
 
-#mainnav ul .get-insights-menu a.paoc-popup.popupaoc-button {
-    background: unset;
-}
-
 .header-mail {
     padding: 25px 15px 25px 15px;
-}
-
-#mailpoet_form_1 .mailpoet_text,
-#mailpoet_form_1 .mailpoet_textarea,
-#mailpoet_form_2 .mailpoet_text,
-#mailpoet_form_2 .mailpoet_textarea {
-    border-radius: 3px;
-    height: 46px;
-    margin: 0 auto;
 }
 
 #mailpoet_form_2 .mailpoet_form_loading,
 #mailpoet_form_1 .mailpoet_form_loading {
     margin: 0 auto;
     margin-top: 25px;
-}
-
-input.mailpoet_submit {
-    font-family: "Montserrat", myriad pro regular;
-    font-weight: bold;
-    color: #ffffff;
-    background-color: #549db9;
-    border-radius: 20px 20px 20px 20px;
-    padding: 6px 6px 6px 6px;
-    width: 25%;
-    margin: 0 auto;
-    display: block;
 }
 
 .mail-text {
@@ -991,10 +824,6 @@ input.mailpoet_submit {
 @media only screen and (min-width: 320px) and (max-width: 736px) {
     .press-section .post-cart h3 a {
         font-size: 14px !important;
-    }
-
-    input.mailpoet_submit {
-        width: 40% !important;
     }
 
     .page-template-home-page-php span.round-tabs.two img {
@@ -1014,12 +843,6 @@ input.mailpoet_submit {
         padding-right: 0px !important;
     }
 
-    #spopup {
-        width: auto !important;
-        right: 0% !important;
-        margin-left: 20px;
-        margin-right: 20px;
-    }
 }
 
 @media only screen and (min-width: 320px) and (max-width: 768px) {
@@ -1071,23 +894,6 @@ input.mailpoet_submit {
         font-size: 16px !important;
     }
 
-    #spopup {
-        bottom: 12% !important;
-    }
-}
-
-#spopup {
-    background: #fff;
-    border-radius: 9px;
-    padding: 12px 14px 12px 14px;
-    position: fixed;
-    bottom: 20%;
-    right: 18%;
-    display: none;
-    z-index: 9999;
-    background-color: #FFF;
-    box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12);
-    width: 853px;
 }
 
 .close-get {
@@ -1124,21 +930,9 @@ input.mailpoet_submit {
 
 /* ipad  */
 @media only screen and (min-width: 740px) and (max-width: 768px) {
-    #spopup {
-        bottom: 38% !important;
-        right: 10% !important;
-        width: 600px !important;
-    }
 }
 
 /* ipad pro */
 @media only screen and (min-width: 1024px) and (max-width: 1200px) {
-    #spopup {
-        bottom: 38% !important;
-        right: 25% !important;
-    }
 }
 
-.page-template-about .pop-abt-kowsi a.paoc-popup.popupaoc-link {
-    color: blue;
-}

@@ -16,9 +16,8 @@ i18n
     .use(LanguageDetector)
     .use(initReactI18next)
     .init({
-        debug: true,
+        debug: false,
         detection: options,
-        lng: 'en',
         backend: {
             loadPath: '/assets/i18n/translations/{{lng}}.json'
         },
@@ -38,29 +37,3 @@ i18n
         }
     });
 export default i18n;
-
-/*
-i18n
-    .use(Backend)
-    .use(LanguageDetector)
-    .use(initReactI18next)
-    .init({
-        lng: 'en',
-        backend: {
-            loadPath: '/assets/i18n/{{ns}}/{{lng}}.json'
-        },
-        fallbackLng: 'en',
-        debug: true,
-        ns: ['translations'],
-        defaultNS: 'translations',
-        //keySeparator: false,
-        interpolation: {
-            escapeValue: false,
-            formatSeparator: ','
-        },
-        react: {
-            wait: true
-        }
-    });
-export default i18n;
-*/

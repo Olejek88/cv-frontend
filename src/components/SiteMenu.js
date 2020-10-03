@@ -51,9 +51,9 @@ class SiteMenu extends React.Component {
                                                             data-widget_type="image.default">
                                                             <div className="elementor-widget-container">
                                                                 <div className="elementor-image">
-                                                                    <img src={"images/bg-footer-new2.png"}
+                                                                    <img src={"images/bg-footer-new.png"}
                                                                          className="attachment-large size-large" alt=""
-                                                                         srcSet={"images/bg-footer-new2.png"}
+                                                                         srcSet={"images/bg-footer-new.png"}
                                                                          width="1024" height="541"/>
                                                                 </div>
                                                             </div>

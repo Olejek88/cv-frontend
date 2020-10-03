@@ -2,23 +2,6 @@ body > .preloader {
     display: none;
 }
 
-#spopup {
-    background: #fff;
-    border-radius: 9px;
-    padding: 12px 14px 12px 14px;
-    position: fixed;
-    display: none;
-    z-index: 9999;
-    background-color: #FFF;
-    box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12);
-    width: 853px;
-    margin: 50px auto;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-}
-
 .close-get {
     position: relative;
     top: -30px;
@@ -39,11 +22,6 @@ body > .preloader {
         max-width: 100% !important;
     }
 
-    .auther-details .taxonomy-description {
-        margin-left: 30px;
-        margin-right: 30px;
-    }
-
     .author .right-content {
         margin-right: 0px !important;
     }
@@ -54,10 +32,6 @@ body > .preloader {
         display: block;
         text-align: center;
         margin-left: 0px !important;
-    }
-
-    .author-social-icons span.a2a_svg.a2a_s__default.a2a_s_facebook {
-        margin-left: 0px;
     }
 
     .author div#content {
@@ -76,20 +50,12 @@ body > .preloader {
         margin-top: 0px !important;
     }
 
-    .single-post .a2a_floating_style {
-        z-index: 000;
-    }
-
     .about-poptexts .post-cart {
         height: auto !important;
     }
 
     .about-pop-title {
         margin-top: 35px;
-    }
-
-    .page-template-about .paoc-popup-modal {
-        width: 90% !important;
     }
 
     aside#text-8 .row {
@@ -126,12 +92,6 @@ body > .preloader {
         line-height: 28px !important;
     }
 
-    #spopup {
-        margin-left: 20px;
-        margin-right: 20px;
-        overflow: scroll;
-    }
-
     .close-get {
         top: -16px !important;
         right: -26px !important;
@@ -159,17 +119,6 @@ body > .preloader {
         padding: 0px 30px !important;
     }
 
-    input.mailpoet_submit {
-        width: 60% !important;
-    }
-
-    .book-email #mailpoet_form_3 input.mailpoet_text {
-        width: 90% !important;
-    }
-
-    .home-section-web .elementor-text-editor, .home-section-mobile .elementor-text-editor, .home-section-design .elementor-text-editor {
-        height: 185px !important;
-    }
 }
 
 @media only screen and (min-width: 320px) and (max-width: 350px) {
@@ -180,10 +129,6 @@ body > .preloader {
 
     .mail-logo {
         width: 210px !important;
-    }
-
-    #mailpoet_form_1 .mailpoet_text, #mailpoet_form_1 .mailpoet_textarea {
-        width: 250px !important;
     }
 
     .author-section-new .top-left {
@@ -259,34 +204,15 @@ body > .preloader {
         margin-bottom: 0px !important;
     }
 
-    #spopup {
-        bottom: 0% !important;
-        right: 0% !important;
-        width: 600px !important;
-        margin: 210px auto;
-    }
 }
 
 @media only screen and (min-width: 320px) and (max-width: 360px) {
-    #spopup {
-        bottom: 0% !important;
-        overflow: scroll;
-    }
 }
 
 @media only screen and (min-width: 360px) and (max-width: 384px) {
-    #spopup {
-        bottom: 0% !important;
-        overflow: scroll;
-    }
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1200px) {
-    #spopup {
-        right: 0% !important;
-        bottom: 0% !important;
-        margin: 380px auto;
-    }
 
     .single-post .a2a_vertical_style {
         display: none;
@@ -370,15 +296,6 @@ button.buy-book {
     letter-spacing: 1px;
 }
 
-input.mailpoet_submit[disabled]:hover {
-    background-color: #549db9;
-    color: #fff;
-}
-
-input.mailpoet_submit[disabled] {
-    opacity: 0.5;
-}
-
 .archive div#paoc-modal-1,
 .page-template-reference div#paoc-modal-1 {
     display: none !important;
@@ -389,12 +306,6 @@ input.mailpoet_submit[disabled] {
 .page-template-reference .custombox-overlay,
 .page-template-reference .custombox-content {
     z-index: -1;
-}
-
-.mailpoet_captcha_form input.mailpoet_submit {
-    display: inline;
-    width: 20%;
-    margin-top: 20px;
 }
 
 .image-book-content .heading {
@@ -453,19 +364,6 @@ input.mailpoet_submit[disabled] {
     line-height: 45px;
 }
 
-.book-email input.mailpoet_submit {
-    display: initial;
-    margin-top: 20px;
-    width: 240;
-}
-
-.book-email #mailpoet_form_3 input.mailpoet_text {
-    width: 50%;
-    border-radius: 10px;
-    padding: 0px 10px !important;
-    outline: unset;
-}
-
 .author-mark .elementor-column-gap-default > .elementor-row > .elementor-column > .elementor-element-populated, .author-new-full .elementor-column-gap-default > .elementor-row > .elementor-column > .elementor-element-populated {
     padding: 0px;
 }
@@ -498,10 +396,6 @@ input.mailpoet_submit[disabled] {
     color: #fff;
 }
 
-.creating-book .elementor-button-icon.elementor-align-icon-right, .computing-book .elementor-button-icon.elementor-align-icon-right, .communicate-book .elementor-button-icon.elementor-align-icon-right {
-    display: none;
-}
-
 .footer-getinsight {
     position: absolute;
     bottom: -10px;
@@ -519,21 +413,8 @@ input.mailpoet_submit[disabled] {
     display: none;
 }
 
-.footer-getinsight input.mailpoet_submit {
-    width: 100%;
-    padding: 6px 20px;
-}
-
 .widget-area .footer-getinsight a {
     color: #549db9;
-}
-
-.footer-getinsight #mailpoet_form_4 .mailpoet_text, .footer-getinsight #mailpoet_form_4 .mailpoet_textarea {
-    width: 320px;
-    border-radius: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    outline: unset;
 }
 
 .additional-get-section {
@@ -580,12 +461,6 @@ aside#text-8 .row {
     color: #58b6a2;
 }
 
-.page-template-about .paoc-popup-modal {
-    overflow: inherit;
-    width: 80% !important;
-    height: 100%;
-}
-
 .page-template-about .post-cart p {
     padding: 0 17px;
     padding-bottom: 50px;
@@ -594,10 +469,6 @@ aside#text-8 .row {
 .page-template-about .paoc-popup-close {
     top: 10px;
     right: 5px;
-}
-
-.page-template-about a.ref-learnmore {
-    padding: 8px 17px;
 }
 
 .about-poptexts .post-cart {
@@ -612,16 +483,6 @@ aside#text-8 .row {
 div#paoc-modal-27, div#paoc-modal-28, div#paoc-modal-29 {
     width: 853 !important;
     height: auto;
-}
-
-.page-template-about a.paoc-popup.popupaoc-link {
-    color: #36afe2;
-    font-size: 14px;
-    font-family: Helvetica, myriad pro regular;
-}
-
-.tmm_photo {
-    cursor: pointer;
 }
 
 .about-poptexts {
@@ -648,22 +509,6 @@ div#paoc-modal-27, div#paoc-modal-28, div#paoc-modal-29 {
     padding: 15px 15px;
 }
 
-.book-banner-pop a.paoc-popup.popupaoc-button {
-    font-family: "Montserrat", myriad pro regular;
-    font-weight: 700;
-    letter-spacing: 1px;
-    fill: #549DB9;
-    color: #549DB9;
-    background-color: #FFFFFF;
-    border-radius: 30px 30px 30px 30px;
-    padding: 8px 34px;
-    display: block;
-    margin: 0 auto;
-    width: 60%;
-    font-size: 14px;
-    text-align: center;
-}
-
 .book-banner-pop a.paoc-popup.popupaoc-button:hover .right-img-arrow {
     padding-left: 3px;
 }
@@ -673,20 +518,8 @@ div#paoc-modal-27, div#paoc-modal-28, div#paoc-modal-29 {
     bottom: 2px;
 }
 
-.menu-ebook a.paoc-popup.popupaoc-button {
-    background-color: transparent;
-    border: 1px solid #fff;
-    border-radius: 30px;
-}
-
 .menu-ebook a.paoc-popup.popupaoc-button .right-img-arrow {
     display: none;
-}
-
-.float-header .menu-ebook a.paoc-popup.popupaoc-button {
-    background-color: transparent;
-    border: 1px solid #549db9;
-    border-radius: 30px;
 }
 
 .book-email .mailpoet_recaptcha .mailpoet_recaptcha_container > div {
@@ -700,58 +533,31 @@ div#paoc-modal-27, div#paoc-modal-28, div#paoc-modal-29 {
 }
 
 @media only screen and (min-width: 1380px) and (max-width: 1500px) {
-    #spopup {
-        margin: 110px auto;
-    }
 }
 
 @media only screen and (min-width: 1450px) and (max-width: 1679px) {
-    #spopup {
-        margin: 90px auto;
-    }
 }
 
 @media only screen and (min-width: 1680px) and (max-width: 1920px) {
-    #spopup {
-        margin: 130px auto;
-    }
 }
 
 @media only screen and (min-width: 1925px) and (max-width: 2560px) {
-    #spopup {
-        margin: 200px auto;
-    }
 }
 
 @media only screen and (min-width: 2570px) and (max-width: 3840px) {
-    #spopup {
-        margin: 340px auto;
-    }
 }
 
 @media only screen and (min-width: 3900px) {
-    #spopup {
-        margin: 600px auto;
-    }
 }
 
 @media not all and (min-resolution: .001dpcm) {
     @media {
 
-        #spopup {
-
-            margin: 100px auto;
-
-        }
     }
 }
 
 .page-id-13971 h1.title-post.entry-title, .page-id-14010 h1.title-post.entry-title {
     display: none;
-}
-
-.archive .category_details {
-    height: 560px;
 }
 
 .archive .cat-para p {
@@ -785,10 +591,6 @@ div#paoc-modal-27, div#paoc-modal-28, div#paoc-modal-29 {
     float: none;
 }
 
-.auther-details .taxonomy-description {
-    margin-left: 30px;
-}
-
 .author-social-icons {
     margin: 20px auto 0px auto;
     text-align: center;
@@ -802,11 +604,6 @@ div#paoc-modal-27, div#paoc-modal-28, div#paoc-modal-29 {
 
 .author-social-icons a span {
     border-radius: 20px;
-}
-
-.auther-details .taxonomy-description {
-    font-family: Tahoma;
-    font-size: 18px;
 }
 
 .website-icon {
@@ -840,21 +637,9 @@ div#km-anonymous-chat-launcher {
     text-align: center;
 }
 
-i.fab.fa-twitter {
-    padding: 7px 8px;
-}
-
-i.fab.fa-facebook-f {
-    padding: 7px 12px;
-}
-
 i.fas.fa-envelope {
     padding: 9px 9px;
     font-size: 18px;
-}
-
-i.fab.fa-dribbble {
-    padding: 8px 10px;
 }
 
 .author h3.archive-cat-title {
@@ -901,10 +686,6 @@ span#cn-notice-text a {
     color: #fff;
 }
 
-i.fab.fa-linkedin {
-    padding: 8px 10px;
-}
-
 .catlist li {
     display: none;
     position: absolute;
@@ -926,24 +707,8 @@ i.fab.fa-linkedin {
     color: #7a7a7a;
 }
 
-.tools-distributed .elementor-text-editor {
-    height: 185px;
-    overflow: hidden;
-}
-
 .tools-distributed h3 {
     margin-bottom: 10px;
-}
-
-.page-template-distributed-teams div#spopup {
-    height: fit-content;
-    margin: 50px auto;
-}
-
-.page-template-distributed-teams #mailpoet_form_8 .mailpoet_text, .page-template-distributed-teams #mailpoet_form_8 .mailpoet_textarea {
-    width: 275px;
-    margin: 0px auto;
-    display: block;
 }
 
 .page-template-distributed-teams h5.pop-title1 {
@@ -954,6 +719,3 @@ i.fab.fa-linkedin {
     width: 200px !important;
 }
 
-.page-template-distributed-teams input.mailpoet_submit {
-    border-color: #549db9 !important;
-}
