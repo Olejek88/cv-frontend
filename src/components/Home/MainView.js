@@ -8,6 +8,7 @@ import CategoryHeader from "./CategoryHeader";
 import CategoryTitle from "./CategoryTitle";
 
 class MainView extends React.Component {
+
     constructor(props) {
         super(props);
         this.state = {
@@ -64,6 +65,8 @@ class MainView extends React.Component {
     }
 
     render() {
+        //const { t } = this.props;
+        //console.log(t('my_projects.label'));
         return (
             <React.Fragment>
                 <Banner/>

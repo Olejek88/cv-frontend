@@ -1,10 +1,11 @@
 import ReactDOM from 'react-dom';
 import promiseFinally from 'promise.prototype.finally';
-import React from 'react';
+import React, {Suspense} from 'react';
 import {HashRouter} from 'react-router-dom';
 import {Provider} from 'mobx-react';
 
 import App from './components/App';
+import './i18n';
 
 import projectStore from "./stores/projectStore";
 import projectImageStore from "./stores/projectImageStore";
@@ -31,7 +32,9 @@ promiseFinally.shim();
 ReactDOM.render((
     <Provider {...stores}>
         <HashRouter>
-            <App/>
+            <Suspense fallback={<div>Loading... </div>}>
+                <App/>
+            </Suspense>
         </HashRouter>
     </Provider>
 ), document.getElementById('page'));

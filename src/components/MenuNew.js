@@ -2,8 +2,11 @@ import React from 'react';
 import {inject} from 'mobx-react';
 import Link from "react-router-dom/es/Link";
 import MenuLink from "./Components/MenuLink";
+import {withTranslation} from 'react-i18next';
+import {withCookies} from "react-cookie";
 
 class SiteMenu extends React.Component {
+
     constructor(props) {
         super(props);
         this.state = {
@@ -25,6 +28,16 @@ class SiteMenu extends React.Component {
     }
 
     render() {
+        const {t, i18n, cookies} = this.props;
+        const changeLanguage = lng => {
+            i18n.changeLanguage(lng);
+            let d = new Date();
+            d.setTime(d.getTime() + (200 * 60 * 1000));
+            cookies.set('lang', lng, {path: "/", expires: d, SameSite: 'None'});
+            this.setState({lng});
+            document.cookie = "lang = " + lng + "; expires = " + d.toDateString();
+        };
+
         return (
             <nav id="mainnav" className="mainnav" role="navigation">
                 <div className="menu-main-container">
@@ -70,16 +83,19 @@ class SiteMenu extends React.Component {
                                                                                   aria-label="ru">&#127479;&#127482;&nbsp;</span>Русский</span></a>
                             <ul className="sub-menu">
                                 <li className="lang-item lang-item-57 lang-item-ru current-lang lang-item-first menu-item menu-item-type-custom menu-item-object-custom menu-item-3378-en">
-                                    <a href="/"><span style={{marginLeft: '0.3em'}}><span role="img"
-                                                                                          aria-label="ru">&#127479;&#127482;&nbsp;</span>Русский</span></a>
+                                    <a onClick={() => changeLanguage('ru')} style={{cursor: 'pointer'}}><span
+                                        style={{marginLeft: '0.3em'}}><span role="img"
+                                                                            aria-label="ru">&#127479;&#127482;&nbsp;</span>Русский</span></a>
                                 </li>
                                 <li className="lang-item lang-item-60 lang-item-en menu-item menu-item-type-custom menu-item-object-custom menu-item-3378-da">
-                                    <a href="/"><span style={{marginLeft: '0.3em'}}><span role="img"
-                                                                                          aria-label="de">&#127465;&#127466;&nbsp;</span>Deutsch</span></a>
+                                    <a onClick={() => changeLanguage('de')} style={{cursor: 'pointer'}}><span
+                                        style={{marginLeft: '0.3em'}}><span role="img"
+                                                                            aria-label="de">&#127465;&#127466;&nbsp;</span>Deutsch</span></a>
                                 </li>
                                 <li className="lang-item lang-item-60 lang-item-de menu-item menu-item-type-custom menu-item-object-custom menu-item-3378-da">
-                                    <a href="/"><span style={{marginLeft: '0.3em'}}><span role="img"
-                                                                                          aria-label="en">&#127468;&#127463;&nbsp;</span>English</span></a>
+                                    <a onClick={() => changeLanguage('en')} style={{cursor: 'pointer'}}><span
+                                        style={{marginLeft: '0.3em'}}><span role="img"
+                                                                            aria-label="en">&#127468;&#127463;&nbsp;</span>English</span></a>
                                 </li>
                             </ul>
                         </li>
@@ -94,4 +110,4 @@ class SiteMenu extends React.Component {
     }
 }
 
-export default inject('categoryStore')(SiteMenu);
+export default inject('categoryStore')(withCookies(withTranslation('translations')(SiteMenu)));

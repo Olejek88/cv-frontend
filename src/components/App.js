@@ -9,15 +9,16 @@ import About from './About';
 import Footer from "./Footer";
 import Projects from "./Projects";
 import {Helmet} from "react-helmet";
+import {withTranslation} from "react-i18next";
 
 class App extends React.Component {
-
     render() {
+        const {t} = this.props;
         return (
             <div>
                 <Helmet>
-                    <title>Приложения, проекты, сайты и системы</title>
-                    <description>Здесь прведен полный перечень того, чем я занимался.</description>
+                    <title>{t('header_main')}</title>
+                    <description>{t('description')}</description>
                 </Helmet>
                 <Header/>
                 <Switch>
@@ -32,4 +33,4 @@ class App extends React.Component {
     }
 }
 
-export default inject('projectStore')(withRouter(observer(App)));
+export default inject('projectStore')(withTranslation('translations')(withRouter(observer(App))));

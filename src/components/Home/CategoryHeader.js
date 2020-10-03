@@ -1,11 +1,13 @@
 import React from 'react';
+import {withTranslation} from "react-i18next";
 
 class CategoryHeader extends React.Component {
     render() {
+        const {t} = this.props;
         return (
             <React.Fragment>
                 <div className="banner-content-about">
-                    <div data-elementor-type="wp-post" data-elementor-id="2190" className="elementor elementor-2190">
+                    <div className="elementor elementor-2190">
                         <div className="elementor-inner">
                             <div className="elementor-section-wrap">
                                 <section
@@ -13,14 +15,11 @@ class CategoryHeader extends React.Component {
                                     <div className="elementor-container elementor-column-gap-default">
                                         <div className="elementor-row">
                                             <div
-                                                className="elementor-element elementor-element-6c62d29 elementor-column elementor-col-50 elementor-top-column"
-                                                data-id="6c62d29" data-element_type="column">
+                                                className="elementor-element elementor-element-6c62d29 elementor-column elementor-col-50 elementor-top-column">
                                                 <div className="elementor-column-wrap  elementor-element-populated">
                                                     <div className="elementor-widget-wrap">
                                                         <div
-                                                            className="elementor-element elementor-element-dfde740 elementor-hidden-phone elementor-widget elementor-widget-image"
-                                                            data-id="dfde740" data-element_type="widget"
-                                                            data-widget_type="image.default">
+                                                            className="elementor-element elementor-element-dfde740 elementor-hidden-phone elementor-widget elementor-widget-image">
                                                             <div className="elementor-widget-container">
                                                                 <div className="elementor-image">
                                                                     <img src={"images/side-img-header1.png"}
@@ -47,23 +46,9 @@ class CategoryHeader extends React.Component {
                                                                 <div
                                                                     className="elementor-text-editor elementor-clearfix">
                                                                     <p style={{textAlign: 'center'}}>
-                                                                        <span style={{color: '#fff'}}>PROJECT MADE BY OLEJEK</span>
+                                                                        <span
+                                                                            style={{color: '#fff'}}>{t('my_projects.label')} </span>
                                                                     </p></div>
-                                                            </div>
-                                                        </div>
-                                                        <div
-                                                            className="elementor-element elementor-element-0d822c1 elementor-widget elementor-widget-wp-widget-custom_html"
-                                                            data-id="0d822c1" data-element_type="widget"
-                                                            data-widget_type="wp-widget-custom_html.default">
-                                                            <div className="elementor-widget-container">
-                                                                <div className="textwidget custom-html-widget">
-                                                                    <button className="letschat-btn"> Contact Me
-                                                                        <img
-                                                                            src={"images/arrow-pointing-to-right-3.png"}
-                                                                            alt={""}
-                                                                            className="right-img-arrow"/>
-                                                                    </button>
-                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -84,20 +69,10 @@ class CategoryHeader extends React.Component {
                                                 <div className="elementor-column-wrap  elementor-element-populated">
                                                     <div className="elementor-widget-wrap">
                                                         <div
-                                                            className="elementor-element elementor-element-e0fb7ab elementor-widget elementor-widget-heading"
-                                                            data-id="e0fb7ab" data-element_type="widget"
-                                                            data-widget_type="heading.default">
-                                                            <div className="elementor-widget-container">
-                                                                <h3 className="elementor-heading-title elementor-size-default">Cases
-                                                                    make perfect</h3></div>
-                                                        </div>
-                                                        <div
-                                                            className="elementor-element elementor-element-5fab417 elementor-widget elementor-widget-heading"
-                                                            data-id="5fab417" data-element_type="widget"
-                                                            data-widget_type="heading.default">
+                                                            className="elementor-element elementor-element-5fab417 elementor-widget elementor-widget-heading">
                                                             <div className="elementor-widget-container">
                                                                 <h3 className="elementor-heading-title elementor-size-default">Check
-                                                                    out some of our latest work...</h3></div>
+                                                                    out some of my latest projects</h3></div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -114,4 +89,4 @@ class CategoryHeader extends React.Component {
     }
 }
 
-export default CategoryHeader;
+export default withTranslation('translations')(CategoryHeader);
