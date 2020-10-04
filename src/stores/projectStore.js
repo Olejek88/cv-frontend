@@ -56,7 +56,7 @@ export class ProjectStore {
                 this.isLoading = false;
             }))
             .catch(action(err => {
-                console.log(err);
+                //console.log(err);
             }));
     }
 

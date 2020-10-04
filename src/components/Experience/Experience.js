@@ -10,6 +10,7 @@ class Experience extends React.Component {
         super(props);
         this.state = {
             title: 'title',
+            lang: 'ru',
             description: 'description',
             isMounted: false,
             project: '',
@@ -22,23 +23,14 @@ class Experience extends React.Component {
         let self = this;
         let tags = [];
         const {cookies} = this.props;
-        let lang = cookies.get('lang');
+        this.state.lang = cookies.get('lang');
         if (this.props.project) {
             this.setState({project: this.props.project});
-            //console.log(this.props.project);
             this.props.project.tags.forEach(function (tag, i) {
                 tags.push(<Tag tag={tag.title} key={i}/>);
                 tags.push(' ');
             });
             self.state.tags = tags;
-            if (lang === "en") {
-                self.state.title = this.props.project.title_en.valueOf();
-                self.state.description = this.props.project.description_en.valueOf();
-            }
-            if (lang === "de") {
-                self.state.title = this.props.project.title_de.valueOf();
-                self.state.description = this.props.project.description_en.valueOf();
-            }
         }
     }
 
@@ -55,10 +47,16 @@ class Experience extends React.Component {
                     <div className="container cardcontent">
                         <div className="title post-head-title">
                             <Link to={"/project/" + this.state.project.id} className="" rel="bookmark">
-                                {this.state.project.title}
+                                {this.state.lang === "ru" && this.state.project.title}
+                                {this.state.lang === "en" && this.state.project.title_en}
+                                {this.state.lang === "de" && this.state.project.title_de}
                             </Link>
                         </div>
-                        <div className="newscontent">{this.state.project.description}</div>
+                        <div className="newscontent">
+                            {this.state.lang === "ru" && this.state.project.description}
+                            {this.state.lang === "en" && this.state.project.description_en}
+                            {this.state.lang === "de" && this.state.project.description_de}
+                        </div>
                         <div className="tag-span">
                             {this.state.tags}
                         </div>

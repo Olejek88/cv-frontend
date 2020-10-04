@@ -14,20 +14,18 @@ class SiteMenu extends React.Component {
         };
     }
 
-    componentWillMount() {
+    componentDidMount() {
         let self = this;
         this.props.categoryStore.loadCategories()
             .then(() => {
                 let categoriesList = [];
                 for (let category of Array.from(self.props.categoryStore.categoryRegistry.values())) {
-                    categoriesList.push(<MenuLink link={"/#/activities/category/" + category.id}
-                                                  text={category.title} key={category.id}/>);
+                    categoriesList.push(<li className="menu-item" key={category.id}><Link
+                        to={"/#/activities/category/" + category.id} key={category.id}>{category.title}</Link></li>);
                 }
                 self.setState({categoriesList: categoriesList});
             });
-    }
 
-    componentDidMount() {
         const {cookies} = this.props;
         let lang = cookies.get('lang');
         if (lang === "ru") {
@@ -61,8 +59,7 @@ class SiteMenu extends React.Component {
             <nav id="mainnav" className="mainnav" role="navigation">
                 <div className="menu-main-container">
                     <ul id="menu-main" className="menu">
-                        <li id="menu-item-1"
-                            className="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-1">
+                        <li className="menu-item">
                             <Link to="/">HOME</Link>
                             <ul className="sub-menu">
                                 <MenuLink link="/" text="ABOUT"/>
@@ -74,30 +71,13 @@ class SiteMenu extends React.Component {
                                 <MenuLink link="http://mediacritic.site" text="MEDIA"/>
                             </ul>
                         </li>
-                        <li id="menu-item-7662"
-                            className="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-7662">
+                        <li className="menu-item">
                             <Link to="/">WORK</Link>
                             <ul className="sub-menu">
-                                <li id="menu-item-4289"
-                                    className="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-4289">
-                                    <Link to="/">WEB</Link>
-                                    <ul className="sub-menu">
-                                        <MenuLink link="/" text="SITES"/>
-                                        <MenuLink link="/" text="SHOPS"/>
-                                    </ul>
-                                </li>
-                                <li id="menu-item-4290"
-                                    className="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-4290">
-                                    <Link to="/">MOBILE</Link>
-                                    <ul className="sub-menu">
-                                        <MenuLink link="/" text="ANDROID"/>
-                                        <MenuLink link="/" text="CROSS"/>
-                                    </ul>
-                                </li>
                                 {this.state.categoriesList}
                             </ul>
                         </li>
-                        <li className="pll-parent-menu-item menu-item menu-item-type-custom menu-item-object-custom current-menu-parent menu-item-has-children menu-item-3378">
+                        <li className="pll-parent-menu-item menu-item menu-item-type-custom menu-item-object-custom current-menu-parent menu-item-has-children">
                             <a href="/" id="ru"><span style={{marginLeft: '0.3em'}}><span role="img"
                                                                                           aria-label="ru">&#127479;&#127482;&nbsp;</span>Русский</span></a>
                             <a href="/" id="de" style={{display: 'none'}}><span style={{marginLeft: '0.3em'}}><span
