@@ -4,12 +4,14 @@ import Tag from "../Home/Tag";
 import {Link} from "react-router-dom";
 import Banner from "../Home/Banner";
 import CategoryHeader from "../Home/CategoryHeader";
+import {withCookies} from "react-cookie";
 
 class Project extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             showProjectItem: true,
+            lang: "ru",
             project: {
                 id: 1,
                 title: "loading",
@@ -37,6 +39,8 @@ class Project extends React.Component {
     loadProject(id) {
         let self = this;
         let tags = [];
+        const {cookies} = this.props;
+        this.state.lang = cookies.get('lang');
         this.props.projectStore.loadProject(id)
             .then((project) => {
                 self.setState({project: project});
@@ -65,7 +69,10 @@ class Project extends React.Component {
                                         </div>
                                         <div className="post-head col-md-12">
                                             <div className="post-heading-left col-md-6">
-                                                <h1 className="title-post entry-title">{this.state.project.title}</h1>
+                                                <h1 className="title-post entry-title">
+                                                    {this.state.lang === "ru" && this.state.project.title}
+                                                    {this.state.lang === "en" && this.state.project.title_en}
+                                                    {this.state.lang === "de" && this.state.project.title_de}</h1>
                                                 <div className="post-span">
                                                     {this.state.tags}
                                                 </div>
@@ -91,7 +98,9 @@ class Project extends React.Component {
                                     </div>
                                     <div className="entry-content">
                                         <p><span style={{fontWeight: 400}}>
-                                        {this.state.project.description}
+                                            {this.state.lang === "ru" && this.state.project.description}
+                                            {this.state.lang === "en" && this.state.project.description_en}
+                                            {this.state.lang === "de" && this.state.project.description_de}
                                         </span>
                                         </p>
                                         <p><img src={'images/aoc.png'} alt="Avatar"
@@ -108,4 +117,4 @@ class Project extends React.Component {
     }
 }
 
-export default inject('projectStore')(Project);
+export default inject('projectStore')(withCookies(Project));

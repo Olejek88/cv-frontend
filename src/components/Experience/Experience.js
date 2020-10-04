@@ -3,6 +3,7 @@ import {inject} from "mobx-react/index";
 import Tag from "../Home/Tag";
 import {Link} from "react-router-dom";
 import ROOT from "../../index";
+import {withCookies} from "react-cookie";
 
 class Experience extends React.Component {
     constructor(props) {
@@ -20,6 +21,8 @@ class Experience extends React.Component {
     componentWillMount() {
         let self = this;
         let tags = [];
+        const {cookies} = this.props;
+        let lang = cookies.get('lang');
         if (this.props.project) {
             this.setState({project: this.props.project});
             //console.log(this.props.project);
@@ -28,6 +31,14 @@ class Experience extends React.Component {
                 tags.push(' ');
             });
             self.state.tags = tags;
+            if (lang === "en") {
+                self.state.title = this.props.project.title_en.valueOf();
+                self.state.description = this.props.project.description_en.valueOf();
+            }
+            if (lang === "de") {
+                self.state.title = this.props.project.title_de.valueOf();
+                self.state.description = this.props.project.description_en.valueOf();
+            }
         }
     }
 
@@ -58,4 +69,4 @@ class Experience extends React.Component {
     }
 }
 
-export default inject('projectStore')(Experience);
+export default inject('projectStore')(withCookies(Experience));
