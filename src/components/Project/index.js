@@ -5,6 +5,7 @@ import {Link} from "react-router-dom";
 import Banner from "../Home/Banner";
 import CategoryHeader from "../Home/CategoryHeader";
 import {withCookies} from "react-cookie";
+import ROOT from "../../index";
 
 class Project extends React.Component {
     constructor(props) {
@@ -21,10 +22,12 @@ class Project extends React.Component {
                 role: "loading",
                 usage: "loading",
                 git: "loading",
+                photos: [],
                 created_at: "loading",
                 years: "loading"
             },
-            tags: []
+            tags: [],
+            imagesList: []
         };
     }
 
@@ -39,6 +42,7 @@ class Project extends React.Component {
     loadProject(id) {
         let self = this;
         let tags = [];
+        let images = [];
         const {cookies} = this.props;
         this.state.lang = cookies.get('lang');
         this.props.projectStore.loadProject(id)
@@ -48,6 +52,11 @@ class Project extends React.Component {
                     tags.push(<Tag tag={tag.title} key={i}/>);
                 });
                 self.state.tags = tags;
+
+                project.photos.forEach(function (image, i) {
+                    images.push(<img src={ROOT + image.path} key={i} alt={image.title} className='project_image'/>);
+                });
+                self.setState({imagesList: images});
             });
     }
 
@@ -61,35 +70,41 @@ class Project extends React.Component {
                         <div className="container">
                             <div className="newspagelink">
                                 <article
-                                    className="post type-post status-publish format-standard has-post-thumbnail hentry category-cases-en category-homepage category-adrian-gavrilescu category-martin-genchev category-daniela-todorova category-aaron-morley category-distributed-team-cases category-website category-e-commerce category-custom tag-web-development tag-web-design tag-mobile-responsive tag-programming-languages tag-javascript tag-communication-channels tag-cms tag-mobile-friendly tag-business-cards tag-business-referral-strategies tag-custom-business-cards tag-philip-morris tag-philip-morris-international tag-pmi tag-referral-code-schemes tag-referral-codes-systems tag-sql-databases tag-unique-business-cards tag-mysql-databases">
+                                    className="post type-post status-publish format-standard has-post-thumbnail hentry category-cases-en category-homepage">
                                     <header className="entry-header">
                                         <div className="meta-post">
                                             <a href="/" title="Cases" className="post-cat">Cases</a>
                                             <a href="/" title="Homepage" className="post-cat">Homepage</a>
                                         </div>
                                         <div className="post-head col-md-12">
-                                            <div className="post-heading-left col-md-6">
-                                                <h1 className="title-post entry-title">
+                                            <div className="post-heading-left" style={{width: '75%'}}>
+                                                <img src={ROOT + this.state.project.photo} alt="img"
+                                                     style={{width: '200px', float: 'left', margin: '5px'}}/>
+                                                <h1 className="title-post entry-title" style={{position: "relative"}}>
                                                     {this.state.lang === "ru" && this.state.project.title}
                                                     {this.state.lang === "en" && this.state.project.title_en}
-                                                    {this.state.lang === "de" && this.state.project.title_de}</h1>
-                                                <div className="post-span">
-                                                    {this.state.tags}
+                                                    {this.state.lang === "de" && this.state.project.title_de}
+                                                </h1>
+                                                <div className="post-span" style={{
+                                                    display: 'inline-block',
+                                                    marginTop: '10px',
+                                                    marginBottom: '10px',
+                                                    float: 'bottom'
+                                                }}>
+                                                    Tags: {this.state.tags}
                                                 </div>
                                             </div>
-                                            <div className="post-heading-right col-md-6">
+                                            <div className="post-heading-right" style={{width: '25%'}}>
                                                 <div className="single-meta">
                                 <span className="posted-on">
                                     <time className="entry-date published">{this.state.project.years}</time>
                                     <time className="updated">{this.state.project.created_at}</time>
-                                </span>
-                                                    <span className="byline">
+                                </span><span className="byline">
                                     <span className="author vcard">
                                         <Link to={"/project/" + this.state.project.id} className="url fn n">
                                             {this.state.project.stack}
                                         </Link>
-                                    </span>
-                                </span>
+                                    </span></span>
                                                 </div>
                                             </div>
                                         </div>
@@ -103,9 +118,7 @@ class Project extends React.Component {
                                             {this.state.lang === "de" && this.state.project.description_de}
                                         </span>
                                         </p>
-                                        <p><img src={'images/aoc.png'} alt="Avatar"
-                                                style={{width: '1024', height: '768'}}
-                                                className="aligncenter wp-image-13734 size-large"/></p>
+                                        <p> {this.state.imagesList}</p>
                                     </div>
                                 </article>
                             </div>

@@ -219,11 +219,6 @@ body > .preloader {
     }
 }
 
-.archive a.cat_post_img img,
-.newspage .card img {
-    height: 240px;
-}
-
 .archive #content .container.content-wrapper {
     padding: 0% 5%;
     max-width: 1430px;
@@ -719,3 +714,9 @@ span#cn-notice-text a {
     width: 200px !important;
 }
 
+.project_image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}

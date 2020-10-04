@@ -1,6 +1,5 @@
 import React from 'react';
 import {inject} from "mobx-react/index";
-import ActivityPhotoDiv from "./ActivityPhotoDiv";
 
 class ProjectPhotos extends React.Component {
     constructor(props) {
@@ -41,7 +40,7 @@ class ProjectPhotos extends React.Component {
                 <div className="pImgContainer">
                     <div className="item" style={{display: 'block'}}>
                         {
-                            this.state.photoList[0]
+                            this.state.photoList
                         }
                     </div>
                 </div>

@@ -19,7 +19,7 @@ class Experience extends React.Component {
         };
     }
 
-    componentWillMount() {
+    componentDidMount() {
         let self = this;
         let tags = [];
         const {cookies} = this.props;
@@ -53,9 +53,9 @@ class Experience extends React.Component {
                             </Link>
                         </div>
                         <div className="newscontent">
-                            {this.state.lang === "ru" && this.state.project.description}
-                            {this.state.lang === "en" && this.state.project.description_en}
-                            {this.state.lang === "de" && this.state.project.description_de}
+                            {this.state.lang === "ru" && truncate(this.state.project.description, 300, true)}
+                            {this.state.lang === "en" && truncate(this.state.project.description_en, 300, true)}
+                            {this.state.lang === "de" && truncate(this.state.project.description_de, 300, true)}
                         </div>
                         <div className="tag-span">
                             {this.state.tags}
@@ -65,6 +65,17 @@ class Experience extends React.Component {
             </div>
         );
     }
+}
+
+function truncate(str, n, useWordBoundary) {
+    if (!str) return "";
+    if (str.length <= n) {
+        return str;
+    }
+    const subString = str.substr(0, n - 1); // the original check
+    return (useWordBoundary
+        ? subString.substr(0, subString.lastIndexOf(" "))
+        : subString) + "...";
 }
 
 export default inject('projectStore')(withCookies(Experience));

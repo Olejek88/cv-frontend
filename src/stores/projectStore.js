@@ -13,7 +13,7 @@ export class ProjectStore {
             title: 'Проект #1',
             title_en: 'Project #1',
             title_de: 'Project #1',
-            images: imageStore.images,
+            photos: imageStore.images,
             description: 'Описание проекта',
             description_en: 'Project description',
             description_de: 'Projektbeschreibung',

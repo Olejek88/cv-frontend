@@ -16,7 +16,7 @@ class Header extends React.Component {
         this.setState({width: documentElement.clientWidth});
     }
 
-    componentWillMount() {
+    componentDidMount() {
         window.addEventListener("resize", this.updateDimensions);
     }
 
