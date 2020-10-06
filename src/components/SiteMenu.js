@@ -5,8 +5,7 @@ class SiteMenu extends React.Component {
         return (
             <React.Fragment>
                 <div className="footer-banner except-home">
-                    <div data-elementor-type="wp-post" data-elementor-id="2204" className="elementor elementor-2204"
-                         data-elementor-settings="[]">
+                    <div className="elementor">
                         <div className="elementor-inner">
                             <div className="elementor-section-wrap">
                                 <section
@@ -117,29 +116,17 @@ class SiteMenu extends React.Component {
                             <aside id="text-8" className="widget widget_text">
                                 <div className="textwidget">
                                     <div className="row">
-                                        <div className="col-md-4 getfooter-insigh">
-                                            <div className="popupaoc-image-popup"><a
-                                                className="paoc-popup popupaoc-link-image" href="/"
-                                                data-target="popuppaoc-modal-7826"
-                                                data-conf="{&quot;content&quot;:{ &quot;target&quot; : &quot;#paoc-modal-2&quot;, &quot;effect&quot;: &quot;fadein&quot;, &quot;positionX&quot;: &quot;center&quot;, &quot;positionY&quot;: &quot;center&quot;, &quot;fullscreen&quot;: false, &quot;speedIn&quot;: 300, &quot;speedOut&quot;: 300, &quot;delay&quot;: 150, &quot;width&quot;: &quot;60%&quot; },&quot;loader&quot;:{&quot;active&quot;: true},&quot;overlay&quot;:{&quot;active&quot;: true}}"><img
-                                                className="popupaoc-img" src={"images/mail-icon.png"} alt=""/></a></div>
-                                            <p className="get-text-footer">GET INSIGHTS</p>
+                                        <div className="col-md-4" style={{textAlign: 'center'}}>
+                                            <a href="mailto:olejek8@yandex.ru"><img src={"images/mail-icon.png"}
+                                                                                    alt="mail"/></a>
+                                            <p className="get-text-footer">MAIL ME</p>
                                         </div>
-                                        <div className="col-md-4 showreel-footer">
-                                            <div className="popupaoc-image-popup"><a
-                                                className="paoc-popup popupaoc-link-image" href="/"
-                                                data-target="popuppaoc-modal-4245"
-                                                data-conf="{&quot;content&quot;:{ &quot;target&quot; : &quot;#paoc-modal-3&quot;, &quot;effect&quot;: &quot;fadein&quot;, &quot;positionX&quot;: &quot;center&quot;, &quot;positionY&quot;: &quot;center&quot;, &quot;fullscreen&quot;: false, &quot;speedIn&quot;: 300, &quot;speedOut&quot;: 300, &quot;delay&quot;: 150, &quot;width&quot;: &quot;60%&quot; },&quot;loader&quot;:{&quot;active&quot;: true},&quot;overlay&quot;:{&quot;active&quot;: true}}"><img
-                                                className="popupaoc-img" src={"images/1-1.png"} alt=""/></a></div>
+                                        <div className="col-md-4" style={{textAlign: 'center'}}>
+                                            <a href="/"><img src={"images/1-1.png"} alt=""/></a>
                                             <p className="showreel">VIDEO SHOWREEL</p>
                                         </div>
-                                        <div className="col-md-4 working-footer">
-                                            <div className="popupaoc-image-popup"><a
-                                                className="paoc-popup popupaoc-link-image" href="/"
-                                                data-target="popuppaoc-modal-4548"
-                                                data-conf="{&quot;content&quot;:{ &quot;target&quot; : &quot;#paoc-modal-4&quot;, &quot;effect&quot;: &quot;fadein&quot;, &quot;positionX&quot;: &quot;center&quot;, &quot;positionY&quot;: &quot;center&quot;, &quot;fullscreen&quot;: false, &quot;speedIn&quot;: 300, &quot;speedOut&quot;: 300, &quot;delay&quot;: 150, &quot;width&quot;: &quot;60%&quot; },&quot;loader&quot;:{&quot;active&quot;: true},&quot;overlay&quot;:{&quot;active&quot;: true}}"><img
-                                                className="popupaoc-img" src={"images/work-footer.png"} alt=""/></a>
-                                            </div>
+                                        <div className="col-md-4" style={{textAlign: 'center'}}>
+                                            <a><img src={"images/work-footer.png"} alt=""/></a>
                                             <p className="workwd">WORKING HERE</p>
                                         </div>
                                     </div>

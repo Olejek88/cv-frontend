@@ -20,16 +20,12 @@ class CategoryHeader extends React.Component {
                                                     <div className="elementor-widget-wrap">
                                                         <div
                                                             className="elementor-element elementor-element-dfde740 elementor-hidden-phone elementor-widget elementor-widget-image">
-                                                            <div className="elementor-widget-container">
-                                                                <div className="elementor-image">
                                                                     <img src={"images/side-img-header1.png"}
                                                                          className="attachment-large size-large"
                                                                          alt=""
                                                                          srcSet={"images/side-img-header1.png"}
                                                                          sizes="(max-width: 454px) 100vw, 454px"
                                                                          width="454" height="340"/></div>
-                                                            </div>
-                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -71,8 +67,10 @@ class CategoryHeader extends React.Component {
                                                         <div
                                                             className="elementor-element elementor-element-5fab417 elementor-widget elementor-widget-heading">
                                                             <div className="elementor-widget-container">
-                                                                <h3 className="elementor-heading-title elementor-size-default">Check
-                                                                    out some of my latest projects</h3></div>
+                                                                <h3 className="elementor-heading-title elementor-size-default">
+                                                                    Check out some of my latest projects
+                                                                </h3>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
