@@ -7,7 +7,7 @@ class CategoryHeader extends React.Component {
         return (
             <React.Fragment>
                 <div className="banner-content-about">
-                    <div className="elementor elementor-2190">
+                    <div className="elementor elementor-main">
                         <div className="elementor-inner">
                             <div className="elementor-section-wrap">
                                 <section

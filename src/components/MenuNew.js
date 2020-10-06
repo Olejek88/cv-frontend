@@ -1,7 +1,6 @@
 import React from 'react';
 import {inject} from 'mobx-react';
 import Link from "react-router-dom/es/Link";
-import MenuLink from "./Components/MenuLink";
 import {withTranslation} from 'react-i18next';
 import {withCookies} from "react-cookie";
 
@@ -16,18 +15,27 @@ class SiteMenu extends React.Component {
 
     componentDidMount() {
         let self = this;
+        const {i18n, cookies} = this.props;
+        let lang = cookies.get('lang');
+        if (lang === undefined) {
+            i18n.changeLanguage("ru");
+            let d = new Date();
+            d.setTime(d.getTime() + (7 * 24 * 60 * 60 * 1000));
+            cookies.set('lang', 'ru', {path: "/", expires: d, SameSite: 'Secure'});
+        }
         this.props.categoryStore.loadCategories()
             .then(() => {
                 let categoriesList = [];
                 for (let category of Array.from(self.props.categoryStore.categoryRegistry.values())) {
                     categoriesList.push(<li className="menu-item" key={category.id}><Link
-                        to={"/#/activities/category/" + category.id} key={category.id}>{category.title}</Link></li>);
+                        to={"/#/activities/category/" + category.id} key={category.id}>
+                        {lang === "ru" && category.title}
+                        {lang === "en" && category.title_en}
+                        {lang === "de" && category.title_de}
+                    </Link></li>);
                 }
                 self.setState({categoriesList: categoriesList});
             });
-
-        const {cookies} = this.props;
-        let lang = cookies.get('lang');
         if (lang === "ru") {
             document.getElementById("ru").style.display = '';
             document.getElementById("en").style.display = 'none';
@@ -62,13 +70,12 @@ class SiteMenu extends React.Component {
                         <li className="menu-item">
                             <Link to="/">HOME</Link>
                             <ul className="sub-menu">
-                                <MenuLink link="/" text="ABOUT"/>
-                                <MenuLink link="/" text="CV"/>
-                                <MenuLink link="/" text="OLD"/>
-                                <MenuLink link="/" text="CAREER"/>
-                                <MenuLink link="/" text="STACK"/>
-                                <MenuLink link="/" text="LIFE"/>
-                                <MenuLink link="http://mediacritic.site" text="MEDIA"/>
+                                <li className="menu-item"><Link to="/">About</Link></li>
+                                <li className="menu-item"><Link to="/">CV</Link></li>
+                                <li className="menu-item"><Link to="/">Career</Link></li>
+                                <li className="menu-item"><Link to="/">Stack</Link></li>
+                                <li className="menu-item"><Link to="/">Life</Link></li>
+                                <li className="menu-item"><Link to="http://mediacritic.site">Media</Link></li>
                             </ul>
                         </li>
                         <li className="menu-item">

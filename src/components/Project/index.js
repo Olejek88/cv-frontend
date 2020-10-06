@@ -1,11 +1,11 @@
 import React from 'react';
 import {inject} from "mobx-react/index";
 import Tag from "../Home/Tag";
-import {Link} from "react-router-dom";
 import Banner from "../Home/Banner";
-import CategoryHeader from "../Home/CategoryHeader";
 import {withCookies} from "react-cookie";
 import ROOT from "../../index";
+import ProjectHeader from "./ProjectHeader";
+import {withTranslation} from "react-i18next";
 
 class Project extends React.Component {
     constructor(props) {
@@ -26,6 +26,7 @@ class Project extends React.Component {
                 created_at: "loading",
                 years: "loading"
             },
+            description: "",
             tags: [],
             imagesList: []
         };
@@ -54,17 +55,29 @@ class Project extends React.Component {
                 self.state.tags = tags;
 
                 project.photos.forEach(function (image, i) {
-                    images.push(<img src={ROOT + image.path} key={i} alt={image.title} className='project_image'/>);
+                    images.push(<img src={ROOT + image.path} key={i} alt={image.title} className='project_image'
+                                     style={{marginTop: '20px', maxWidth: '800px'}}/>);
                 });
+
                 self.setState({imagesList: images});
+                if (this.state.lang === "ru") {
+                    self.setState({description: project.description});
+                }
+                if (this.state.lang === "de") {
+                    self.setState({description: project.description_de});
+                }
+                if (this.state.lang === "en") {
+                    self.setState({description: project.description_en});
+                }
             });
     }
 
     render() {
+        const {t} = this.props;
         return (
             <React.Fragment>
                 <Banner/>
-                <CategoryHeader/>
+                <ProjectHeader project={this.state.project}/>
                 <section className="newspage newsadd">
                     <div className="container-fluid">
                         <div className="container">
@@ -72,14 +85,12 @@ class Project extends React.Component {
                                 <article
                                     className="post type-post status-publish format-standard has-post-thumbnail hentry category-cases-en category-homepage">
                                     <header className="entry-header">
-                                        <div className="meta-post">
-                                            <a href="/" title="Cases" className="post-cat">Cases</a>
-                                            <a href="/" title="Homepage" className="post-cat">Homepage</a>
-                                        </div>
                                         <div className="post-head col-md-12">
                                             <div className="post-heading-left" style={{width: '75%'}}>
+                                                {/*
                                                 <img src={ROOT + this.state.project.photo} alt="img"
                                                      style={{width: '200px', float: 'left', margin: '5px'}}/>
+*/}
                                                 <h1 className="title-post entry-title" style={{position: "relative"}}>
                                                     {this.state.lang === "ru" && this.state.project.title}
                                                     {this.state.lang === "en" && this.state.project.title_en}
@@ -96,15 +107,21 @@ class Project extends React.Component {
                                             </div>
                                             <div className="post-heading-right" style={{width: '25%'}}>
                                                 <div className="single-meta">
-                                <span className="posted-on">
-                                    <time className="entry-date published">{this.state.project.years}</time>
-                                    <time className="updated">{this.state.project.created_at}</time>
-                                </span><span className="byline">
-                                    <span className="author vcard">
-                                        <Link to={"/project/" + this.state.project.id} className="url fn n">
-                                            {this.state.project.stack}
-                                        </Link>
-                                    </span></span>
+                                                    <span className="posted-on">
+                                                        <time
+                                                            className="entry-date published">{this.state.project.years}</time>
+                                                        <time className="updated">{this.state.project.created_at}</time>
+                                                    </span>
+                                                    <span className="byline">
+                                                        <span className="author vcard">
+                                                            {this.state.project.stack}
+                                                    </span></span>
+                                                </div>
+                                                <div className="single-meta">
+                                                    <span className="byline">
+                                                        Role: {this.state.project.role}<br/>
+                                                        <a href={this.state.project.git}>Github</a>
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
@@ -113,10 +130,13 @@ class Project extends React.Component {
                                     </div>
                                     <div className="entry-content">
                                         <p><span style={{fontWeight: 400}}>
-                                            {this.state.lang === "ru" && this.state.project.description}
-                                            {this.state.lang === "en" && this.state.project.description_en}
-                                            {this.state.lang === "de" && this.state.project.description_de}
+                                            <div dangerouslySetInnerHTML={{__html: this.state.description}}></div>
                                         </span>
+                                            <br/><b>{t('usage.label')}:</b> {this.state.project.usage}
+                                            <br/><b>Github:</b> <a
+                                                href={this.state.project.git}>{this.state.project.git}</a>
+                                            <br/><b>Link:</b> <a
+                                                href={this.state.project.link}>{this.state.project.link}</a>
                                         </p>
                                         <p> {this.state.imagesList}</p>
                                     </div>
@@ -130,4 +150,4 @@ class Project extends React.Component {
     }
 }
 
-export default inject('projectStore')(withCookies(Project));
+export default inject('projectStore')(withCookies(withTranslation('translations')(Project)));

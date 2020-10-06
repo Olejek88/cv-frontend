@@ -605,7 +605,7 @@ a.post-cat {
 
 .post-head {
     border-bottom: 1px solid #ccc;
-    margin-top: 10%;
+    margin-top: 200px;
     margin-bottom: 2%;
 }
 
@@ -643,7 +643,6 @@ span.author.vcard {
 .single-meta, .single-meta a, .classic-alt .posted-on, .classic-alt .posted-on a, .single .single-meta, .classic-alt .posted-on {
     color: #4ac0c9;
     font-weight: 700;
-    letter-spacing: 0.5;
 }
 
 .single .hentry .title-post {
@@ -935,3 +934,9 @@ body {
 @media only screen and (min-width: 1024px) and (max-width: 1200px) {
 }
 
+.single-meta2, .single-meta2 a {
+    color: #4ac0c9;
+    font-weight: 700;
+    margin-top: 5px;
+    float: none;
+}
