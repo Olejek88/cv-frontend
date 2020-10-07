@@ -907,3 +907,51 @@ span#cn-notice-text a {
         margin-bottom: 0
     }
 }
+
+.elementor-column .elementor-element.elementor-element-about > .elementor-widget-container {
+    margin: 0 0 0 50px;
+}
+
+.elementor-column .elementor-element.elementor-element-about .elementor-image-box-content .elementor-image-box-title {
+    color: #66cbff;
+    font-family: "Montserrat", Sans-serif;
+    font-weight: 300;
+}
+
+.elementor-column .elementor-element.elementor-element-about.elementor-position-left .elementor-image-box-img {
+    margin-right: 15px;
+}
+
+.business-what-section {
+    z-index: 1;
+}
+
+.avatar-user {
+    border-radius: 50% !important;
+}
+
+.avatar {
+    display: inline-block;
+    overflow: hidden;
+    line-height: 1;
+    vertical-align: middle;
+    border-radius: 6px;
+}
+
+.width-full {
+    width: 100% !important;
+}
+
+.bg-white {
+    background-color: #fff !important;
+}
+
+.border {
+    border: 1px solid #e1e4e8 !important;
+}
+
+.elementor-column .elementor-element.elementor-element-about .elementor-image-box-content {
+    color: #808080;
+    font-size: 14px;
+    font-weight: 400;
+}

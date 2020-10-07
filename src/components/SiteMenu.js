@@ -116,18 +116,25 @@ class SiteMenu extends React.Component {
                             <aside id="text-8" className="widget widget_text">
                                 <div className="textwidget">
                                     <div className="row">
-                                        <div className="col-md-4" style={{textAlign: 'center'}}>
-                                            <a href="mailto:olejek8@yandex.ru"><img src={"images/mail-icon.png"}
-                                                                                    alt="mail"/></a>
-                                            <p className="get-text-footer">MAIL ME</p>
+                                        <div className="col-md-3" style={{textAlign: 'center'}}>
+                                            <a href="http://vk.com/shtrm">
+                                                <img src={"images/vk.png"} alt="vk"/></a>
+                                            <p className="get-text-footer">VK</p>
                                         </div>
-                                        <div className="col-md-4" style={{textAlign: 'center'}}>
-                                            <a href="/"><img src={"images/1-1.png"} alt=""/></a>
-                                            <p className="showreel">VIDEO SHOWREEL</p>
+                                        <div className="col-md-3" style={{textAlign: 'center'}}>
+                                            <a href="http://github.com/Olejek88">
+                                                <img src={"images/github.png"} alt="github"/></a>
+                                            <p className="get-text-footer">Github</p>
                                         </div>
-                                        <div className="col-md-4" style={{textAlign: 'center'}}>
-                                            <a><img src={"images/work-footer.png"} alt=""/></a>
-                                            <p className="workwd">WORKING HERE</p>
+                                        <div className="col-md-3" style={{textAlign: 'center'}}>
+                                            <a href="http://linkedin.com/shtrm">
+                                                <img src={"images/linkedin.png"} alt="linkedin"/></a>
+                                            <p className="get-text-footer">Linkedin</p>
+                                        </div>
+                                        <div className="col-md-3" style={{textAlign: 'center'}}>
+                                            <a href="https://www.facebook.com/olejek.ivanov">
+                                                <img src={"images/fb.png"} alt="facebook"/></a>
+                                            <p className="get-text-footer">Facebook</p>
                                         </div>
                                     </div>
                                 </div>

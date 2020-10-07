@@ -35,12 +35,12 @@ class Header extends React.Component {
                                     {this.state.width >= 1000 &&
                                     <img className="site-logo"
                                          alt="olejek"
-                                         src={"images/wd-color-logo.png"}/>
+                                         src={"images/code_olejek.png"}/>
                                     }
                                     {this.state.width < 1000 &&
                                     <img className="site-logo"
                                          alt="olejek"
-                                         src={"images/wd-color-logo.png"}/>
+                                         src={"images/code_olejek.png"}/>
                                     }
                                 </Link>
                             </div>

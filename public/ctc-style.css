@@ -1,19 +1,5 @@
-/*
-CTC Separate Stylesheet
-Updated: 2019-01-22 10:46:07
-*/
-@font-face {
-    font-family: 'ProximaNova-Regular';
-    /*src: url('./fonts/ProximaNova/ProximaNova-Regular.eot') format('embedded-opentype');*/
-    src: url('./fonts/ProximaNova/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'), url('./fonts/ProximaNova/ProximaNova-Regular.otf') format('opentype'),
-    url('./fonts/ProximaNova/ProximaNova-Regular.woff') format('woff'), url('./fonts/ProximaNova/ProximaNova-Regular.ttf') format('truetype'), url('./fonts/ProximaNova/ProximaNova-Regular.svg#ProximaNova-Regular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
 @font-face {
     font-family: 'Tahoma';
-    /*src: url('./fonts/ProximaNova/ProximaNova-Light.eot') format('embedded-opentype');*/
     font-weight: normal;
     font-style: normal;
 }
@@ -37,7 +23,7 @@ Updated: 2019-01-22 10:46:07
     margin-bottom: 30px;
     padding: 0 0 5px 0;
     border-radius: 20px 20px 20px 20px;
-    box-shadow: 0px 11px 10px 0px rgba(219, 219, 219, 0.91);
+    box-shadow: 0 11px 10px 0 rgba(219, 219, 219, 0.91);
     height: 650px;
     position: relative;
 }
@@ -728,11 +714,6 @@ input.cancel-button:hover {
     background: #549db9;
 }
 
-button.estimate-submit-button:hover i {
-    transition: all 0.3s ease-in-out;
-    padding-left: 3;
-}
-
 #mainnav .sub-menu li a {
     border-top: 1px solid #ccc;
 }
@@ -742,7 +723,7 @@ ul.sub-menu a {
 }
 
 #mainnav ul li.estimate-menu.current-menu-item a {
-    border-bottom: 0px solid #4ac0c9;
+    border-bottom: 0 solid #4ac0c9;
 }
 
 #mainnav .sub-menu li a {

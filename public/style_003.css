@@ -1861,6 +1861,10 @@ p {
 
 .newscontent {
     padding: 0px 10px;
+    font-family: "Arimo, Helvetica Neue, helvetica, arial";
+    color: #808080;
+    font-size: 14px;
+    font-weight: 300;
 }
 
 .archive #content .container.content-wrapper {

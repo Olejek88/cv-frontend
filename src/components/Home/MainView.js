@@ -6,6 +6,7 @@ import Banner from "./Banner";
 import Experience from "../Experience/Experience";
 import CategoryHeader from "./CategoryHeader";
 import CategoryTitle from "./CategoryTitle";
+import About from "./About";
 
 class MainView extends React.Component {
 
@@ -65,8 +66,6 @@ class MainView extends React.Component {
     }
 
     render() {
-        //const { t } = this.props;
-        //console.log(t('my_projects.label'));
         return (
             <React.Fragment>
                 <Banner/>
@@ -81,6 +80,7 @@ class MainView extends React.Component {
                         </div>
                     </div>
                 </section>
+                <About/>
             </React.Fragment>
         );
     }
