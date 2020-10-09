@@ -7,6 +7,7 @@ import Experience from "../Experience/Experience";
 import CategoryHeader from "./CategoryHeader";
 import CategoryTitle from "./CategoryTitle";
 import About from "./About";
+import {withTranslation} from "react-i18next";
 
 class MainView extends React.Component {
 
@@ -36,7 +37,7 @@ class MainView extends React.Component {
 
     }
 
-    componentDidUpdate(previousProps) {
+    componentDidUpdate(previousProps, prevState, snapShotValue) {
         if (
             this.getTab(this.props) !== this.getTab(previousProps) ||
             this.getTag(this.props) !== this.getTag(previousProps)
@@ -66,10 +67,11 @@ class MainView extends React.Component {
     }
 
     render() {
+        const {t} = this.props;
         return (
             <React.Fragment>
                 <Banner/>
-                <CategoryHeader/>
+                <CategoryHeader title={t('check_projects')} type='main'/>
                 <CategoryTitle/>
                 <section className="newspage newsadd">
                     <div className="container-fluid">
@@ -86,4 +88,4 @@ class MainView extends React.Component {
     }
 }
 
-export default inject('projectStore')(withRouter(MainView));
+export default inject('projectStore')(withTranslation('translations')(withRouter(MainView)));

@@ -40,8 +40,8 @@ export class ProjectStore {
     }
 
     $req(count = 12, start = 0) {
-        if (this.predicate.filter && this.predicate.id)
-            return agent.Projects.filter(this.predicate.filter, this.predicate.id, this.predicate.limit, this.predicate.start);
+        if (this.predicate.id)
+            return agent.Projects.category(this.predicate.id, this.predicate.limit, this.predicate.start);
         return agent.Projects.all(count, start);
     }
 

@@ -32,8 +32,8 @@ const ProjectImage = {
 };
 
 const Projects = {
-    filter: (filter, id, lim = 3, start = 0) =>
-        requests.get(`projects?${filter}_id=${id}&expand=projectImages.image`),
+    category: (id, lim = 3, start = 0) =>
+        requests.get(`projects/category/${id}?expand=projectImages.image`),
     get: id =>
         requests.get(`projects/${id}?expand=projectImages.image`),
     tags: id =>

@@ -28,7 +28,7 @@ class SiteMenu extends React.Component {
                 let categoriesList = [];
                 for (let category of Array.from(self.props.categoryStore.categoryRegistry.values())) {
                     categoriesList.push(<li className="menu-item" key={category.id}><Link
-                        to={"/#/activities/category/" + category.id} key={category.id}>
+                        to={"projects/category/" + category.id} key={category.id}>
                         {lang === "ru" && category.title}
                         {lang === "en" && category.title_en}
                         {lang === "de" && category.title_de}
@@ -110,9 +110,8 @@ class SiteMenu extends React.Component {
                                 </li>
                             </ul>
                         </li>
-                        <li id="menu-item-10299"
-                            className="menu-button estimate-menu menu-item menu-item-type-custom menu-item-object-custom menu-item-10299">
-                            <a href="/">CONTACT ME</a>
+                        <li className="menu-button estimate-menu menu-item menu-item-type-custom menu-item-object-custom">
+                            <a href="mailto:olejek8@yandex.ru">CONTACT ME</a>
                         </li>
                     </ul>
                 </div>
