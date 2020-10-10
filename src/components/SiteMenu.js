@@ -73,42 +73,25 @@ class SiteMenu extends React.Component {
                             <aside id="custom_html-4" className="widget_text widget widget_custom_html">
                                 <div className="textwidget custom-html-widget">
                                     <div className="row-one">
-                                        <div className="col-one">
-                                            <a href="https://wiredelta.com/about">ABOUT US</a><br/>
-                                            <a href="https://wiredelta.com/cases">REFERENCES</a><br/>
-                                            <a href="https://wiredelta.com/services">SERVICES</a><br/>
-                                            <a href="https://wiredelta.com/blog">BLOG</a><br/>
-                                        </div>
                                         <div className="col-two">
                                             <div className="text-footer">
-                                                <a href="https://wiredelta.com/about">ABOUT</a><br/>
-                                                <a href="https://wiredelta.com/cases">CASES</a><br/>
-                                                <a href="https://wiredelta.com/services">SERVICES</a><br/>
-                                                <a href="https://wiredelta.com/technologies">TECHNOLOGIES</a><br/>
-                                                <a href="https://wiredelta.com/partners">PARTNERS</a><br/>
-                                                <a href="https://wiredelta.com/jobs">CAREERS</a>
+                                                <a href={"/#/about"}>ABOUT ME</a><br/>
+                                                <a href={"/#/projects"}>CASES</a><br/>
+                                                <a href={"/#/cases"}>PROJECTS</a><br/>
+                                                <a href={"/#/cv"}>CV</a><br/>
+                                                <a href={"/#/career"}>CAREER</a><br/>
                                             </div>
                                         </div>
                                         <div className="col-three">
-                                            <a href="https://www.facebook.com/wiredelta" rel="noopener noreferrer"
-                                               target="_blank">FACEBOOK</a><br/>
-                                            <a href="https://www.linkedin.com/company/wiredelta/"
-                                               rel="noopener noreferrer" target="_blank">LINKEDIN</a><br/>
-                                            <a href="https://twitter.com/Wiredeltadotcom" rel="noopener noreferrer"
-                                               target="_blank">TWITTER</a><br/>
-                                            <a href="https://www.instagram.com/wiredeltadotcom/"
-                                               rel="noopener noreferrer" target="_blank">INSTAGRAM</a><br/>
-                                            <a href="https://www.youtube.com/channel/UCQcuIsCZpDCmdOQ2GTSIiDg"
-                                               rel="noopener noreferrer" target="_blank">YOUTUBE</a><br/>
-                                            <a href="https://www.amazon.com/Software-Feeding-World-Mark-Dencker/dp/168948568X"
-                                               rel="noopener noreferrer" target="_blank">AMAZON</a>
+                                            <a href="http://shrtm.ru" rel="noopener noreferrer" target="_blank">OLD
+                                                SITE</a><br/>
+                                            <a href="http://mediacritic.ru/" rel="noopener noreferrer"
+                                               target="_blank">MEDIA</a><br/>
+                                            <a href={"/#/links"}>LINKS</a><br/>
                                         </div>
                                     </div>
-                                    <p className="language-left"><a href="mailto:olejek8@yandex.ru"
-                                                                    rel="noopener noreferrer">Mail me</a> | <a
-                                        href="http://olejek8@yandex.ru" rel="noopener noreferrer">Old site</a></p>
-                                    <p className="copy-right">COPYRIGHT © 2020 OLEJEK. This page based on Front
-                                        [React/Redux], Back [Laravel]</p>
+                                    <p className="copy-right">COPYRIGHT © 2020 OLE. This page based on Front
+                                        [React/MobX], Back [Laravel]</p>
                                 </div>
                             </aside>
                         </div>
