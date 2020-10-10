@@ -32,7 +32,7 @@ class About extends React.Component {
                                                     </a>
                                                     <img alt=""
                                                          className="avatar avatar-user width-full border bg-white"
-                                                         src="https://avatars2.githubusercontent.com/u/11804878?s=460&amp;u=37befc3e94926cb47ce03d69b154707a11f30e27&amp;v=4"
+                                                         src={"images/avatar.png"}
                                                          width="260" height="260"/>
                                                 </div>
                                             </div>

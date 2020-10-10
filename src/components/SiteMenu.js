@@ -128,7 +128,7 @@ class SiteMenu extends React.Component {
                                         </div>
                                         <div className="col-md-3" style={{textAlign: 'center'}}>
                                             <a href="http://linkedin.com/shtrm">
-                                                <img src={"images/linkedin.png"} alt="linkedin"/></a>
+                                                <img src={"images/linkedin2.png"} alt="linkedin"/></a>
                                             <p className="get-text-footer">Linkedin</p>
                                         </div>
                                         <div className="col-md-3" style={{textAlign: 'center'}}>

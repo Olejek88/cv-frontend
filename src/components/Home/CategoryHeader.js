@@ -42,20 +42,20 @@ class CategoryHeader extends React.Component {
                                                     <div className="elementor-widget-wrap">
                                                         <div
                                                             className="elementor-element elementor-element-dfde740 elementor-hidden-phone elementor-widget elementor-widget-image">
-                                                                    <img src={"images/side-img-header1.png"}
-                                                                         className="attachment-large size-large"
-                                                                         alt=""
-                                                                         srcSet={"images/side-img-header1.png"}
-                                                                         sizes="(max-width: 454px) 100vw, 454px"
-                                                                         width="454" height="340"/></div>
+                                                            <img src={"images/side-img-header1.png"}
+                                                                 className="attachment-large size-large"
+                                                                 alt=""
+                                                                 srcSet={"images/side-img-header1.png"}
+                                                                 sizes="(max-width: 454px) 100vw, 454px"
+                                                                 width="454" height="340"/></div>
                                                     </div>
                                                 </div>
                                             </div>
+                                            {this.state.type !== 'main' && <HeaderTitle title={this.state.title}/>}
                                         </div>
-                                        {this.state.type !== 'main' && <HeaderTitle title={this.state.title}/>}
                                     </div>
                                 </section>
-                                {this.state.type === 'main' && <CategoryHeaderTitle title={this.state.title}/>}
+                                <CategoryHeaderTitle title={this.state.type === 'main' && this.state.title}/>
                             </div>
                         </div>
                     </div>

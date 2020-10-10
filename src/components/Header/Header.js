@@ -6,9 +6,11 @@ class Header extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            width: 1920
+            width: 1920,
+            class: 'site-header fixed'
         };
         this.updateDimensions = this.updateDimensions.bind(this);
+        this.handleScroll = this.handleScroll.bind(this)
     }
 
     updateDimensions() {
@@ -18,15 +20,38 @@ class Header extends React.Component {
 
     componentDidMount() {
         window.addEventListener("resize", this.updateDimensions);
+        window.addEventListener('scroll', this.handleScroll);
     }
 
     componentWillUnmount() {
         window.removeEventListener("resize", this.updateDimensions);
     }
 
+    handleScroll() {
+        let masthead = document.getElementById('masthead');
+        let rect = masthead.getBoundingClientRect();
+        console.log(rect);
+        if (rect) {
+            let e = window.pageYOffset;
+            console.log(" e=" + e);
+            if (e < 100) {
+                this.setState({class: 'site-header fixed'});
+                console.log("site-header fixed");
+            } else {
+                this.setState({class: 'site-header fixed float-header'});
+                console.log("site-header fixed float-header");
+            }
+            /*
+                        i <= e ? (masthead.addClass("fixed"), n("body").addClass("siteScrolled")) : (n(".site-header").removeClass("fixed"),
+                            n("body").removeClass("siteScrolled")), 107 <= e ? n(".site-header").addClass("float-header") : n(".site-header").removeClass("float-header")
+            */
+
+        }
+    }
+
     render() {
         return (
-            <header id="masthead" className="site-header fixed" role="banner">
+            <header id="masthead" ref="masthead" className={this.state.class} role="banner">
                 <div className="header-wrap">
                     <div className="container">
                         <div className="row">
