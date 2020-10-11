@@ -30,22 +30,13 @@ class Header extends React.Component {
     handleScroll() {
         let masthead = document.getElementById('masthead');
         let rect = masthead.getBoundingClientRect();
-        console.log(rect);
         if (rect) {
             let e = window.pageYOffset;
-            console.log(" e=" + e);
             if (e < 100) {
                 this.setState({class: 'site-header fixed'});
-                console.log("site-header fixed");
             } else {
                 this.setState({class: 'site-header fixed float-header'});
-                console.log("site-header fixed float-header");
             }
-            /*
-                        i <= e ? (masthead.addClass("fixed"), n("body").addClass("siteScrolled")) : (n(".site-header").removeClass("fixed"),
-                            n("body").removeClass("siteScrolled")), 107 <= e ? n(".site-header").addClass("float-header") : n(".site-header").removeClass("float-header")
-            */
-
         }
     }
 

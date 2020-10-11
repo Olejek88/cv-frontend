@@ -22,6 +22,11 @@ const Categories = {
         requests.get(`categories/${id}`),
 };
 
+const Cv = {
+    all: () =>
+        requests.get(`cv`),
+};
+
 const ProjectImage = {
     all: (id) =>
         requests.get(`project-images?project_id=${id}&expand=image`),
@@ -59,5 +64,6 @@ export default {
     Projects,
     ProjectImage,
     Image,
+    Cv,
     Tags
 };

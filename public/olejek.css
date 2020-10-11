@@ -955,3 +955,40 @@ span#cn-notice-text a {
     font-size: 14px;
     font-weight: 400;
 }
+
+.elementor-about .elementor-element.elementor-element-about {
+    text-align: left;
+    z-index: 1;
+}
+
+.elementor-widget:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.elementor-about .elementor-element.elementor-element-about > .elementor-widget-container {
+    margin: 0 0 -60px 50px;
+}
+
+.elementor-about .elementor-element.elementor-element-about {
+    text-align: left;
+}
+
+.elementor-about .elementor-element.elementor-element-about {
+    text-align: left;
+}
+
+.elementor-about .elementor-element.elementor-element-about .elementor-image img {
+    border-radius: 40px 40px 40px 40px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.elementor-widget-image .elementor-image img {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.elementor-about .elementor-element.elementor-element-ed08c33 > .elementor-widget-container {
+    padding: 60px 55px 33px 55px;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
