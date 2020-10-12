@@ -23,7 +23,7 @@ class Experience extends React.Component {
         let self = this;
         let tags = [];
         const {cookies} = this.props;
-        this.state.lang = cookies.get('lang');
+        this.setState({lang: cookies.get('lang')});
         if (this.props.project) {
             this.setState({project: this.props.project});
             this.props.project.tags.forEach(function (tag, i) {

@@ -70,11 +70,11 @@ class SiteMenu extends React.Component {
                         <li className="menu-item">
                             <Link to="/">HOME</Link>
                             <ul className="sub-menu">
-                                <li className="menu-item"><Link to="/">About</Link></li>
-                                <li className="menu-item"><Link to="/">CV</Link></li>
-                                <li className="menu-item"><Link to="/">Career</Link></li>
-                                <li className="menu-item"><Link to="/">Stack</Link></li>
-                                <li className="menu-item"><Link to="/">Life</Link></li>
+                                <li className="menu-item"><Link to="/about">About</Link></li>
+                                <li className="menu-item"><Link to="/cv">CV</Link></li>
+                                <li className="menu-item"><Link to="/career">Career</Link></li>
+                                <li className="menu-item"><Link to="/stack">Stack</Link></li>
+                                <li className="menu-item"><Link to="/life">Life</Link></li>
                                 <li className="menu-item"><Link to="http://mediacritic.site">Media</Link></li>
                             </ul>
                         </li>
@@ -93,18 +93,20 @@ class SiteMenu extends React.Component {
                                 role="img" aria-label="en">&#127468;&#127463;&nbsp;</span>English</span></a>
                             <ul className="sub-menu">
                                 <li className="lang-item lang-item-ru menu-item menu-item-type-custom menu-item-object-custom">
-                                    <a onClick={() => changeLanguage('ru')} href="#" style={{cursor: 'pointer'}}>
+                                    <a onClick={() => changeLanguage('ru')} href={"/#"} style={{cursor: 'pointer'}}>
                                         <span style={{marginLeft: '0.3em'}}>
                                             <span role="img" aria-label="ru">&#127479;&#127482;&nbsp;</span>Русский
                                         </span></a>
                                 </li>
                                 <li className="lang-item lang-item-en current-lang lang-item-first menu-item menu-item-type-custom menu-item-object-custom">
-                                    <a onClick={() => changeLanguage('de')} href="#" style={{cursor: 'pointer'}}><span
+                                    <a onClick={() => changeLanguage('de')} href={"/#"}
+                                       style={{cursor: 'pointer'}}><span
                                         style={{marginLeft: '0.3em'}}><span role="img"
                                                                             aria-label="de">&#127465;&#127466;&nbsp;</span>Deutsch</span></a>
                                 </li>
                                 <li className="lang-item lang-item-de menu-item menu-item-type-custom menu-item-object-custom">
-                                    <a onClick={() => changeLanguage('en')} href="#" style={{cursor: 'pointer'}}><span
+                                    <a onClick={() => changeLanguage('en')} href={"/#"}
+                                       style={{cursor: 'pointer'}}><span
                                         style={{marginLeft: '0.3em'}}><span role="img"
                                                                             aria-label="en">&#127468;&#127463;&nbsp;</span>English</span></a>
                                 </li>

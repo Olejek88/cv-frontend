@@ -3,19 +3,19 @@ import {withRouter} from 'react-router-dom'
 import ROOT from "../../index";
 import {withCookies} from "react-cookie";
 
-class CVRow extends React.Component {
+class CareerRow extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            cv: ""
+            career: ""
         };
     }
 
     componentDidMount() {
         const {cookies} = this.props;
         this.state.lang = cookies.get('lang');
-        if (this.props.cv) {
-            this.setState({cv: this.props.cv});
+        if (this.props.career) {
+            this.setState({career: this.props.career});
         }
     }
 
@@ -34,7 +34,7 @@ class CVRow extends React.Component {
                                         className="elementor-element elementor-element-about elementor-widget elementor-widget-image">
                                         <div className="elementor-widget-container">
                                             <div className="elementor-image">
-                                                <img src={ROOT + this.state.cv.image}
+                                                <img src={ROOT + this.state.career.image}
                                                      className="attachment-large size-large"
                                                      alt="" width="75" height="75"/></div>
                                         </div>
@@ -42,16 +42,17 @@ class CVRow extends React.Component {
                                     <div
                                         className="elementor-element elementor-element-ed08c33 elementor-widget elementor-widget-text-editor">
                                         <div className="elementor-widget-container">
-                                            <div className="elementor-text-editor elementor-clearfix">
+                                            <div
+                                                className="elementor-text-editor elementor-clearfix">
                                                 <h4 style={{color: '#999893'}}>
-                                                    [{this.state.cv.year}] {this.state.lang === "ru" && this.state.cv.title}
-                                                    {this.state.lang === "en" && this.state.cv.title_en}
-                                                    {this.state.lang === "de" && this.state.cv.title_de}
+                                                    {this.state.lang === "ru" && this.state.career.title}
+                                                    {this.state.lang === "en" && this.state.career.title_en}
+                                                    {this.state.lang === "de" && this.state.career.title_de}
                                                 </h4>
                                                 <p>
-                                                    {this.state.lang === "ru" && this.state.cv.description}
-                                                    {this.state.lang === "en" && this.state.cv.description_en}
-                                                    {this.state.lang === "de" && this.state.cv.description_de}
+                                                    {this.state.lang === "ru" && this.state.career.description}
+                                                    {this.state.lang === "en" && this.state.career.description_en}
+                                                    {this.state.lang === "de" && this.state.career.description_de}
                                                 </p></div>
                                         </div>
                                     </div>
@@ -65,4 +66,4 @@ class CVRow extends React.Component {
     }
 }
 
-export default withCookies(withRouter(CVRow));
+export default withCookies(withRouter(CareerRow));

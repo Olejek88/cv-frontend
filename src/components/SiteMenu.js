@@ -9,32 +9,6 @@ class SiteMenu extends React.Component {
                         <div className="elementor-inner">
                             <div className="elementor-section-wrap">
                                 <section
-                                    className="elementor-element elementor-element-a738fa7 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section"
-                                    data-id="a738fa7" data-element_type="section">
-                                    <div className="elementor-container elementor-column-gap-default">
-                                        <div className="elementor-row">
-                                            <div
-                                                className="elementor-element elementor-element-2c48a3f elementor-column elementor-col-100 elementor-top-column"
-                                                data-id="2c48a3f" data-element_type="column">
-                                                <div className="elementor-column-wrap  elementor-element-populated">
-                                                    <div className="elementor-widget-wrap">
-                                                        <div
-                                                            className="elementor-element elementor-element-c466409 elementor-widget elementor-widget-spacer"
-                                                            data-id="c466409" data-element_type="widget"
-                                                            data-widget_type="spacer.default">
-                                                            <div className="elementor-widget-container">
-                                                                <div className="elementor-spacer">
-                                                                    <div className="elementor-spacer-inner"></div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
-                                <section
                                     className="elementor-element elementor-element-46e263f footer-img elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section"
                                     data-id="46e263f" data-element_type="section">
                                     <div className="elementor-container elementor-column-gap-default">
@@ -119,18 +93,6 @@ class SiteMenu extends React.Component {
                                                 <img src={"images/fb.png"} alt="facebook"/></a>
                                             <p className="get-text-footer">Facebook</p>
                                         </div>
-                                    </div>
-                                </div>
-                            </aside>
-
-                            <aside id="custom_html-8" className="widget_text widget widget_custom_html">
-                                <div className="textwidget custom-html-widget">
-                                    <div className="mobile-footer-three">
-                                        <p className="mobile-policy-right"><a href="mailto:olejek8@yandex.ru">Mail
-                                            me</a> | <a href="http://shtrm.ru" rel="noopener noreferrer">Old Site</a>
-                                        </p>
-                                        <p className="mobile-copy-right">COPYRIGHT © 2020 OLEJEK. This site based on
-                                            Front [React/Redux], Back [Laravel].</p>
                                     </div>
                                 </div>
                             </aside>

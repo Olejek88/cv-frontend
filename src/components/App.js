@@ -11,6 +11,7 @@ import Projects from "./Projects";
 import {Helmet} from "react-helmet";
 import {withTranslation} from "react-i18next";
 import CV from "./Cv";
+import Career from "./Career";
 
 class App extends React.Component {
     render() {
@@ -24,6 +25,7 @@ class App extends React.Component {
                 <Header/>
                 <Switch>
                     <Route path="/cv" component={CV}/>
+                    <Route path="/career" component={Career}/>
                     <Route path="/projects/:category/:id" component={Projects}/>
                     <Route path="/project/:id" component={Project}/>
                     <Route path="/about" component={About}/>

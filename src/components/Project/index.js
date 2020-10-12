@@ -45,7 +45,7 @@ class Project extends React.Component {
         let tags = [];
         let images = [];
         const {cookies} = this.props;
-        this.state.lang = cookies.get('lang');
+        this.setState({lang: cookies.get('lang')});
         this.props.projectStore.loadProject(id)
             .then((project) => {
                 self.setState({project: project});

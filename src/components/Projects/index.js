@@ -10,7 +10,7 @@ class Projects extends React.Component {
         };
     };
 
-    componentWillReceiveProps(nextProps) {
+    componentWillReceiveProps(nextProps, next) {
         this.setState({filter: nextProps.match.params.filter});
         this.setState({id: nextProps.match.params.id});
     }

@@ -2,27 +2,27 @@ import React from 'react';
 import {withRouter} from 'react-router-dom'
 import CategoryHeader from "../Home/CategoryHeader";
 import Banner from "../Home/Banner";
-import CVRow from "./CVRow";
 import {inject} from "mobx-react/index";
 import {withCookies} from "react-cookie";
+import CareerRow from "./CareerRow";
 
-class CVView extends React.Component {
+class CareerView extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             updated: false,
-            cvs: [],
-            title: "CV"
+            careers: [],
+            title: "Career"
         };
     }
 
     componentDidMount() {
         let my = this;
-        let cvs = my.state.cvs;
-        this.props.cvStore.loadCv().then(() => {
-            this.props.cvStore.cvRegistry.forEach(function (cv, i) {
-                cvs.push(<CVRow cv={cv} key={i}/>);
-                my.setState({cvs: cvs});
+        let careers = my.state.careers;
+        this.props.careerStore.loadCareer().then(() => {
+            this.props.careerStore.careerRegistry.forEach(function (career, i) {
+                careers.push(<CareerRow career={career} key={i}/>);
+                my.setState({careers: careers});
             });
             my.setState({updated: true});
         });
@@ -39,7 +39,7 @@ class CVView extends React.Component {
                             <div data-elementor-type="wp-post" className="elementor elementor-about">
                                 <div className="elementor-inner">
                                     <div className="elementor-section-wrap">
-                                        {this.state.updated && this.state.cvs}
+                                        {this.state.updated && this.state.careers}
                                     </div>
                                 </div>
                             </div>
@@ -53,4 +53,4 @@ class CVView extends React.Component {
     }
 }
 
-export default inject('cvStore')(withCookies(withRouter(CVView)));
+export default inject('careerStore')(withCookies(withRouter(CareerView)));
