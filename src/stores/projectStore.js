@@ -47,9 +47,9 @@ export class ProjectStore {
 
     loadProjects() {
         this.isLoading = true;
+        this.projectsRegistry.clear();
         return this.$req()
             .then(action((projects) => {
-                this.projectsRegistry.clear();
                 projects.forEach(project => this.projectsRegistry.set(project.id, project));
             }))
             .finally(action(() => {

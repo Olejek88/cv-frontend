@@ -16,7 +16,7 @@ class ProjectPhotos extends React.Component {
         this.loadData(this.props.project);
     }
 
-    componentWillReceiveProps(nextProps) {
+    componentWillReceiveProps(nextProps, next) {
         this.setState({project: nextProps.project});
         this.loadData(nextProps.project);
     }

@@ -10,9 +10,19 @@ class Projects extends React.Component {
         };
     };
 
-    componentWillReceiveProps(nextProps, next) {
-        this.setState({filter: nextProps.match.params.filter});
-        this.setState({id: nextProps.match.params.id});
+    static getDerivedStateFromProps(props, state) {
+        state.id = props.match.params.id;
+        state.filter = props.match.params.filter;
+        if (props.match.params.id !== state.id) {
+            return {
+                filter: props.filter,
+                id: props.id
+            };
+        }
+        return {
+            filter: state.filter,
+            id: state.id
+        };
     }
 
     componentDidMount() {

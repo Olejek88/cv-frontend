@@ -32,7 +32,7 @@ class Project extends React.Component {
         };
     }
 
-    componentWillReceiveProps(nextProps) {
+    componentWillReceiveProps(nextProps, next) {
         this.loadProject(nextProps.match.params.id);
     }
 

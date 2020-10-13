@@ -28,7 +28,7 @@ class SiteMenu extends React.Component {
                 let categoriesList = [];
                 for (let category of Array.from(self.props.categoryStore.categoryRegistry.values())) {
                     categoriesList.push(<li className="menu-item" key={category.id}><Link
-                        to={"projects/category/" + category.id} key={category.id}>
+                        to={"/projects/category/" + category.id} key={category.id} replace>
                         {lang === "ru" && category.title}
                         {lang === "en" && category.title_en}
                         {lang === "de" && category.title_de}

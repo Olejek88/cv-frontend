@@ -13,7 +13,7 @@ class CVRow extends React.Component {
 
     componentDidMount() {
         const {cookies} = this.props;
-        this.state.lang = cookies.get('lang');
+        this.setState({lang: cookies.get('lang')});
         if (this.props.cv) {
             this.setState({cv: this.props.cv});
         }

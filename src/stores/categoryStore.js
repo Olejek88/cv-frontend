@@ -36,13 +36,10 @@ class CategoryStore {
     }
 
     loadCategory(id) {
-        if (this.categoryRegistry.size > 0) {
-            return this.categoryRegistry.get(parseInt(id, 10));
-        }
         this.isLoading = true;
         return agent.Categories.get(id)
             .then(action((category) => {
-                this.categoryRegistry.set(id, category);
+                //this.categoryRegistry.set(id, category);
                 return category;
             }))
             .finally(action(() => {

@@ -20,9 +20,11 @@ class Footer extends React.Component {
         window.addEventListener("resize", this.updateDimensions);
     }
 
-    componentWillUnmount() {
-        window.removeEventListener("resize", this.updateDimensions);
-    }
+    /*
+        componentWillUnmount() {
+            window.removeEventListener("resize", this.updateDimensions);
+        }
+    */
 
     render() {
         return (

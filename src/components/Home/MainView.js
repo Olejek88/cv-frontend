@@ -8,6 +8,7 @@ import CategoryHeader from "./CategoryHeader";
 import CategoryTitle from "./CategoryTitle";
 import About from "./About";
 import {withTranslation} from "react-i18next";
+import {Helmet} from "react-helmet";
 
 class MainView extends React.Component {
 
@@ -70,6 +71,10 @@ class MainView extends React.Component {
         const {t} = this.props;
         return (
             <React.Fragment>
+                <Helmet>
+                    <title>{t('header_main')}</title>
+                    <meta name="description" content={t('description')}/>
+                </Helmet>
                 <Banner/>
                 <CategoryHeader title={t('check_projects')} type='main'/>
                 <CategoryTitle/>

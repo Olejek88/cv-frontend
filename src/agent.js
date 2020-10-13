@@ -22,6 +22,11 @@ const Categories = {
         requests.get(`categories/${id}`),
 };
 
+const About = {
+    all: () =>
+        requests.get(`about`),
+};
+
 const Cv = {
     all: () =>
         requests.get(`cv`),
@@ -69,6 +74,7 @@ export default {
     Projects,
     ProjectImage,
     Image,
+    About,
     Cv,
     Career,
     Tags

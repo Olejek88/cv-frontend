@@ -24,7 +24,8 @@ class About extends React.Component {
                                             className="elementor-element elementor-element-about elementor-align-right elementor-mobile-align-center start-chat elementor-widget elementor-widget-button">
                                             <div className="elementor-widget-container">
                                                 <div className="elementor-button-wrapper">
-                                                    <a className="elementor-button elementor-size-xs" role="button">
+                                                    <a className="elementor-button elementor-size-xs" role="button"
+                                                       href={"cv.pdf"}>
 						                            <span className="elementor-button-content-wrapper">
                             						    <span
                                                             className="elementor-button-text">{t('download_cv')}</span>

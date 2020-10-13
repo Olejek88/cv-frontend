@@ -13,24 +13,24 @@ class ProjectsView extends React.Component {
             projects: [],
             title: "",
             updated: false,
+            fillList: this.fillList.bind(this),
             id: '0'
         };
     }
 
-    componentWillReceiveProps(nextProps, next) {
-        this.setState({projects: [], id: nextProps.i});
-        this.fillList(nextProps)
-    }
-
-    componentDidUpdate(prevProps, prevState, snapshotValue) {
-        if (prevProps.data !== this.props.data) {
-            if (!this.state.updated)
-                this.setState({updated: true});
+    static getDerivedStateFromProps(props, state) {
+        if (props.i !== state.id) {
+            state.id = props.i;
+            return {
+                props: state.fillList(props)
+            }
         }
+        return null;
     }
 
     fillList(props) {
         let my = this;
+        my.setState({updated: false});
         const {cookies} = this.props;
         let lang = cookies.get('lang');
 
@@ -49,14 +49,21 @@ class ProjectsView extends React.Component {
                 if (lang === "de") my.setState({title: category.title_de});
             });
 
-        let projects = my.state.projects;
+        let projects = [];
         this.props.projectStore.loadProjects().then(() => {
             this.props.projectStore.projectsRegistry.forEach(function (project, i) {
                 projects.push(<Experience project={project} key={i}/>);
-                my.setState({projects: projects});
             });
+            my.setState({projects: projects});
             my.setState({updated: true});
         });
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshotValue) {
+        if (prevProps.data !== this.props.data) {
+            if (!this.state.updated)
+                this.setState({updated: true});
+        }
     }
 
     render() {
@@ -70,6 +77,8 @@ class ProjectsView extends React.Component {
                         <div className="container">
                             <div className="newspagelink">
                                 {this.state.updated && this.state.projects}
+                                <br/>
+                                <br/>
                             </div>
                         </div>
                     </div>

@@ -23,9 +23,11 @@ class Header extends React.Component {
         window.addEventListener('scroll', this.handleScroll);
     }
 
-    componentWillUnmount() {
-        window.removeEventListener("resize", this.updateDimensions);
-    }
+    /*
+        componentWillUnmount() {
+            window.removeEventListener("resize", this.updateDimensions);
+        }
+    */
 
     handleScroll() {
         let masthead = document.getElementById('masthead');

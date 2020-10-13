@@ -8,20 +8,13 @@ import Home from './Home';
 import About from './About';
 import Footer from "./Footer";
 import Projects from "./Projects";
-import {Helmet} from "react-helmet";
-import {withTranslation} from "react-i18next";
 import CV from "./Cv";
 import Career from "./Career";
 
 class App extends React.Component {
     render() {
-        const {t} = this.props;
         return (
             <div>
-                <Helmet>
-                    <title>{t('header_main')}</title>
-                    <description>{t('description')}</description>
-                </Helmet>
                 <Header/>
                 <Switch>
                     <Route path="/cv" component={CV}/>
@@ -37,4 +30,4 @@ class App extends React.Component {
     }
 }
 
-export default inject('projectStore')(withTranslation('translations')(withRouter(observer(App))));
+export default inject('projectStore')(withRouter(observer(App)));

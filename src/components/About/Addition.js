@@ -1,22 +1,36 @@
 import React from 'react';
-import {withRouter} from 'react-router-dom'
 import ROOT from "../../index";
+import {withRouter} from "react-router-dom";
+import {withTranslation} from "react-i18next";
 import {withCookies} from "react-cookie";
 
-class CareerRow extends React.Component {
+class Addition extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            career: ""
+            about: [],
+            image: "image/avatar.png",
+            lang: "ru"
         };
+    }
+
+    static getDerivedStateFromProps(props, state) {
+        if (props.about !== state.about) {
+            state.about = props.about;
+            if (props.about.image !== undefined) {
+                state.image = props.about.image;
+            }
+            return {
+                props: state.props
+            }
+        }
+        return null;
     }
 
     componentDidMount() {
         const {cookies} = this.props;
         this.setState({lang: cookies.get('lang')});
-        if (this.props.career) {
-            this.setState({career: this.props.career});
-        }
+        this.setState({about: this.props.about});
     }
 
     render() {
@@ -34,7 +48,7 @@ class CareerRow extends React.Component {
                                         className="elementor-element elementor-element-about elementor-widget elementor-widget-image">
                                         <div className="elementor-widget-container">
                                             <div className="elementor-image">
-                                                <img src={ROOT + this.state.career.image}
+                                                <img src={ROOT + this.state.image}
                                                      className="attachment-large size-large"
                                                      alt="" width="75" height="75"/></div>
                                         </div>
@@ -42,18 +56,10 @@ class CareerRow extends React.Component {
                                     <div
                                         className="elementor-element elementor-element-ed08c33 elementor-widget elementor-widget-text-editor">
                                         <div className="elementor-widget-container">
-                                            <div
-                                                className="elementor-text-editor elementor-clearfix">
-                                                <h4 style={{color: '#999893'}}>
-                                                    {this.state.lang === "ru" && this.state.career.title}
-                                                    {this.state.lang === "en" && this.state.career.title_en}
-                                                    {this.state.lang === "de" && this.state.career.title_de}
-                                                </h4>
-                                                <p>
-                                                    {this.state.lang === "ru" && this.state.career.description}
-                                                    {this.state.lang === "en" && this.state.career.description_en}
-                                                    {this.state.lang === "de" && this.state.career.description_de}
-                                                </p></div>
+                                            <div className="elementor-text-editor elementor-clearfix">
+                                                <div
+                                                    dangerouslySetInnerHTML={{__html: this.state.about.addition}}></div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -66,4 +72,4 @@ class CareerRow extends React.Component {
     }
 }
 
-export default withCookies(withRouter(CareerRow));
+export default withTranslation('translations')(withCookies(withRouter(Addition)));

@@ -7,10 +7,12 @@
   "description": "Сайт содержит перечень проектов, которыми я занимался",
   "download_cv": "CV download",
   "who": "Who",
-  "who_description": "When it comes to web and mobile development, our developers are like Stephen Hawking meets Brahma meets Gandalf. The work delivered is like black sorcery: code is forged from the molten steel of ten thousand motherships and designs resemble the majestic sunrise of web 2.0 lovemaking. We’re very humble too. For some more factual information, have a look around on the site."
+  "who_description": "When it comes to web and mobile development, our developers are like Stephen Hawking meets Brahma meets Gandalf. The work delivered is like black sorcery: code is forged from the molten steel of ten thousand motherships and designs resemble the majestic sunrise of web 2.0 lovemaking. We’re very humble too. For some more factual information, have a look around on the site.",
   "what": "Что",
   "what_description": "Я разрабатывал: программы для микроконтроллеров, PLC, OPC сервера и клиенты, различные системы учета, системы управления, SCADA-проекты, интерфейсы доступа к данным, сервисы агрегации данных с других систем, мобильные приложения (Android), API к своим проектам, драйвера устройств, сайты и интернет-магазины.",
   "how": "Как",
   "how_description": "Стек технологий: PHP+Yii2+MySQL+RabbitMQ (временами Redis,MSSQL,Laravel / PHPStorm), Android (Java+Realm+OSM+MaterialDrawer+Retrofit+AMPQ / Android Studio), react + MobX (WebStorm), node.js (keystone,express,mongoose+MongoDB / Netbeans), C/C++, для Windows/CE, Raspberry, Linux, Mac, (MVS 2003-2014, eVC++ 4.0, CLion, Eclipse),DHTML/CSS/Pug-Jade, Apache/Nginx,C# (Реализация проектов с AR (Vuforia, Kudan, Metaio, OpenCV) / Unity),Basic/VBA (для SCADA), ORM (Realm, Sequelize), Assembler (PC, ARM4, i196 еще давнее), Pascal, ST/LAD/FB для PLC, Perl, sh/bat",
-  "check_projects": "Check out my latest projects"
+  "check_projects": "Check out my latest projects",
+  "cv": "My curriculum vitae",
+  "about": "About me"
 }

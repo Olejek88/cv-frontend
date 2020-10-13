@@ -14,7 +14,7 @@ class ProjectHeader extends React.Component {
         this.setState({project: this.props.project});
     }
 
-    componentWillReceiveProps(nextProps) {
+    componentWillReceiveProps(nextProps, next) {
         this.setState({project: nextProps.project});
     }
 
