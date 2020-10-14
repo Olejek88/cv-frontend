@@ -56,8 +56,8 @@ const Projects = {
         requests.get(`projects/category/${id}?expand=projectImages.image`),
     get: id =>
         requests.get(`projects/${id}?expand=projectImages.image`),
-    tags: id =>
-        requests.get(`projects/${id}/tags`),
+    tag: id =>
+        requests.get(`projects/tag/${id}?expand=projectImages.image`),
     all: (lim = 10, page = 0) =>
         requests.get(`projects`),
 };

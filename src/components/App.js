@@ -21,7 +21,7 @@ class App extends React.Component {
                     <Route path="/cv" component={CV}/>
                     <Route path="/career" component={Career}/>
                     <Route path="/stack" component={Stack}/>
-                    <Route path="/projects/:category/:id" component={Projects}/>
+                    <Route path="/projects/:filter/:id" component={Projects}/>
                     <Route path="/project/:id" component={Project}/>
                     <Route path="/about" component={About}/>
                     <Route path="/" component={Home}/>

@@ -50,7 +50,7 @@ class Project extends React.Component {
             .then((project) => {
                 self.setState({project: project});
                 project.tags.forEach(function (tag, i) {
-                    tags.push(<Tag tag={tag.title} key={i}/>);
+                    tags.push(<a href={'/#/projects/tags/' + tag.id}><Tag tag={tag.title} key={i}/></a>);
                 });
                 self.state.tags = tags;
 

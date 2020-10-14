@@ -32,7 +32,7 @@ class Projects extends React.Component {
 
     render() {
         return (
-            <ProjectView i={this.state.id}/>
+            <ProjectView i={this.state.id} filter={this.state.filter}/>
         );
     }
 }

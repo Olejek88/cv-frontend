@@ -39,6 +39,7 @@ class ProjectsView extends React.Component {
         };
         if (props.i !== '0') {
             predicate.id = props.i;
+            predicate.filter = props.filter;
         }
         this.props.projectStore.setPredicate(predicate);
 
@@ -77,10 +78,10 @@ class ProjectsView extends React.Component {
                         <div className="container">
                             <div className="newspagelink">
                                 {this.state.updated && this.state.projects}
-                                <br/>
-                                <br/>
                             </div>
                         </div>
+                        <br/>
+                        <br/>
                     </div>
                 </section>
             </React.Fragment>
