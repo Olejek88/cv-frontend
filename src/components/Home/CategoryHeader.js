@@ -7,7 +7,8 @@ class CategoryHeader extends React.Component {
         super(props);
         this.state = {
             title: 'Категория',
-            type: 'main'
+            type: 'main',
+            image: 'images/side-img-header1.png'
         };
     }
 
@@ -15,6 +16,15 @@ class CategoryHeader extends React.Component {
         if (this.props.title) {
             this.setState({title: this.props.title});
             this.setState({type: this.props.type});
+        }
+        if (this.props.type === 'cv') {
+            this.setState({image: 'images/cv.png'});
+        }
+        if (this.props.type === 'stack') {
+            this.setState({image: 'images/stack.png'});
+        }
+        if (this.props.type === 'about' || this.props.type === 'career') {
+            this.setState({image: 'images/prog.png'});
         }
     }
 
@@ -42,10 +52,10 @@ class CategoryHeader extends React.Component {
                                                     <div className="elementor-widget-wrap">
                                                         <div
                                                             className="elementor-element elementor-element-dfde740 elementor-hidden-phone elementor-widget elementor-widget-image">
-                                                            <img src={"images/side-img-header1.png"}
+                                                            <img src={this.state.image}
                                                                  className="attachment-large size-large"
                                                                  alt=""
-                                                                 srcSet={"images/side-img-header1.png"}
+                                                                 srcSet={this.state.image}
                                                                  sizes="(max-width: 454px) 100vw, 454px"
                                                                  width="454" height="340"/></div>
                                                     </div>

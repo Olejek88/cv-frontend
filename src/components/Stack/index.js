@@ -2,29 +2,29 @@ import React from 'react';
 import {withRouter} from 'react-router-dom'
 import CategoryHeader from "../Home/CategoryHeader";
 import Banner from "../Home/Banner";
-import CVRow from "./CVRow";
 import {inject} from "mobx-react/index";
 import {withCookies} from "react-cookie";
+import StackRow from "./StackRow";
 import {Helmet} from "react-helmet";
 import {withTranslation} from "react-i18next";
 
-class CVView extends React.Component {
+class Stack extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             updated: false,
-            cvs: [],
-            title: "CV"
+            stacks: [],
+            title: "Stacks"
         };
     }
 
     componentDidMount() {
         let my = this;
-        let cvs = my.state.cvs;
-        this.props.cvStore.loadCv().then(() => {
-            this.props.cvStore.cvRegistry.forEach(function (cv, i) {
-                cvs.push(<CVRow cv={cv} key={i}/>);
-                my.setState({cvs: cvs});
+        let stacks = my.state.stacks;
+        this.props.stackStore.loadStack().then(() => {
+            this.props.stackStore.stackRegistry.forEach(function (stack, i) {
+                stacks.push(<StackRow stack={stack} key={i}/>);
+                my.setState({stacks: stacks});
             });
             my.setState({updated: true});
         });
@@ -35,18 +35,18 @@ class CVView extends React.Component {
         return (
             <React.Fragment>
                 <Helmet>
-                    <title>{t('cv')}</title>
-                    <meta name="description" content={t('cv')}/>
+                    <title>{t('stack')}</title>
+                    <meta name="description" content={t('stack')}/>
                 </Helmet>
                 <Banner/>
-                <CategoryHeader title={this.state.title} type='cv'/>
-                <div id="content" className="page-wrap" style={{marginTop: '-100px'}}>
+                <CategoryHeader title={this.state.title} type='stack'/>
+                <div id="content" className="page-wrap" style={{marginTop: '-150px'}}>
                     <div className="container content-wrapper">
                         <div className="row">
                             <div data-elementor-type="wp-post" className="elementor elementor-about">
                                 <div className="elementor-inner">
                                     <div className="elementor-section-wrap">
-                                        {this.state.updated && this.state.cvs}
+                                        {this.state.updated && this.state.stacks}
                                     </div>
                                 </div>
                             </div>
@@ -60,4 +60,4 @@ class CVView extends React.Component {
     }
 }
 
-export default inject('cvStore')(withTranslation('translations')(withCookies(withRouter(CVView))));
+export default inject('stackStore')(withTranslation('translations')(withCookies(withRouter(Stack))));

@@ -34,12 +34,12 @@ class ProjectHeader extends React.Component {
                                             className="elementor-element elementor-element-dfde740 elementor-hidden-phone elementor-widget elementor-widget-image">
                                             <div className="elementor-widget-container">
                                                 <div className="elementor-image">
-                                                    <img
-                                                        src={this.state.project && ROOT + this.state.project.photo}
-                                                        alt={this.state.project && this.state.project.title}
-                                                        className="attachment-large size-large"
-                                                        srcSet={this.state.project && ROOT + this.state.project.photo}
-                                                        sizes="(max-width: 454px) 100vw, 454px"/>
+                                                    <img style={{borderRadius: '5%'}}
+                                                         src={this.state.project && ROOT + this.state.project.photo}
+                                                         alt={this.state.project && this.state.project.title}
+                                                         className="attachment-large size-large"
+                                                         srcSet={this.state.project && ROOT + this.state.project.photo}
+                                                         sizes="(max-width: 454px) 100vw, 454px"/>
                                                 </div>
                                             </div>
                                         </div>

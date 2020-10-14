@@ -15,6 +15,7 @@ import cvStore from "./stores/cvStore";
 import categoryStore from "./stores/categoryStore";
 import careerStore from "./stores/careerStore";
 import aboutStore from "./stores/aboutStore";
+import stackStore from "./stores/stackStore";
 
 const ROOT = 'http://svc.shtrm88.ru/uploads/';
 
@@ -24,6 +25,7 @@ const stores = {
     categoryStore,
     imageStore,
     aboutStore,
+    stackStore,
     cvStore,
     careerStore,
     tagStore

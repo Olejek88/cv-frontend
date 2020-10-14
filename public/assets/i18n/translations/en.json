@@ -14,5 +14,6 @@
   "how_description": "Стек технологий: PHP+Yii2+MySQL+RabbitMQ (временами Redis,MSSQL,Laravel / PHPStorm), Android (Java+Realm+OSM+MaterialDrawer+Retrofit+AMPQ / Android Studio), react + MobX (WebStorm), node.js (keystone,express,mongoose+MongoDB / Netbeans), C/C++, для Windows/CE, Raspberry, Linux, Mac, (MVS 2003-2014, eVC++ 4.0, CLion, Eclipse),DHTML/CSS/Pug-Jade, Apache/Nginx,C# (Реализация проектов с AR (Vuforia, Kudan, Metaio, OpenCV) / Unity),Basic/VBA (для SCADA), ORM (Realm, Sequelize), Assembler (PC, ARM4, i196 еще давнее), Pascal, ST/LAD/FB для PLC, Perl, sh/bat",
   "check_projects": "Check out my latest projects",
   "cv": "My curriculum vitae",
-  "about": "About me"
+  "about": "About me",
+  "stack": "Используемый стек технологий"
 }

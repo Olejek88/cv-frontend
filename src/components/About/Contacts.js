@@ -1,14 +1,15 @@
 import React from 'react';
+import ROOT from "../../index";
 import {withRouter} from "react-router-dom";
 import {withTranslation} from "react-i18next";
 import {withCookies} from "react-cookie";
 
-class Courses extends React.Component {
+class Contacts extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             about: [],
-            image: "images/scada.png",
+            image: "image/avatar.png",
             lang: "ru"
         };
     }
@@ -16,6 +17,9 @@ class Courses extends React.Component {
     static getDerivedStateFromProps(props, state) {
         if (props.about !== state.about) {
             state.about = props.about;
+            if (props.about.image !== undefined) {
+                state.image = props.about.image;
+            }
             return {
                 props: state.props
             }
@@ -44,7 +48,7 @@ class Courses extends React.Component {
                                         className="elementor-element elementor-element-about elementor-widget elementor-widget-image">
                                         <div className="elementor-widget-container">
                                             <div className="elementor-image">
-                                                <img src={this.state.image}
+                                                <img src={ROOT + this.state.image}
                                                      className="attachment-large size-large"
                                                      alt="" width="75" height="75"/></div>
                                         </div>
@@ -53,7 +57,7 @@ class Courses extends React.Component {
                                         className="elementor-element elementor-element-ed08c33 elementor-widget elementor-widget-text-editor">
                                         <div className="elementor-widget-container">
                                             <div className="elementor-text-editor elementor-clearfix">
-                                                <div dangerouslySetInnerHTML={{__html: this.state.about.courses}}></div>
+                                                <div dangerouslySetInnerHTML={{__html: this.state.about.contact}}></div>
                                             </div>
                                         </div>
                                     </div>
@@ -67,4 +71,4 @@ class Courses extends React.Component {
     }
 }
 
-export default withTranslation('translations')(withCookies(withRouter(Courses)));
+export default withTranslation('translations')(withCookies(withRouter(Contacts)));

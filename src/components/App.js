@@ -8,6 +8,7 @@ import Home from './Home';
 import About from './About';
 import Footer from "./Footer";
 import Projects from "./Projects";
+import Stack from "./Stack";
 import CV from "./Cv";
 import Career from "./Career";
 
@@ -19,6 +20,7 @@ class App extends React.Component {
                 <Switch>
                     <Route path="/cv" component={CV}/>
                     <Route path="/career" component={Career}/>
+                    <Route path="/stack" component={Stack}/>
                     <Route path="/projects/:category/:id" component={Projects}/>
                     <Route path="/project/:id" component={Project}/>
                     <Route path="/about" component={About}/>

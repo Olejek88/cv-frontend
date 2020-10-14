@@ -27,6 +27,11 @@ const About = {
         requests.get(`about`),
 };
 
+const Stack = {
+    all: () =>
+        requests.get(`stack`),
+};
+
 const Cv = {
     all: () =>
         requests.get(`cv`),
@@ -77,5 +82,6 @@ export default {
     About,
     Cv,
     Career,
+    Stack,
     Tags
 };

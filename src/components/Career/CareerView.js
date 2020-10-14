@@ -32,8 +32,8 @@ class CareerView extends React.Component {
         return (
             <React.Fragment>
                 <Banner/>
-                <CategoryHeader title={this.state.title} type='cv'/>
-                <div id="content" className="page-wrap">
+                <CategoryHeader title={this.state.title} type='career'/>
+                <div id="content" className="page-wrap" style={{marginTop: '-100px'}}>
                     <div className="container content-wrapper">
                         <div className="row">
                             <div data-elementor-type="wp-post" className="elementor elementor-about">

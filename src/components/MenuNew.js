@@ -75,7 +75,7 @@ class SiteMenu extends React.Component {
                                 <li className="menu-item"><Link to="/career">Career</Link></li>
                                 <li className="menu-item"><Link to="/stack">Stack</Link></li>
                                 <li className="menu-item"><Link to="/life">Life</Link></li>
-                                <li className="menu-item"><Link to="http://mediacritic.site">Media</Link></li>
+                                <li className="menu-item"><a href="http://mediacritic.site">Media</a></li>
                             </ul>
                         </li>
                         <li className="menu-item">

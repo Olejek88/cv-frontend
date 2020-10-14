@@ -1,32 +1,22 @@
 import React from 'react';
-import {withRouter} from "react-router-dom";
-import {withTranslation} from "react-i18next";
+import {withRouter} from 'react-router-dom'
+import ROOT from "../../index";
 import {withCookies} from "react-cookie";
 
-class Courses extends React.Component {
+class StackRow extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            about: [],
-            image: "images/scada.png",
-            lang: "ru"
+            stack: ""
         };
-    }
-
-    static getDerivedStateFromProps(props, state) {
-        if (props.about !== state.about) {
-            state.about = props.about;
-            return {
-                props: state.props
-            }
-        }
-        return null;
     }
 
     componentDidMount() {
         const {cookies} = this.props;
         this.setState({lang: cookies.get('lang')});
-        this.setState({about: this.props.about});
+        if (this.props.stack) {
+            this.setState({stack: this.props.stack});
+        }
     }
 
     render() {
@@ -44,7 +34,7 @@ class Courses extends React.Component {
                                         className="elementor-element elementor-element-about elementor-widget elementor-widget-image">
                                         <div className="elementor-widget-container">
                                             <div className="elementor-image">
-                                                <img src={this.state.image}
+                                                <img src={ROOT + this.state.stack.image}
                                                      className="attachment-large size-large"
                                                      alt="" width="75" height="75"/></div>
                                         </div>
@@ -52,8 +42,17 @@ class Courses extends React.Component {
                                     <div
                                         className="elementor-element elementor-element-ed08c33 elementor-widget elementor-widget-text-editor">
                                         <div className="elementor-widget-container">
-                                            <div className="elementor-text-editor elementor-clearfix">
-                                                <div dangerouslySetInnerHTML={{__html: this.state.about.courses}}></div>
+                                            <div
+                                                className="elementor-text-editor elementor-clearfix">
+                                                <h4 style={{color: '#999893'}}>
+                                                    {this.state.stack.title}
+                                                </h4>
+                                                {this.state.lang === "ru" && <div
+                                                    dangerouslySetInnerHTML={{__html: this.state.stack.description}}></div>}
+                                                {this.state.lang === "en" && <div
+                                                    dangerouslySetInnerHTML={{__html: this.state.stack.description_en}}></div>}
+                                                {this.state.lang === "de" && <div
+                                                    dangerouslySetInnerHTML={{__html: this.state.stack.description_de}}></div>}
                                             </div>
                                         </div>
                                     </div>
@@ -67,4 +66,4 @@ class Courses extends React.Component {
     }
 }
 
-export default withTranslation('translations')(withCookies(withRouter(Courses)));
+export default withCookies(withRouter(StackRow));

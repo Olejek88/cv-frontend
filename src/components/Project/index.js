@@ -120,7 +120,7 @@ class Project extends React.Component {
                                                 <div className="single-meta">
                                                     <span className="byline">
                                                         Role: {this.state.project.role}<br/>
-                                                        <a href={this.state.project.git}>Github</a>
+                                                        <a href={this.state.project.git}>{this.state.project.git !== "-" && "Github"}</a>
                                                     </span>
                                                 </div>
                                             </div>
@@ -129,7 +129,7 @@ class Project extends React.Component {
                                     <div className="entry-thumb">
                                     </div>
                                     <div className="entry-content">
-                                        <p><span style={{fontWeight: 400}}>
+                                        <span style={{fontWeight: 400}}>
                                             <div dangerouslySetInnerHTML={{__html: this.state.description}}></div>
                                         </span>
                                             <br/><b>{t('usage.label')}:</b> {this.state.project.usage}
@@ -137,8 +137,9 @@ class Project extends React.Component {
                                                 href={this.state.project.git}>{this.state.project.git}</a>
                                             <br/><b>Link:</b> <a
                                                 href={this.state.project.link}>{this.state.project.link}</a>
-                                        </p>
                                         <p> {this.state.imagesList}</p>
+                                        <br/>
+                                        <br/>
                                     </div>
                                 </article>
                             </div>

@@ -51,7 +51,7 @@ class SiteMenu extends React.Component {
                                             <div className="text-footer">
                                                 <a href={"/#/about"}>ABOUT ME</a><br/>
                                                 <a href={"/#/projects"}>CASES</a><br/>
-                                                <a href={"/#/cases"}>PROJECTS</a><br/>
+                                                <a href={"/#/stack"}>STACK</a><br/>
                                                 <a href={"/#/cv"}>CV</a><br/>
                                                 <a href={"/#/career"}>CAREER</a><br/>
                                             </div>

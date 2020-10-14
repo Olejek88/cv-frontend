@@ -8,7 +8,7 @@ class Skills extends React.Component {
         super(props);
         this.state = {
             about: [],
-            image: "images/coding.png",
+            image: "images/laptop-code.png",
             lang: "ru"
         };
     }

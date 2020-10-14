@@ -1,5 +1,4 @@
 import React from 'react';
-import ROOT from "../../index";
 import {withRouter} from "react-router-dom";
 import {withTranslation} from "react-i18next";
 import {withCookies} from "react-cookie";
@@ -9,7 +8,7 @@ class Addition extends React.Component {
         super(props);
         this.state = {
             about: [],
-            image: "image/avatar.png",
+            image: "images/languages.png",
             lang: "ru"
         };
     }
@@ -17,9 +16,6 @@ class Addition extends React.Component {
     static getDerivedStateFromProps(props, state) {
         if (props.about !== state.about) {
             state.about = props.about;
-            if (props.about.image !== undefined) {
-                state.image = props.about.image;
-            }
             return {
                 props: state.props
             }
@@ -48,7 +44,7 @@ class Addition extends React.Component {
                                         className="elementor-element elementor-element-about elementor-widget elementor-widget-image">
                                         <div className="elementor-widget-container">
                                             <div className="elementor-image">
-                                                <img src={ROOT + this.state.image}
+                                                <img src={this.state.image}
                                                      className="attachment-large size-large"
                                                      alt="" width="75" height="75"/></div>
                                         </div>
