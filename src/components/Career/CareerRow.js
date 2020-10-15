@@ -7,6 +7,7 @@ class CareerRow extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            lang: "ru",
             career: ""
         };
     }

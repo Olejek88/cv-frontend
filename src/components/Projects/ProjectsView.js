@@ -5,6 +5,7 @@ import Experience from "../Experience/Experience";
 import CategoryHeader from "../Home/CategoryHeader";
 import Banner from "../Home/Banner";
 import {withCookies} from "react-cookie";
+import {Helmet} from "react-helmet";
 
 class ProjectsView extends React.Component {
     constructor(props) {
@@ -12,6 +13,7 @@ class ProjectsView extends React.Component {
         this.state = {
             projects: [],
             title: "",
+            lang: "ru",
             updated: false,
             fillList: this.fillList.bind(this),
             id: '0'
@@ -43,12 +45,16 @@ class ProjectsView extends React.Component {
         }
         this.props.projectStore.setPredicate(predicate);
 
-        this.props.categoryStore.loadCategory(props.i)
-            .then((category) => {
-                if (lang === "ru") my.setState({title: category.title});
-                if (lang === "en") my.setState({title: category.title_en});
-                if (lang === "de") my.setState({title: category.title_de});
-            });
+        if (props.filter === 'category') {
+            this.props.categoryStore.loadCategory(props.i)
+                .then((category) => {
+                    if (lang === "ru") my.setState({title: category.title});
+                    if (lang === "en") my.setState({title: category.title_en});
+                    if (lang === "de") my.setState({title: category.title_de});
+                });
+        } else {
+            my.setState({title: "Проекты и программы по тэгу"});
+        }
 
         let projects = [];
         this.props.projectStore.loadProjects().then(() => {
@@ -70,6 +76,10 @@ class ProjectsView extends React.Component {
     render() {
         return (
             <React.Fragment>
+                <Helmet>
+                    <title>{this.state.title}</title>
+                    <meta name="description" content={this.state.title}/>
+                </Helmet>
                 <Banner/>
                 <CategoryHeader title={this.state.title} type='project'/>
                 {/*<CategoryTitle/>*/}

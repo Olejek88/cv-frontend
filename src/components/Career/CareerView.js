@@ -5,6 +5,8 @@ import Banner from "../Home/Banner";
 import {inject} from "mobx-react/index";
 import {withCookies} from "react-cookie";
 import CareerRow from "./CareerRow";
+import {Helmet} from "react-helmet";
+import {withTranslation} from "react-i18next/src/index";
 
 class CareerView extends React.Component {
     constructor(props) {
@@ -29,8 +31,13 @@ class CareerView extends React.Component {
     }
 
     render() {
+        const {t} = this.props;
         return (
             <React.Fragment>
+                <Helmet>
+                    <title>{t('career')}</title>
+                    <meta name="description" content={t('career')}/>
+                </Helmet>
                 <Banner/>
                 <CategoryHeader title={this.state.title} type='career'/>
                 <div id="content" className="page-wrap" style={{marginTop: '-100px'}}>
@@ -53,4 +60,4 @@ class CareerView extends React.Component {
     }
 }
 
-export default inject('careerStore')(withCookies(withRouter(CareerView)));
+export default inject('careerStore')(withTranslation('translations')(withCookies(withRouter(CareerView))));

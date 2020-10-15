@@ -1,15 +1,12 @@
 p.copy-right {
     float: left;
     position: relative;
-    right: 45;
     margin-top: 0;
-    font-family: montserrat;
     font-size: 11px;
     clear: both;
     text-align: left;
     color: white;
     top: 270px;
-    letter-spacing: 0.6;
 }
 
 .elementor-section-wrap .elementor-section.elementor-section-boxed > .elementor-container {
@@ -17,26 +14,23 @@ p.copy-right {
 }
 
 .elementor-image-box-content h3 {
-    margin: 0px;
+    margin: 0;
 }
 
 p.workwd,
 p.showreel {
     color: rgb(84, 157, 185);
     margin-top: 10px;
-    font-family: Montserrat;
     font-size: 12px;
 }
 
 .col-one p,
 .text-footer p,
 .col-three p {
-    font-family: Montserrat;
     font-size: 14px;
 }
 
 .logo-footer p {
-    font-family: Montserrat;
     font-weight: 400;
 }
 
@@ -51,11 +45,7 @@ p.showreel {
 
 #mainnav ul li a {
     color: white;
-    padding-left: 12px;
-    font-family: 'Montserrat-SemiBold';
-    padding-right: 15px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding: 5px 15px 5px 12px;
 }
 
 .estimate-menu {
@@ -69,13 +59,13 @@ p.showreel {
 }
 
 #mainnav ul li:last-child {
-    padding: 0px;
-    margin: 0px 13px;
+    padding: 0;
+    margin: 0 13px;
 }
 
 #mainnav ul li:last-child ul.sub-menu {
     width: 45px;
-    right: 0px;
+    right: 0;
 }
 
 #mainnav ul li:last-child ul.sub-menu li a {
@@ -97,8 +87,6 @@ p.showreel {
 
 .page-wrap {
     padding: 0;
-    padding-bottom: 0 !important;
-    padding-top: 0 !important;
 }
 
 #colophon {
@@ -125,7 +113,6 @@ p.showreel {
 #sidebar-footer .container .col-three {
     float: left;
     color: white;
-    font-family: Montserrat;
     font-size: 14px;
     line-height: 40px;
     margin-left: 10px;
@@ -163,7 +150,6 @@ p.showreel {
 }
 
 #sidebar-footer .container .logo-footer {
-    margin-left: -178px;
     position: absolute;
     top: -162px;
     text-align: center;
@@ -176,12 +162,10 @@ p.showreel {
 .text-footer {
     position: relative;
     right: 65px;
-    bottom: 30;
 }
 
 #sidebar-footer .container .row-one {
     position: absolute;
-    font-family: Montserrat;
     font-size: 14px;
     font-weight: 500;
 }
@@ -230,16 +214,16 @@ p.showreel {
     .elementor-3505 .elementor-element.elementor-element-7142fd8,
     .elementor-3505 .elementor-element.elementor-element-05e7872,
     .elementor-3505 .elementor-element.elementor-element-cfefe42 {
-        margin: 0px 20px !important;
+        margin: 0 20px !important;
     }
 
     input.cancel-button {
-        margin-right: 0px !important;
+        margin-right: 0 !important;
     }
 
     .fifth-sec h3,
     .eighth-sec.story-background-img h3 {
-        padding-top: 0px !important;
+        padding-top: 0 !important;
     }
 
     span.elementor-title {
@@ -247,15 +231,15 @@ p.showreel {
     }
 
     .elementor-2221 .elementor-element.elementor-element-1afa3d3 {
-        margin-bottom: 0px !important;
+        margin-bottom: 0 !important;
     }
 
     .elementor-widget:not(:last-child) {
-        margin-bottom: 0px !important;
+        margin-bottom: 0 !important;
     }
 
     .page-template-services .banner-content-about section, .page-template-services-da .banner-content-about section {
-        margin: 0 0% !important;
+        margin: 0 0 !important;
     }
 
     .footer-banner.except-home section.elementor-element.elementor-element-a738fa7.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default.elementor-section.elementor-top-section {
@@ -275,12 +259,12 @@ p.showreel {
     .elementor-element-05e7872 .elementor-widget-wrap,
     .elementor-element-7142fd8 .elementor-widget-wrap {
         width: 100% !important;
-        margin-left: 0% !important;
-        margin-right: 0% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
 
     .float-header div#content .container {
-        margin-top: 0px;
+        margin-top: 0;
     }
 
     .site-header.float-header {
@@ -312,7 +296,7 @@ p.showreel {
     }
 
     .estimate-menu {
-        border: 0px solid;
+        border: 0 solid;
         border-radius: 0;
     }
 
@@ -329,7 +313,7 @@ p.showreel {
     }
 
     .btn-menu {
-        margin: 0px auto 0 !important;
+        margin: 0 auto 0 !important;
     }
 
     .btn-submenu {
@@ -387,7 +371,7 @@ p.showreel {
 
 @media only screen and (min-width: 320px) and (max-width: 1024px) {
     .single-post article, .rel-post {
-        margin: 0px 0px 0px 0px !important;
+        margin: 0 !important;
     }
 
     #sidebar-footer .container .twoimage-footer .wd-man {
@@ -416,7 +400,6 @@ p.language-left {
     position: relative;
     right: 45px;
     top: 254px;
-    font-family: Montserrat;
     font-size: 12px;
 }
 
@@ -471,7 +454,7 @@ p.language-left a {
     .elementor-3505 .elementor-element.elementor-element-05e7872,
     .elementor-3505 .elementor-element.elementor-element-cfefe42 {
         width: 100% !important;
-        margin: 0px 50px !important;
+        margin: 0 50px !important;
     }
 
     .elementor-element-cfefe42 .elementor-widget-wrap {
@@ -513,7 +496,7 @@ p.language-left a {
     .home-section-web .elementor-top-column,
     .home-section-mobile .elementor-top-column,
     .home-section-design .elementor-top-column {
-        margin: 20px 0px;
+        margin: 20px 0;
     }
 
     .header-image {
@@ -568,7 +551,7 @@ p.language-left a {
     }
 
     .btn-menu {
-        margin: 0px auto 0 !important;
+        margin: 0 auto 0 !important;
     }
 
     .btn-submenu {
@@ -1643,9 +1626,7 @@ p {
 
     .post-heading-right .single-meta {
         float: left !important;
-        padding: 10px;
-        padding-top: 0px;
-        padding-bottom: 10px;
+        padding: 0 10px 10px;
     }
 
     .post-heading-left.col-md-6 {
@@ -1653,8 +1634,7 @@ p {
     }
 
     article {
-        padding: 20;
-        padding-top: 0px !important;
+        padding-top: 0 !important;
     }
 
     .mobile-copy-right {
@@ -1692,7 +1672,7 @@ p {
 
     .page-template-reference #content .blog-page .newsfilter {
         margin-left: 20% !important;
-        margin-right: 0% !important;
+        margin-right: 0 !important;
         float: left;
     }
 
@@ -1723,7 +1703,7 @@ p {
 @media only screen and (max-width: 1024px) {
 
     .footer-widgets .widget {
-        margin-bottom: 0px;
+        margin-bottom: 0;
     }
 
     .text-footer {
@@ -1733,16 +1713,16 @@ p {
 
     #content .container,
     .site-header {
-        padding: 0px 0px !important;
+        padding: 0 0 !important;
     }
 
     .single.single-post .post-banner,
     .post-heading-right .single-meta {
-        margin-top: 0px !important;
+        margin-top: 0 !important;
     }
 
     .post-head {
-        border-bottom: 0px solid #ccc !important;
+        border-bottom: 0 solid #ccc !important;
         margin-top: 0 !important;
         margin-bottom: 0 !important;
     }
@@ -1760,13 +1740,12 @@ p {
 }
 
 .banner_sections .elementor-button {
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5) !important;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5) !important;
 }
 
 .col-three {
     position: relative;
     z-index: 1111;
-    bottom: 30;
 }
 
 #mainnav-mobi ul li {
@@ -1783,7 +1762,7 @@ p {
 }
 
 #mainnav ul #menu-item-30.current-menu-item a {
-    border-bottom: 0px solid #4ac0c9;
+    border-bottom: 0 solid #4ac0c9;
 }
 
 .press-section {
@@ -1791,9 +1770,9 @@ p {
 }
 
 .press-section .col-md-4.post-cart {
-    padding: 1px 1px 30px 0px;
+    padding: 1px 1px 30px 0;
     border-radius: 20px 20px 20px 20px;
-    box-shadow: 0px 11px 10px 0px rgba(219, 219, 219, 0.91);
+    box-shadow: 0 11px 10px 0 rgba(219, 219, 219, 0.91);
     margin: 17px;
     width: 30%;
     height: 430px;
@@ -1809,7 +1788,6 @@ p {
 .date-details {
     color: #4ac0c9;
     font-weight: 700;
-    letter-spacing: 0.5;
     font-family: "Raleway", sans-serif !important;
     font-size: 14px;
 }
@@ -1860,8 +1838,7 @@ p {
 }
 
 .newscontent {
-    padding: 0px 10px;
-    font-family: "Arimo, Helvetica Neue, helvetica, arial";
+    padding: 0 10px;
     color: #808080;
     font-size: 14px;
     font-weight: 300;
@@ -1869,14 +1846,13 @@ p {
 
 .archive #content .container.content-wrapper {
     width: 100%;
-    padding: 0% 3%;
+    padding: 0 3%;
 }
 
 .cat_links {
     font-size: 20px;
     color: #7a7a7a !important;
     font-weight: 500;
-    font-family: "Montserrat", myriad pro regular;
     text-align: left !important;
     float: left;
     padding: 0 20px;
@@ -1884,22 +1860,18 @@ p {
 
 .cat-para {
     clear: both;
-    padding-top: 10px;
     text-align: left;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 10px;
+    padding: 10px 20px;
     color: #767676 !important;
 }
 
 .cat-para p {
-    padding: 0px !important;
+    padding: 0 !important;
 }
 
 .cat-learnmore {
     color: #36afe2;
     font-size: 16px;
-    font-family: Helvetica, "myriad pro regular";
     text-transform: uppercase;
     padding: 20px;
     position: relative;
@@ -1923,7 +1895,7 @@ a.cat-learnmore:hover i,
 }
 
 .single-post article {
-    margin: 0px 85px 0px 70px;
+    margin: 0 85px 0 70px;
 }
 
 .single-post .entry-content p {
@@ -1958,7 +1930,6 @@ img.chat-image {
 
 .team-about h2 {
     color: #54595f;
-    font-family: "Montserrat", myriad pro regular;
     font-weight: 400;
 }
 
@@ -1976,7 +1947,6 @@ img.chat-image {
 
 ol li {
     list-style-type: disc;
-    font-family: 'Tahoma';
 }
 
 td ol li {
@@ -1985,7 +1955,6 @@ td ol li {
 
 .single-post em {
     font-style: italic;
-    font-family: 'Tahoma';
 }
 
 .single-post h4 {
@@ -1998,12 +1967,11 @@ article a:hover, article a:focus {
 }
 
 article ul li span {
-    font-family: 'Tahoma' !important;
     font-size: 18px;
 }
 
 .rel-post {
-    margin: 0px 100px 0px 70px;
+    margin: 0 100px 0 70px;
 }
 
 h2.rel-articles {
@@ -2014,7 +1982,7 @@ h2.rel-articles {
 
 .related-articles {
     border-radius: 20px 20px 20px 20px;
-    box-shadow: 0px 11px 10px 0px rgba(219, 219, 219, 0.91);
+    box-shadow: 0 11px 10px 0 rgba(219, 219, 219, 0.91);
     padding: 0;
     width: 30%;
     margin: 15px;
@@ -2023,8 +1991,8 @@ h2.rel-articles {
 
 .main-rel-articles {
     clear: both;
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 body.mailpoet_page-template-default .elementor-section-wrap .elementor-section.elementor-section-boxed.footer-img > .elementor-container .elementor-image {

@@ -46,8 +46,7 @@ class ProjectHeader extends React.Component {
                                     </div>
                                 </div>
                                 <div
-                                    className="elementor-element elementor-element-f9dc749 banner_sections elementor-column elementor-col-50 elementor-top-column"
-                                    data-id="f9dc749" data-element_type="column">
+                                    className="elementor-element elementor-element-f9dc749 banner_sections elementor-column elementor-col-50 elementor-top-column">
                                     <div className="elementor-column-wrap  elementor-element-populated">
                                         <div
                                             className="elementor-element elementor-element-33e3be2 tab-banner elementor-widget elementor-widget-text-editor">
@@ -55,8 +54,7 @@ class ProjectHeader extends React.Component {
                                                 <div
                                                     className="elementor-text-editor elementor-clearfix">
                                                     <p style={{textAlign: 'center'}}>
-                                                                        <span
-                                                                            style={{color: '#fff'}}>{t('my_projects.label')} </span>
+                                                        <span style={{color: '#fff'}}>{t('my_projects.label')} </span>
                                                     </p></div>
                                             </div>
                                         </div>

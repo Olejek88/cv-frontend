@@ -54,7 +54,7 @@ class SiteMenu extends React.Component {
     }
 
     render() {
-        const {i18n, cookies} = this.props;
+        const {i18n, cookies, t} = this.props;
         const changeLanguage = lng => {
             i18n.changeLanguage(lng);
             let d = new Date();
@@ -68,29 +68,29 @@ class SiteMenu extends React.Component {
                 <div className="menu-main-container">
                     <ul id="menu-main" className="menu">
                         <li className="menu-item">
-                            <Link to="/">HOME</Link>
+                            <Link to="/">{t('menu.home')}</Link>
                             <ul className="sub-menu">
-                                <li className="menu-item"><Link to="/about">About</Link></li>
-                                <li className="menu-item"><Link to="/cv">CV</Link></li>
-                                <li className="menu-item"><Link to="/career">Career</Link></li>
-                                <li className="menu-item"><Link to="/stack">Stack</Link></li>
-                                <li className="menu-item"><Link to="/life">Life</Link></li>
-                                <li className="menu-item"><a href="http://mediacritic.site">Media</a></li>
+                                <li className="menu-item"><Link to="/about">{t('menu.about')}</Link></li>
+                                <li className="menu-item"><Link to="/cv">{t('menu.cv')}</Link></li>
+                                <li className="menu-item"><Link to="/career">{t('menu.career')}</Link></li>
+                                <li className="menu-item"><Link to="/stack">{t('menu.stack')}</Link></li>
+                                <li className="menu-item"><Link to="/life">{t('menu.life')}</Link></li>
+                                <li className="menu-item"><a href="http://mediacritic.site">{t('menu.media')}</a></li>
                             </ul>
                         </li>
                         <li className="menu-item">
-                            <Link to="/">WORK</Link>
+                            <Link to="/">{t('menu.work')}</Link>
                             <ul className="sub-menu">
                                 {this.state.categoriesList}
                             </ul>
                         </li>
                         <li className="pll-parent-menu-item menu-item menu-item-type-custom menu-item-object-custom current-menu-parent menu-item-has-children">
-                            <a href="/" id="ru"><span style={{marginLeft: '0.3em'}}><span role="img"
-                                                                                          aria-label="ru">&#127479;&#127482;&nbsp;</span>Русский</span></a>
-                            <a href="/" id="de" style={{display: 'none'}}><span style={{marginLeft: '0.3em'}}><span
-                                role="img" aria-label="de">&#127465;&#127466;&nbsp;</span>Deutsch</span></a>
-                            <a href="/" id="en" style={{display: 'none'}}><span style={{marginLeft: '0.3em'}}><span
-                                role="img" aria-label="en">&#127468;&#127463;&nbsp;</span>English</span></a>
+                            <a href="/" id="ru"><span style={{marginLeft: '0.3em'}}>
+                                <span role="img" aria-label="ru">&#127479;&#127482;&nbsp;</span>Русский</span></a>
+                            <a href="/" id="de" style={{display: 'none'}}><span style={{marginLeft: '0.3em'}}>
+                                <span role="img" aria-label="de">&#127465;&#127466;&nbsp;</span>Deutsch</span></a>
+                            <a href="/" id="en" style={{display: 'none'}}><span style={{marginLeft: '0.3em'}}>
+                                <span role="img" aria-label="en">&#127468;&#127463;&nbsp;</span>English</span></a>
                             <ul className="sub-menu">
                                 <li className="lang-item lang-item-ru menu-item menu-item-type-custom menu-item-object-custom">
                                     <a onClick={() => changeLanguage('ru')} href={"/#"} style={{cursor: 'pointer'}}>
@@ -113,7 +113,7 @@ class SiteMenu extends React.Component {
                             </ul>
                         </li>
                         <li className="menu-button estimate-menu menu-item menu-item-type-custom menu-item-object-custom">
-                            <a href="mailto:olejek8@yandex.ru">CONTACT ME</a>
+                            <a href="mailto:olejek8@yandex.ru">{t('menu.contact_me')}</a>
                         </li>
                     </ul>
                 </div>

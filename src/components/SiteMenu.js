@@ -1,7 +1,9 @@
 import React from 'react';
+import {withTranslation} from "react-i18next";
 
 class SiteMenu extends React.Component {
     render() {
+        const {t} = this.props;
         return (
             <React.Fragment>
                 <div className="footer-banner except-home">
@@ -9,19 +11,15 @@ class SiteMenu extends React.Component {
                         <div className="elementor-inner">
                             <div className="elementor-section-wrap">
                                 <section
-                                    className="elementor-element elementor-element-46e263f footer-img elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section"
-                                    data-id="46e263f" data-element_type="section">
+                                    className="elementor-element elementor-element-46e263f footer-img elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section">
                                     <div className="elementor-container elementor-column-gap-default">
                                         <div className="elementor-row">
                                             <div
-                                                className="elementor-element elementor-element-a1d4e45 elementor-column elementor-col-100 elementor-top-column"
-                                                data-id="a1d4e45" data-element_type="column">
+                                                className="elementor-element elementor-element-a1d4e45 elementor-column elementor-col-100 elementor-top-column">
                                                 <div className="elementor-column-wrap  elementor-element-populated">
                                                     <div className="elementor-widget-wrap">
                                                         <div
-                                                            className="elementor-element elementor-element-68370d1 elementor-widget elementor-widget-image"
-                                                            data-id="68370d1" data-element_type="widget"
-                                                            data-widget_type="image.default">
+                                                            className="elementor-element elementor-element-68370d1 elementor-widget elementor-widget-image">
                                                             <div className="elementor-widget-container">
                                                                 <div className="elementor-image">
                                                                     <img src={"images/bg-footer-new.png"}
@@ -49,19 +47,19 @@ class SiteMenu extends React.Component {
                                     <div className="row-one">
                                         <div className="col-two">
                                             <div className="text-footer">
-                                                <a href={"/#/about"}>ABOUT ME</a><br/>
-                                                <a href={"/#/projects"}>CASES</a><br/>
-                                                <a href={"/#/stack"}>STACK</a><br/>
-                                                <a href={"/#/cv"}>CV</a><br/>
-                                                <a href={"/#/career"}>CAREER</a><br/>
+                                                <a href={"/#/about"}>{t('menu.about')}</a><br/>
+                                                <a href={"/#/projects"}>{t('menu.projects')}</a><br/>
+                                                <a href={"/#/stack"}>{t('menu.stack')}</a><br/>
+                                                <a href={"/#/cv"}>{t('menu.cv')}</a><br/>
+                                                <a href={"/#/career"}>{t('menu.career')}</a><br/>
                                             </div>
                                         </div>
                                         <div className="col-three">
-                                            <a href="http://shrtm.ru" rel="noopener noreferrer" target="_blank">OLD
-                                                SITE</a><br/>
+                                            <a href="http://shrtm.ru" rel="noopener noreferrer"
+                                               target="_blank">{t('menu.old_site')}</a><br/>
                                             <a href="http://mediacritic.ru/" rel="noopener noreferrer"
-                                               target="_blank">MEDIA</a><br/>
-                                            <a href={"/#/links"}>LINKS</a><br/>
+                                               target="_blank">{t('menu.media')}</a><br/>
+                                            <a href={"/#/links"}>{t('menu.links')}</a><br/>
                                         </div>
                                     </div>
                                     <p className="copy-right">COPYRIGHT © 2020 OLE. This page based on Front
@@ -108,4 +106,4 @@ class SiteMenu extends React.Component {
     }
 }
 
-export default SiteMenu;
+export default withTranslation('translations')(SiteMenu);

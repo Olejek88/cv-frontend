@@ -6,6 +6,7 @@ import {withCookies} from "react-cookie";
 import ROOT from "../../index";
 import ProjectHeader from "./ProjectHeader";
 import {withTranslation} from "react-i18next";
+import {Helmet} from "react-helmet";
 
 class Project extends React.Component {
     constructor(props) {
@@ -76,6 +77,10 @@ class Project extends React.Component {
         const {t} = this.props;
         return (
             <React.Fragment>
+                <Helmet>
+                    <title>{this.state.lang === "ru" && this.state.project.title_en}</title>
+                    <meta name="description" content={this.state.project.title_en}/>
+                </Helmet>
                 <Banner/>
                 <ProjectHeader project={this.state.project}/>
                 <section className="newspage newsadd">
@@ -87,10 +92,6 @@ class Project extends React.Component {
                                     <header className="entry-header">
                                         <div className="post-head col-md-12">
                                             <div className="post-heading-left" style={{width: '75%'}}>
-                                                {/*
-                                                <img src={ROOT + this.state.project.photo} alt="img"
-                                                     style={{width: '200px', float: 'left', margin: '5px'}}/>
-*/}
                                                 <h1 className="title-post entry-title" style={{position: "relative"}}>
                                                     {this.state.lang === "ru" && this.state.project.title}
                                                     {this.state.lang === "en" && this.state.project.title_en}

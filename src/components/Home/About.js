@@ -1,8 +1,28 @@
 import React from 'react';
 import {withRouter} from 'react-router-dom';
 import {withTranslation} from "react-i18next";
+import {withCookies} from "react-cookie";
 
 class About extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            lang: "ru",
+            link: "doc/cv.pdf"
+        };
+    }
+
+    componentDidMount() {
+        const {cookies} = this.props;
+        this.setState({lang: cookies.get('lang')});
+        if (this.state.lang === "en") {
+            this.setState({link: "doc/cv_en.pdf"});
+        }
+        if (this.state.lang === "de") {
+            this.setState({link: "doc/cv_de.pdf"});
+        }
+    }
+
     render() {
         const {t} = this.props;
         return (
@@ -25,13 +45,13 @@ class About extends React.Component {
                                             <div className="elementor-widget-container">
                                                 <div className="elementor-button-wrapper">
                                                     <a className="elementor-button elementor-size-xs" role="button"
-                                                       href={"cv.pdf"}>
+                                                       href={this.state.link}>
 						                            <span className="elementor-button-content-wrapper">
                             						    <span
                                                             className="elementor-button-text">{t('download_cv')}</span>
                                                     </span>
                                                     </a>
-                                                    <img alt=""
+                                                    <img alt="avatar"
                                                          className="avatar avatar-user width-full border bg-white"
                                                          src={"images/avatar.png"}
                                                          width="260" height="260"/>
@@ -103,4 +123,4 @@ class About extends React.Component {
     }
 }
 
-export default withTranslation('translations')(withRouter(About));
+export default withTranslation('translations')(withCookies(withRouter(About)));
