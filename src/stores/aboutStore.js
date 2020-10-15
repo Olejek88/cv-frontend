@@ -10,13 +10,13 @@ export class aboutStore {
         this.aboutRegistry.clear();
     }
 
-    $req() {
+    static $req() {
         return agent.About.all();
     }
 
     loadAbout() {
         this.isLoading = true;
-        return this.$req()
+        return aboutStore.$req()
             .then(action((about) => {
                 this.aboutRegistry.clear();
                 about.forEach(about => this.aboutRegistry.set(about.id, about));

@@ -7,7 +7,9 @@ class Addition extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            about: [],
+            about: {
+                addition: ""
+            },
             image: "images/languages.png",
             lang: "ru"
         };
@@ -53,8 +55,7 @@ class Addition extends React.Component {
                                         className="elementor-element elementor-element-ed08c33 elementor-widget elementor-widget-text-editor">
                                         <div className="elementor-widget-container">
                                             <div className="elementor-text-editor elementor-clearfix">
-                                                <div
-                                                    dangerouslySetInnerHTML={{__html: this.state.about.addition}}></div>
+                                                <div dangerouslySetInnerHTML={{__html: this.state.about.addition}}/>
                                             </div>
                                         </div>
                                     </div>

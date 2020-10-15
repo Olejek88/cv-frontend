@@ -22,13 +22,13 @@ export class careerStore {
         this.careerRegistry.clear();
     }
 
-    $req() {
+    static $req() {
         return agent.Career.all();
     }
 
     loadCareer() {
         this.isLoading = true;
-        return this.$req()
+        return careerStore.$req()
             .then(action((career) => {
                 this.careerRegistry.clear();
                 career.forEach(career => this.careerRegistry.set(career.id, career));

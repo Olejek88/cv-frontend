@@ -1,8 +1,8 @@
 import React from 'react';
 
 class ExperienceTitle extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             title: 'Project',
             subtitle: 'A daily dose'

@@ -130,7 +130,7 @@ class Project extends React.Component {
                                     </div>
                                     <div className="entry-content">
                                         <span style={{fontWeight: 400}}>
-                                            <div dangerouslySetInnerHTML={{__html: this.state.description}}></div>
+                                            <div dangerouslySetInnerHTML={{__html: this.state.description}}/>
                                         </span>
                                             <br/><b>{t('usage.label')}:</b> {this.state.project.usage}
                                             <br/><b>Github:</b> <a

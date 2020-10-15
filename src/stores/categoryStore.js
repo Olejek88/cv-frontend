@@ -5,19 +5,6 @@ class CategoryStore {
     categoryRegistry = new Map();
     isLoading = true;
 
-    /*
-        defaultData = [
-            {id: 1, title: 'Android apps'},
-            {id: 2, title: 'Systems'},
-            {id: 3, title: 'Interfaces'},
-            {id: 4, title: 'Products'},
-            {id: 5, title: 'Projects'},
-            {id: 6, title: 'Online shops'},
-            {id: 7, title: 'Sites'},
-            {id: 8, title: 'PC Apps'},
-            {id: 9, title: 'OPC'}];
-    */
-
     loadCategories() {
         if (this.categoryRegistry.size > 0)
             return Promise.resolve(this.categoryRegistry);

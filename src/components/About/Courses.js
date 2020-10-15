@@ -7,7 +7,9 @@ class Courses extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            about: [],
+            about: {
+                courses: ""
+            },
             image: "images/scada.png",
             lang: "ru"
         };
@@ -53,7 +55,7 @@ class Courses extends React.Component {
                                         className="elementor-element elementor-element-ed08c33 elementor-widget elementor-widget-text-editor">
                                         <div className="elementor-widget-container">
                                             <div className="elementor-text-editor elementor-clearfix">
-                                                <div dangerouslySetInnerHTML={{__html: this.state.about.courses}}></div>
+                                                <div dangerouslySetInnerHTML={{__html: this.state.about.courses}}/>
                                             </div>
                                         </div>
                                     </div>

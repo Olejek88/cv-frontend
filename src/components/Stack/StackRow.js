@@ -48,11 +48,11 @@ class StackRow extends React.Component {
                                                     {this.state.stack.title}
                                                 </h4>
                                                 {this.state.lang === "ru" && <div
-                                                    dangerouslySetInnerHTML={{__html: this.state.stack.description}}></div>}
+                                                    dangerouslySetInnerHTML={{__html: this.state.stack.description}}/>}
                                                 {this.state.lang === "en" && <div
-                                                    dangerouslySetInnerHTML={{__html: this.state.stack.description_en}}></div>}
+                                                    dangerouslySetInnerHTML={{__html: this.state.stack.description_en}}/>}
                                                 {this.state.lang === "de" && <div
-                                                    dangerouslySetInnerHTML={{__html: this.state.stack.description_de}}></div>}
+                                                    dangerouslySetInnerHTML={{__html: this.state.stack.description_de}}/>}
                                             </div>
                                         </div>
                                     </div>

@@ -8,7 +8,9 @@ class Contacts extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            about: [],
+            about: {
+                contact: ""
+            },
             image: "image/avatar.png",
             lang: "ru"
         };
@@ -57,7 +59,7 @@ class Contacts extends React.Component {
                                         className="elementor-element elementor-element-ed08c33 elementor-widget elementor-widget-text-editor">
                                         <div className="elementor-widget-container">
                                             <div className="elementor-text-editor elementor-clearfix">
-                                                <div dangerouslySetInnerHTML={{__html: this.state.about.contact}}></div>
+                                                <div dangerouslySetInnerHTML={{__html: this.state.about.contact}}/>
                                             </div>
                                         </div>
                                     </div>

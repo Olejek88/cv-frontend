@@ -36,4 +36,5 @@ i18n
             nsMode: 'default'
         }
     });
+
 export default i18n;

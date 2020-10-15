@@ -42,8 +42,7 @@ class Description extends React.Component {
                                         className="elementor-element elementor-element-fb606be elementor-widget elementor-widget-text-editor">
                                         <div className="elementor-widget-container">
                                             <div className="elementor-text-editor elementor-clearfix">
-                                                <div
-                                                    dangerouslySetInnerHTML={{__html: this.state.about.position}}></div>
+                                                <div dangerouslySetInnerHTML={{__html: this.state.about.position}}/>
                                             </div>
                                         </div>
                                     </div>

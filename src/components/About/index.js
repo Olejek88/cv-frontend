@@ -25,7 +25,7 @@ class About extends React.Component {
     componentDidMount() {
         let my = this;
         this.props.aboutStore.loadAbout().then(() => {
-            this.props.aboutStore.aboutRegistry.forEach(function (about, i) {
+            this.props.aboutStore.aboutRegistry.forEach(function (about) {
                 my.setState({about: about});
             });
             my.setState({updated: true});

@@ -22,13 +22,13 @@ export class CVStore {
         this.cvRegistry.clear();
     }
 
-    $req() {
+    static $req() {
         return agent.Cv.all();
     }
 
     loadCv() {
         this.isLoading = true;
-        return this.$req()
+        return CVStore.$req()
             .then(action((cv) => {
                 this.cvRegistry.clear();
                 cv.forEach(cv => this.cvRegistry.set(cv.id, cv));

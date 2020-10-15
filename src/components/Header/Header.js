@@ -63,7 +63,7 @@ class Header extends React.Component {
                                 </Link>
                             </div>
                             <div className="col-md-8 col-sm-4 col-xs-12">
-                                <div className="btn-menu"></div>
+                                <div className="btn-menu"/>
                                 <MenuNew/>
                             </div>
                         </div>

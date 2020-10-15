@@ -10,13 +10,13 @@ export class stackStore {
         this.stackRegistry.clear();
     }
 
-    $req() {
+    static $req() {
         return agent.Stack.all();
     }
 
     loadStack() {
         this.isLoading = true;
-        return this.$req()
+        return stackStore.$req()
             .then(action((stack) => {
                 this.stackRegistry.clear();
                 stack.forEach(stack => this.stackRegistry.set(stack.id, stack));
