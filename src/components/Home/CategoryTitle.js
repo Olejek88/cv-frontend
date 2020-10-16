@@ -1,5 +1,5 @@
 import React from 'react';
-import {withTranslation} from "react-i18next/src/index";
+import {withTranslation} from "react-i18next";
 
 class CategoryTitle extends React.Component {
     render() {

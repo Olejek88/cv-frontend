@@ -42,7 +42,12 @@ class Description extends React.Component {
                                         className="elementor-element elementor-element-fb606be elementor-widget elementor-widget-text-editor">
                                         <div className="elementor-widget-container">
                                             <div className="elementor-text-editor elementor-clearfix">
-                                                <div dangerouslySetInnerHTML={{__html: this.state.about.position}}/>
+                                                {this.state.lang === "ru" &&
+                                                <div dangerouslySetInnerHTML={{__html: this.state.about.position}}/>}
+                                                {this.state.lang === "en" &&
+                                                <div dangerouslySetInnerHTML={{__html: this.state.about.position_en}}/>}
+                                                {this.state.lang === "de" &&
+                                                <div dangerouslySetInnerHTML={{__html: this.state.about.position_de}}/>}
                                             </div>
                                         </div>
                                     </div>

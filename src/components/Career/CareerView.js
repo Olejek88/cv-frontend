@@ -6,7 +6,7 @@ import {inject} from "mobx-react/index";
 import {withCookies} from "react-cookie";
 import CareerRow from "./CareerRow";
 import {Helmet} from "react-helmet";
-import {withTranslation} from "react-i18next/src/index";
+import {withTranslation} from "react-i18next";
 
 class CareerView extends React.Component {
     constructor(props) {
