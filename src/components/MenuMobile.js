@@ -15,12 +15,40 @@ class MenuMobile extends React.Component {
         this.setState({menuOpen: !this.state.menuOpen});
     };
 
+    onMenuAboutItemClicked = () => {
+        if (!this.state.aboutOpen) {
+            this.setState({aboutStyle: {display: "block"}});
+            this.setState({aboutSymbol: "-"});
+        } else {
+            this.setState({aboutStyle: {display: "none"}});
+            this.setState({aboutSymbol: "+"});
+        }
+        this.setState({aboutOpen: !this.state.aboutOpen});
+    };
+
+    onMenuCategoryItemClicked = () => {
+        if (!this.state.categoryOpen) {
+            this.setState({categoryStyle: {display: "block"}});
+            this.setState({categorySymbol: "-"});
+        } else {
+            this.setState({categoryStyle: {display: "none"}});
+            this.setState({categorySymbol: "+"});
+        }
+        this.setState({categoryOpen: !this.state.categoryOpen});
+    };
+
     constructor(props) {
         super(props);
         this.state = {
             categoriesList: [],
             menuOpen: false,
-            menuStyle: {display: "none"}
+            menuStyle: {display: "none"},
+            categoryOpen: false,
+            categorySymbol: "+",
+            categoryStyle: {display: "none"},
+            aboutOpen: false,
+            aboutSymbol: "+",
+            aboutStyle: {display: "none"}
         };
     }
 
@@ -73,6 +101,7 @@ class MenuMobile extends React.Component {
             d.setTime(d.getTime() + (200 * 60 * 1000));
             cookies.set('lang', lng, {path: "/", expires: d, SameSite: 'Secure'});
             this.setState({lng});
+            window.location.reload();
         };
 
         return (
@@ -84,7 +113,9 @@ class MenuMobile extends React.Component {
                         <ul id="menu-main" className="menu">
                             <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-27">
                                 <Link to="/">{t('menu.home')}</Link>
-                                <ul className="sub-menu">
+                                <span onClick={this.onMenuAboutItemClicked} className="btn-submenu"
+                                      style={{color: "white"}}>{this.state.aboutSymbol}</span>
+                                <ul style={this.state.aboutStyle} className="sub-menu">
                                     <li onClick={this.onMenuItemClicked}
                                         className="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4827">
                                         <Link to="/about">{t('menu.about')}</Link></li>
@@ -97,17 +128,13 @@ class MenuMobile extends React.Component {
                                     <li onClick={this.onMenuItemClicked}
                                         className="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4827">
                                         <Link to="/stack">{t('menu.stack')}</Link></li>
-                                    <li onClick={this.onMenuItemClicked}
-                                        className="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4827">
-                                        <Link to="/life">{t('menu.life')}</Link></li>
-                                    <li onClick={this.onMenuItemClicked}
-                                        className="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4827">
-                                        <a href="http://mediacritic.site">{t('menu.media')}</a></li>
                                 </ul>
                             </li>
                             <li className="menu-item">
                                 <Link to="/">{t('menu.work')}</Link>
-                                <ul className="sub-menu">
+                                <span onClick={this.onMenuCategoryItemClicked} className="btn-submenu"
+                                      style={{color: "white"}}>{this.state.categorySymbol}</span>
+                                <ul id="categoryMenu" className="sub-menu" style={this.state.categoryStyle}>
                                     {this.state.categoriesList}
                                 </ul>
                             </li>

@@ -5,7 +5,6 @@ import {parse as qsParse} from 'query-string';
 import Banner from "./Banner";
 import Experience from "../Experience/Experience";
 import CategoryHeader from "./CategoryHeader";
-import CategoryTitle from "./CategoryTitle";
 import About from "./About";
 import {withTranslation} from "react-i18next";
 import {Helmet} from "react-helmet";
@@ -77,7 +76,9 @@ class MainView extends React.Component {
                 </Helmet>
                 <Banner/>
                 <CategoryHeader title={t('check_projects')} type='main'/>
+                {/*
                 <CategoryTitle/>
+*/}
                 <section className="newspage newsadd">
                     <div className="container-fluid">
                         <div className="container">

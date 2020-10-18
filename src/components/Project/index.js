@@ -14,6 +14,7 @@ class Project extends React.Component {
         this.state = {
             showProjectItem: true,
             lang: "ru",
+            width: document.documentElement.clientWidth - 50,
             project: {
                 id: 1,
                 title: "loading",
@@ -41,6 +42,11 @@ class Project extends React.Component {
         this.loadProject(this.props.match.params.id);
     }
 
+    updateDimensions() {
+        let documentElement = document.documentElement - 50;
+        this.setState({width: documentElement.clientWidth});
+    }
+
     loadProject(id) {
         let self = this;
         let tags = [];
@@ -57,7 +63,7 @@ class Project extends React.Component {
 
                 project.photos.forEach(function (image, i) {
                     images.push(<img src={ROOT + image.path} key={i} alt={image.title} className='project_image'
-                                     style={{marginTop: '20px', maxWidth: '800px'}}/>);
+                                     style={{marginTop: '20px', maxWidth: self.state.width}}/>);
                 });
 
                 self.setState({imagesList: images});

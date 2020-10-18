@@ -61,6 +61,7 @@ class SiteMenu extends React.Component {
             d.setTime(d.getTime() + (200 * 60 * 1000));
             cookies.set('lang', lng, {path: "/", expires: d, SameSite: 'Secure'});
             this.setState({lng});
+            window.location.reload();
         };
 
         return (
