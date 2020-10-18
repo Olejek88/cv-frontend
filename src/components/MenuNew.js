@@ -86,29 +86,28 @@ class SiteMenu extends React.Component {
                         </li>
                         <li className="pll-parent-menu-item menu-item menu-item-type-custom menu-item-object-custom current-menu-parent menu-item-has-children">
                             <a href="/" id="ru"><span style={{marginLeft: '0.3em'}}>
-                                <span role="img" aria-label="ru">&#127479;&#127482;&nbsp;</span>Русский</span></a>
+                                <span><img src={"images/ru.jpg"} alt={"ru"}/>&nbsp;</span>Русский</span></a>
                             <a href="/" id="de" style={{display: 'none'}}><span style={{marginLeft: '0.3em'}}>
-                                <span role="img" aria-label="de">&#127465;&#127466;&nbsp;</span>Deutsch</span></a>
+                                <span><img src={"images/de.jpg"} alt={"de"}/>&nbsp;</span>Deutsch</span></a>
                             <a href="/" id="en" style={{display: 'none'}}><span style={{marginLeft: '0.3em'}}>
-                                <span role="img" aria-label="en">&#127468;&#127463;&nbsp;</span>English</span></a>
+                                <span><img src={"images/eng.jpg"} alt={"en"}/>&nbsp;</span>English</span></a>
                             <ul className="sub-menu">
                                 <li className="lang-item lang-item-ru menu-item menu-item-type-custom menu-item-object-custom">
                                     <a onClick={() => changeLanguage('ru')} href={"/#"} style={{cursor: 'pointer'}}>
                                         <span style={{marginLeft: '0.3em'}}>
-                                            <span role="img" aria-label="ru">&#127479;&#127482;&nbsp;</span>Русский
-                                        </span></a>
+                                            <span><img src={"images/ru.jpg"} alt={"ru"}/>&nbsp;</span>Русский</span></a>
                                 </li>
                                 <li className="lang-item lang-item-en current-lang lang-item-first menu-item menu-item-type-custom menu-item-object-custom">
                                     <a onClick={() => changeLanguage('de')} href={"/#"}
                                        style={{cursor: 'pointer'}}><span
-                                        style={{marginLeft: '0.3em'}}><span role="img"
-                                                                            aria-label="de">&#127465;&#127466;&nbsp;</span>Deutsch</span></a>
+                                        style={{marginLeft: '0.3em'}}><span><img src={"images/de.jpg"}
+                                                                                 alt={"de"}/>&nbsp;</span>Deutsch</span></a>
                                 </li>
                                 <li className="lang-item lang-item-de menu-item menu-item-type-custom menu-item-object-custom">
                                     <a onClick={() => changeLanguage('en')} href={"/#"}
                                        style={{cursor: 'pointer'}}><span
-                                        style={{marginLeft: '0.3em'}}><span role="img"
-                                                                            aria-label="en">&#127468;&#127463;&nbsp;</span>English</span></a>
+                                        style={{marginLeft: '0.3em'}}><span><img src={"images/eng.jpg"}
+                                                                                 alt={"en"}/>&nbsp;</span>English</span></a>
                                 </li>
                             </ul>
                         </li>

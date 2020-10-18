@@ -3,7 +3,9 @@ import _superagent from 'superagent';
 
 const superagent = superagentPromise(_superagent, global.Promise);
 
-const API_ROOT = 'http://svc.shtrm88.ru/api/';
+const API_ROOT = (process.env.NODE_ENV === 'development')
+    ? 'http://svc.shtrm88.ru/api/'
+    : 'http://api.olejek.site/api/';
 
 const responseBody = res => res.body;
 

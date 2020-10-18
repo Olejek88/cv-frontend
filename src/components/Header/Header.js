@@ -1,12 +1,13 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import MenuNew from "../MenuNew";
+import MenuMobile from "../MenuMobile";
 
 class Header extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            width: 1920,
+            width: document.documentElement.clientWidth,
             class: 'site-header fixed'
         };
         this.updateDimensions = this.updateDimensions.bind(this);
@@ -22,12 +23,6 @@ class Header extends React.Component {
         window.addEventListener("resize", this.updateDimensions);
         window.addEventListener('scroll', this.handleScroll);
     }
-
-    /*
-        componentWillUnmount() {
-            window.removeEventListener("resize", this.updateDimensions);
-        }
-    */
 
     handleScroll() {
         let masthead = document.getElementById('masthead');
@@ -63,8 +58,8 @@ class Header extends React.Component {
                                 </Link>
                             </div>
                             <div className="col-md-8 col-sm-4 col-xs-12">
-                                <div className="btn-menu"/>
-                                <MenuNew/>
+                                {this.state.width >= 1010 && <MenuNew/>}
+                                {this.state.width < 1010 && <MenuMobile/>}
                             </div>
                         </div>
                     </div>

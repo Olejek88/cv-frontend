@@ -1,50 +1,26 @@
 import React from 'react';
 import {withTranslation} from "react-i18next";
+import SiteMenuBanner from "./SiteMenuBanner";
 
 class SiteMenu extends React.Component {
     render() {
         const {t} = this.props;
         return (
             <React.Fragment>
-                <div className="footer-banner except-home">
-                    <div className="elementor">
-                        <div className="elementor-inner">
-                            <div className="elementor-section-wrap">
-                                <section
-                                    className="elementor-element elementor-element-46e263f footer-img elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section">
-                                    <div className="elementor-container elementor-column-gap-default">
-                                        <div className="elementor-row">
-                                            <div
-                                                className="elementor-element elementor-element-a1d4e45 elementor-column elementor-col-100 elementor-top-column">
-                                                <div className="elementor-column-wrap  elementor-element-populated">
-                                                    <div className="elementor-widget-wrap">
-                                                        <div
-                                                            className="elementor-element elementor-element-68370d1 elementor-widget elementor-widget-image">
-                                                            <div className="elementor-widget-container">
-                                                                <div className="elementor-image">
-                                                                    <img src={"images/bg-footer-new.png"}
-                                                                         className="attachment-large size-large" alt=""
-                                                                         srcSet={"images/bg-footer-new.png"}
-                                                                         width="1024" height="541"/>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <SiteMenuBanner/>
                 <div id="sidebar-footer" className="footer-widgets widget-area" role="complementary">
                     <div className="container">
                         <div className="sidebar-column col-md-6">
                             <aside id="custom_html-4" className="widget_text widget widget_custom_html">
                                 <div className="textwidget custom-html-widget">
                                     <div className="row-one">
+                                        <div className="col-one">
+                                            <a href={"/#/about"}>{t('menu.about')}</a><br/>
+                                            <a href={"/#/projects"}>{t('menu.projects')}</a><br/>
+                                            <a href={"/#/stack"}>{t('menu.stack')}</a><br/>
+                                            <a href={"/#/cv"}>{t('menu.cv')}</a><br/>
+                                            <a href={"/#/career"}>{t('menu.career')}</a><br/>
+                                        </div>
                                         <div className="col-two">
                                             <div className="text-footer">
                                                 <a href={"/#/about"}>{t('menu.about')}</a><br/>

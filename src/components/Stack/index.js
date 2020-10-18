@@ -40,7 +40,7 @@ class Stack extends React.Component {
                 </Helmet>
                 <Banner/>
                 <CategoryHeader title={this.state.title} type='stack'/>
-                <div id="content" className="page-wrap" style={{marginTop: '-150px'}}>
+                <div id="content" className="page-wrap" style={{marginTop: '-40px'}}>
                     <div className="container content-wrapper">
                         <div className="row">
                             <div data-elementor-type="wp-post" className="elementor elementor-about">

@@ -6,7 +6,7 @@ class Footer extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            width: 1920
+            width: document.documentElement.clientWidth
         };
         this.updateDimensions = this.updateDimensions.bind(this);
     }
@@ -24,8 +24,8 @@ class Footer extends React.Component {
         return (
             <div className="main_container" style={{float: 'bottom'}}>
                 <React.Fragment>
-                    <SiteMenu/>
-                    <SiteInfo/>
+                    {this.state.width >= 720 && <SiteMenu/>}
+                    {this.state.width >= 720 && <SiteInfo/>}
                 </React.Fragment>
             </div>
         );

@@ -42,7 +42,7 @@ class About extends React.Component {
                 </Helmet>
                 <Banner/>
                 <CategoryHeader title={this.state.title} type='about'/>
-                <div id="content" className="page-wrap" style={{marginTop: '-100px'}}>
+                <div id="content" className="page-wrap">
                     <div className="container content-wrapper">
                         <div className="row">
                             <div data-elementor-type="wp-post" className="elementor elementor-about">

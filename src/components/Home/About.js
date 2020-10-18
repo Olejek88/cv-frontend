@@ -16,7 +16,7 @@ class About extends React.Component {
         const {cookies} = this.props;
         this.setState({lang: cookies.get('lang')});
         if (this.state.lang === "en") {
-            this.setState({link: "doc/cv_en.pdf"});
+            this.setState({link: "doc/cv_eng.pdf"});
         }
         if (this.state.lang === "de") {
             this.setState({link: "doc/cv_de.pdf"});
