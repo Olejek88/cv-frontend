@@ -65,7 +65,7 @@ class CategoryHeader extends React.Component {
                                         </div>
                                     </div>
                                 </section>
-                                <CategoryHeaderTitle title={this.state.type === 'main' && this.state.title}/>
+                                <CategoryHeaderTitle title={this.state.type === 'main' && ""}/>
                             </div>
                         </div>
                     </div>

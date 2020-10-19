@@ -61,7 +61,7 @@ const Projects = {
     tag: id =>
         requests.get(`projects/tag/${id}?expand=projectImages.image`),
     all: (lim = 15) =>
-        requests.get(`projects?limit=${lim}`),
+        requests.get(`projects/limit/${lim}`),
 };
 
 const Tags = {

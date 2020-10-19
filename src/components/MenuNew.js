@@ -18,10 +18,10 @@ class SiteMenu extends React.Component {
         const {i18n, cookies} = this.props;
         let lang = cookies.get('lang');
         if (lang === undefined) {
-            i18n.changeLanguage("ru");
+            i18n.changeLanguage("en");
             let d = new Date();
             d.setTime(d.getTime() + (7 * 24 * 60 * 60 * 1000));
-            cookies.set('lang', 'ru', {path: "/", expires: d, SameSite: 'Secure'});
+            cookies.set('lang', 'en', {path: "/", expires: d, SameSite: 'Secure'});
         }
         this.props.categoryStore.loadCategories()
             .then(() => {

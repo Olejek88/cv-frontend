@@ -1,8 +1,8 @@
 {
   "name": "shtrm-app",
-  "version": "0.1.0",
+  "version": "0.9.0",
   "private": true,
-  "homepage": "http://shtrm.ru",
+  "homepage": "http://olejek.site",
   "license": "MIT",
   "devDependencies": {
     "gh-pages": "^1.0.0"

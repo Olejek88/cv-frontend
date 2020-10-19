@@ -39,7 +39,8 @@ class Experience extends React.Component {
             <div className="col-md-4">
                 <div className="card" data-aos="fade-up">
                     <Link to={"/project/" + this.state.project.id}>
-                        <img src={ROOT + this.state.project.photo} alt="img" style={{width: '100%'}}/>
+                        <img src={ROOT + this.state.project.photo} alt="img"
+                             style={{width: '100%', maxHeight: '300px'}}/>
                     </Link>
                     <Link to={"/project/" + this.state.project.id} className="ima_clickable" rel="bookmark">
                         <img className="link-img" src={"images/link.png"} alt="" width="52" height="52"/>

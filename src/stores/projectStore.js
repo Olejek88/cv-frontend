@@ -39,7 +39,7 @@ export class ProjectStore {
         this.predicate = predicate;
     }
 
-    $req(count = 12, start = 0) {
+    $req(count = 15, start = 0) {
         if (this.predicate.id && this.predicate.filter === 'category')
             return agent.Projects.category(this.predicate.id, this.predicate.limit, this.predicate.start);
         if (this.predicate.id && this.predicate.filter === 'tags')
