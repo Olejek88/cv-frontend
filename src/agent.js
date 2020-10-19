@@ -60,8 +60,8 @@ const Projects = {
         requests.get(`projects/${id}?expand=projectImages.image`),
     tag: id =>
         requests.get(`projects/tag/${id}?expand=projectImages.image`),
-    all: (lim = 10, page = 0) =>
-        requests.get(`projects`),
+    all: (lim = 15) =>
+        requests.get(`projects?limit=${lim}`),
 };
 
 const Tags = {

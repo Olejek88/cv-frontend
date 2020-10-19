@@ -49,9 +49,12 @@ class CVRow extends React.Component {
                                                     {this.state.lang === "de" && this.state.cv.title_de}
                                                 </h4>
                                                 <p>
-                                                    {this.state.lang === "ru" && this.state.cv.description}
-                                                    {this.state.lang === "en" && this.state.cv.description_en}
-                                                    {this.state.lang === "de" && this.state.cv.description_de}
+                                                    {this.state.lang === "ru" && <div
+                                                        dangerouslySetInnerHTML={{__html: this.state.cv.description}}/>}
+                                                    {this.state.lang === "en" && <div
+                                                        dangerouslySetInnerHTML={{__html: this.state.cv.description_en}}/>}
+                                                    {this.state.lang === "de" && <div
+                                                        dangerouslySetInnerHTML={{__html: this.state.cv.description_de}}/>}
                                                 </p></div>
                                         </div>
                                     </div>

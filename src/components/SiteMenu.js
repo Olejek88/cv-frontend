@@ -31,11 +31,10 @@ class SiteMenu extends React.Component {
                                             </div>
                                         </div>
                                         <div className="col-three">
-                                            <a href="http://shrtm.ru" rel="noopener noreferrer"
+                                            <a href="http://shtrm.ru/cv/index_en.htm" rel="noopener noreferrer"
                                                target="_blank">{t('menu.old_site')}</a><br/>
                                             <a href="http://mediacritic.ru/" rel="noopener noreferrer"
                                                target="_blank">{t('menu.media')}</a><br/>
-                                            <a href={"/#/links"}>{t('menu.links')}</a><br/>
                                         </div>
                                     </div>
                                     <p className="copy-right">COPYRIGHT © 2020 OLE. This page based on Front
@@ -53,17 +52,20 @@ class SiteMenu extends React.Component {
                                             <p className="get-text-footer">VK</p>
                                         </div>
                                         <div className="col-md-3" style={{textAlign: 'center'}}>
-                                            <a href="http://github.com/Olejek88">
+                                            <a href="http://github.com/Olejek88" target="_blank"
+                                               rel="noopener noreferrer">
                                                 <img src={"images/github.png"} alt="github"/></a>
                                             <p className="get-text-footer">Github</p>
                                         </div>
                                         <div className="col-md-3" style={{textAlign: 'center'}}>
-                                            <a href="http://linkedin.com/shtrm">
+                                            <a href="http://linkedin.com/shtrm" target="_blank"
+                                               rel="noopener noreferrer">
                                                 <img src={"images/linkedin2.png"} alt="linkedin"/></a>
                                             <p className="get-text-footer">Linkedin</p>
                                         </div>
                                         <div className="col-md-3" style={{textAlign: 'center'}}>
-                                            <a href="https://www.facebook.com/olejek.ivanov">
+                                            <a href="https://www.facebook.com/olejek.ivanov" target="_blank"
+                                               rel="noopener noreferrer">
                                                 <img src={"images/fb.png"} alt="facebook"/></a>
                                             <p className="get-text-footer">Facebook</p>
                                         </div>

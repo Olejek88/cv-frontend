@@ -41,7 +41,7 @@ class About extends React.Component {
                     <meta name="description" content={t('about')}/>
                 </Helmet>
                 <Banner/>
-                <CategoryHeader title={this.state.title} type='about'/>
+                <CategoryHeader title={t('about')} type='about'/>
                 <div id="content" className="page-wrap">
                     <div className="container content-wrapper">
                         <div className="row">
@@ -53,6 +53,7 @@ class About extends React.Component {
                                         <Courses about={this.state.about}/>
                                         <Addition about={this.state.about}/>
                                         <Contacts about={this.state.about}/>
+                                        <br/>
                                         <br/>
                                         <br/>
                                     </div>

@@ -73,10 +73,7 @@ class SiteMenu extends React.Component {
                             <ul className="sub-menu">
                                 <li className="menu-item"><Link to="/about">{t('menu.about')}</Link></li>
                                 <li className="menu-item"><Link to="/cv">{t('menu.cv')}</Link></li>
-                                <li className="menu-item"><Link to="/career">{t('menu.career')}</Link></li>
                                 <li className="menu-item"><Link to="/stack">{t('menu.stack')}</Link></li>
-                                <li className="menu-item"><Link to="/life">{t('menu.life')}</Link></li>
-                                <li className="menu-item"><a href="http://mediacritic.site">{t('menu.media')}</a></li>
                             </ul>
                         </li>
                         <li className="menu-item">

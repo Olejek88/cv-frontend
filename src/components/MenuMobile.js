@@ -101,6 +101,9 @@ class MenuMobile extends React.Component {
             d.setTime(d.getTime() + (200 * 60 * 1000));
             cookies.set('lang', lng, {path: "/", expires: d, SameSite: 'Secure'});
             this.setState({lng});
+            this.setState({menuStyle: {display: "none"}});
+            this.setState({menuOpen: false});
+            // ?? i am really need it
             window.location.reload();
         };
 
@@ -122,9 +125,6 @@ class MenuMobile extends React.Component {
                                     <li onClick={this.onMenuItemClicked}
                                         className="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4827">
                                         <Link to="/cv">{t('menu.cv')}</Link></li>
-                                    <li onClick={this.onMenuItemClicked}
-                                        className="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4827">
-                                        <Link to="/career">{t('menu.career')}</Link></li>
                                     <li onClick={this.onMenuItemClicked}
                                         className="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4827">
                                         <Link to="/stack">{t('menu.stack')}</Link></li>

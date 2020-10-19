@@ -51,9 +51,12 @@ class CareerRow extends React.Component {
                                                     {this.state.lang === "de" && this.state.career.title_de}
                                                 </h4>
                                                 <p>
-                                                    {this.state.lang === "ru" && this.state.career.description}
-                                                    {this.state.lang === "en" && this.state.career.description_en}
-                                                    {this.state.lang === "de" && this.state.career.description_de}
+                                                    {this.state.lang === "ru" && <div
+                                                        dangerouslySetInnerHTML={{__html: this.state.career.description}}/>}
+                                                    {this.state.lang === "en" && <div
+                                                        dangerouslySetInnerHTML={{__html: this.state.career.description_en}}/>}
+                                                    {this.state.lang === "de" && <div
+                                                        dangerouslySetInnerHTML={{__html: this.state.career.description_de}}/>}
                                                 </p></div>
                                         </div>
                                     </div>

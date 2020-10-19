@@ -55,7 +55,12 @@ class Skills extends React.Component {
                                         className="elementor-element elementor-element-ed08c33 elementor-widget elementor-widget-text-editor">
                                         <div className="elementor-widget-container">
                                             <div className="elementor-text-editor elementor-clearfix">
-                                                <div dangerouslySetInnerHTML={{__html: this.state.about.skills}}/>
+                                                {this.state.lang === "ru" &&
+                                                <div dangerouslySetInnerHTML={{__html: this.state.about.skills}}/>}
+                                                {this.state.lang === "en" &&
+                                                <div dangerouslySetInnerHTML={{__html: this.state.about.skills_en}}/>}
+                                                {this.state.lang === "de" &&
+                                                <div dangerouslySetInnerHTML={{__html: this.state.about.skills_de}}/>}
                                             </div>
                                         </div>
                                     </div>
