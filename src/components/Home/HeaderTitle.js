@@ -4,13 +4,13 @@ class HeaderTitle extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            title: 'Категория',
+            title: 'I BUILD WEB AND MOBILE APPS',
             type: 'main'
         };
     }
 
     componentDidMount() {
-        if (this.props.title) {
+        if (this.state.title) {
             this.setState({title: this.props.title});
             this.setState({type: this.props.type});
         }

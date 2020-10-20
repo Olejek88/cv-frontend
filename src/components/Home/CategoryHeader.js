@@ -6,7 +6,7 @@ class CategoryHeader extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            title: 'Категория',
+            title: 'I BUILD WEB AND MOBILE APPS',
             type: 'main',
             image: 'images/side-img-header1.png'
         };
@@ -61,7 +61,7 @@ class CategoryHeader extends React.Component {
                                                     </div>
                                                 </div>
                                             </div>
-                                            {this.state.type !== 'main' && <HeaderTitle title={this.state.title}/>}
+                                            <HeaderTitle title={this.state.title}/>
                                         </div>
                                     </div>
                                 </section>

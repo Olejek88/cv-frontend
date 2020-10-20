@@ -75,7 +75,7 @@ class MainView extends React.Component {
                     <meta name="description" content={t('description')}/>
                 </Helmet>
                 <Banner/>
-                <CategoryHeader title={t('check_projects')} type='main'/>
+                <CategoryHeader title="I BUILD WEB AND MOBILE APPS" type='main'/>
                 {/*
                 <CategoryTitle/>
 */}

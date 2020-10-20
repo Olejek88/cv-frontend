@@ -992,3 +992,125 @@ span#cn-notice-text a {
     border-radius: 20px 20px 20px 20px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 }
+
+.contact_button {
+    color: #549db9;
+    font-size: 12px !important;
+    padding: 5px 15px 5px 12px;
+    float: left;
+    position: relative;
+    display: block;
+    font-family: raleway, sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    outline: none;
+}
+
+#contact-container.widget-align-right {
+    right: 0 !important;
+}
+
+#contact-container {
+    display: initial !important;
+    z-index: 2147483647;
+    position: fixed !important;
+    bottom: 0 !important;
+}
+
+#contact-container .shadow-container {
+    display: initial !important;
+    z-index: -1;
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    content: "";
+}
+
+.widget-app-container {
+    padding-bottom: 16px;
+    position: absolute;
+    top: 0;
+}
+
+.dhBdz {
+    padding-left: 0;
+    padding-right: 16px;
+    left: inherit;
+    right: 0;
+}
+
+.p-top-8, .p-y-8 {
+    padding-top: 32px !important;
+}
+
+.eRGMbE {
+    width: 260px;
+    padding-left: 20px;
+}
+
+.initial-message-bubble {
+    cursor: pointer;
+    position: relative;
+    border: 1px solid #eaf0f6;
+    background: #fff;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .1);
+    border-radius: 4px;
+    width: 240px;
+    padding: 24px 16px 16px;
+}
+
+.fQCLtD {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;
+    border: medium none;
+    height: 48px;
+    width: 48px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: rgb(124, 152, 182);
+    display: flex;
+    align-items: flex-start;
+    -moz-box-pack: end;
+    justify-content: flex-end;
+    padding-right: 10px;
+    padding-top: 14px;
+    z-index: 2;
+}
+
+.initial-message-bubble .initial-message-avatar {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.justify-center {
+    display: flex;
+    justify-content: center !important;
+}
+
+.chat-head {
+    position: relative;
+}
+
+.tznVS {
+    display: inline-flex;
+    -moz-box-align: center;
+    align-items: center;
+    -moz-box-pack: center;
+    justify-content: center;
+    box-sizing: content-box;
+    font-size: initial;
+    overflow: hidden;
+    position: relative;
+    border-radius: 50%;
+    height: 48px;
+    width: 48px;
+}
+
+.edYRae {
+    background: url("images/mail-icon.png") center center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
