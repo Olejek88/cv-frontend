@@ -1,7 +1,7 @@
 import {action} from 'mobx';
 import agent from "../agent";
 
-class CategoryStore {
+export class CategoryStore {
     categoryRegistry = new Map();
     isLoading = true;
 

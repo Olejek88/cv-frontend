@@ -1,9 +1,11 @@
 import fetch from 'isomorphic-fetch';
 import React from "react";
-import App from "../App";
 import * as Enzyme from "enzyme";
-import {configure, mount} from "enzyme";
+import {configure, shallow} from "enzyme";
 import Adapter from 'enzyme-adapter-react-16';
+import {aboutStore, AboutStore} from "../../stores/aboutStore";
+import About from "../Home/About";
+import {Provider} from "mobx-react";
 
 configure({adapter: new Adapter()});
 const flushPromises = () => new Promise(setImmediate);
@@ -31,6 +33,16 @@ test('simple test accessibility of the main page', (done) => {
     });
 });
 
+test('my comp', () => {
+    const aboutStore = new aboutStore();
+    const component = shallow(
+        <Provider aboutStore={aboutStore}>
+            <About/>
+        </Provider>
+    )
+});
+
+/*
 it('is an example using flushPromises', async () => {
     const wrapper = mount(<App/>);
     await flushPromises();
@@ -38,6 +50,7 @@ it('is an example using flushPromises', async () => {
 
     // make assertions
 });
+*/
 /*
 
 it('renders correctly', () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import {inject} from 'mobx-react';
-import {Link} from "react-router-dom";
+import {Link, withRouter} from "react-router-dom";
 import {withTranslation} from 'react-i18next';
 import {withCookies} from "react-cookie";
 
@@ -176,4 +176,4 @@ class MenuMobile extends React.Component {
     }
 }
 
-export default inject('categoryStore')(withCookies(withTranslation('translations')(MenuMobile)));
+export default inject('categoryStore')(withTranslation('translations')(withCookies(withRouter(MenuMobile))));

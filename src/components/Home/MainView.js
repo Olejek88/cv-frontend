@@ -1,5 +1,4 @@
 import React from 'react';
-import {inject} from 'mobx-react';
 import {withRouter} from 'react-router-dom'
 import {parse as qsParse} from 'query-string';
 import Banner from "./Banner";
@@ -94,4 +93,4 @@ class MainView extends React.Component {
     }
 }
 
-export default inject('projectStore')(withTranslation('translations')(withRouter(MainView)));
+export default withTranslation('translations')(withRouter(MainView));
