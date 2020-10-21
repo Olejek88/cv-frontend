@@ -1,5 +1,5 @@
 import React from 'react';
-import ROOT from "../../index";
+import {ROOT} from "../../constants";
 import {withRouter} from "react-router-dom";
 import {withTranslation} from "react-i18next";
 import {withCookies} from "react-cookie";

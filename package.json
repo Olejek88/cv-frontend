@@ -1,22 +1,32 @@
 {
   "name": "shtrm-app",
   "version": "0.9.0",
+  "type": "module",
   "private": true,
   "homepage": "http://olejek.site",
   "license": "MIT",
   "devDependencies": {
-    "gh-pages": "^1.0.0"
+    "@babel/plugin-transform-modules-commonjs": "^7.12.1",
+    "enzyme": "^3.11.0",
+    "gh-pages": "^1.0.0",
+    "jest": "^26.6.0"
   },
   "dependencies": {
     "@babel/runtime": "^7.11.2",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
     "create-react-class": "^15.6.3",
+    "enzyme-adapter-react-16": "^1.15.5",
     "history": "^4.7.2",
     "i18next": "^19.8.0",
     "i18next-browser-languagedetector": "^6.0.1",
     "i18next-http-backend": "^1.0.21",
     "i18next-xhr-backend": "^3.2.2",
+    "isomorphic-fetch": "latest",
+    "jquery": "^3.5.1",
     "marked": "^0.7.0",
     "mobx": "^5.5.3",
+    "mobx-logger": "^0.7.1",
     "mobx-react": "^5.3.5",
     "moment": "^2.22.2",
     "promise.prototype.finally": "^3.1.0",
@@ -30,6 +40,7 @@
     "react-native": "^0.63.3",
     "react-router-dom": "^4.3.1",
     "react-scripts": "^3.4.3",
+    "react-test-renderer": "^16.14.0",
     "superagent": "^4.0.0-beta.5",
     "superagent-promise": "^1.1.0",
     "webpack": "^4.44.2"
@@ -39,9 +50,15 @@
     "start-prod": "NODE_ENV=production react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "tests": "jest",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?react-native)"
+    ]
   },
   "browserslist": [
     ">0.2%",

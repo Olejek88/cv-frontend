@@ -34,7 +34,7 @@ class HeaderTitle extends React.Component {
                             <div className="elementor-widget-container">
                                 <div className="elementor-text-editor elementor-clearfix">
                                     <p style={{textAlign: 'center'}}>
-                                        <span style={{color: '#fff'}}>{this.state.title} </span>
+                                        <span style={{color: '#fff'}} id="losung">{this.state.title} </span>
                                     </p></div>
                             </div>
                         </div>

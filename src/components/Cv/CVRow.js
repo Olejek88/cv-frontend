@@ -1,6 +1,6 @@
 import React from 'react';
 import {withRouter} from 'react-router-dom'
-import ROOT from "../../index";
+import {ROOT} from "../../constants";
 import {withCookies} from "react-cookie";
 
 class CVRow extends React.Component {

@@ -17,9 +17,11 @@ import careerStore from "./stores/careerStore";
 import aboutStore from "./stores/aboutStore";
 import stackStore from "./stores/stackStore";
 
-const ROOT = (process.env.NODE_ENV === 'development')
-    ? 'http://svc.shtrm88.ru/uploads/'
-    : 'http://api.olejek.site/uploads/';
+import {enableLogging} from 'mobx-logger';
+
+// optional
+const config = {};
+enableLogging(config);
 
 const stores = {
     projectStore,
@@ -47,6 +49,4 @@ ReactDOM.render((
             </Suspense>
         </HashRouter>
     </Provider>
-), document.getElementById('page'));
-
-export default ROOT;
+), document.getElementById('page') || document.createElement('div'));

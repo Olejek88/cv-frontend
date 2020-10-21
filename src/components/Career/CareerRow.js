@@ -1,7 +1,7 @@
 import React from 'react';
 import {withRouter} from 'react-router-dom'
-import ROOT from "../../index";
 import {withCookies} from "react-cookie";
+import {ROOT} from "../../constants";
 
 class CareerRow extends React.Component {
     constructor(props) {

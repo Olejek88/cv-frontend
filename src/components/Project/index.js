@@ -3,10 +3,10 @@ import {inject} from "mobx-react/index";
 import Tag from "../Home/Tag";
 import Banner from "../Home/Banner";
 import {withCookies} from "react-cookie";
-import ROOT from "../../index";
 import ProjectHeader from "./ProjectHeader";
 import {withTranslation} from "react-i18next";
 import {Helmet} from "react-helmet";
+import {ROOT} from "../../constants";
 
 class Project extends React.Component {
     constructor(props) {
@@ -14,7 +14,7 @@ class Project extends React.Component {
         this.state = {
             showProjectItem: true,
             lang: "ru",
-            width: document.documentElement.clientWidth - 50,
+            width: "90%",
             project: {
                 id: 1,
                 title: "loading",
@@ -42,11 +42,6 @@ class Project extends React.Component {
         this.loadProject(this.props.match.params.id);
     }
 
-    updateDimensions() {
-        let documentElement = document.documentElement - 50;
-        this.setState({width: documentElement.clientWidth});
-    }
-
     loadProject(id) {
         let self = this;
         let tags = [];
@@ -57,7 +52,7 @@ class Project extends React.Component {
             .then((project) => {
                 self.setState({project: project});
                 project.tags.forEach(function (tag, i) {
-                    tags.push(<a href={'/#/projects/tags/' + tag.id}><Tag tag={tag.title} key={i}/></a>);
+                    tags.push(<a href={'/#/projects/tags/' + tag.id} key={i}><Tag tag={tag.title} key={i}/></a>);
                 });
                 self.state.tags = tags;
 

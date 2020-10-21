@@ -1,9 +1,9 @@
 import React from 'react';
 import {inject} from 'mobx-react';
-import Link from "react-router-dom/es/Link";
 import {withTranslation} from 'react-i18next';
 import {withCookies} from "react-cookie";
 import Contact from "./Contact";
+import {Link} from "react-router-dom";
 
 class SiteMenu extends React.Component {
 

@@ -1,7 +1,7 @@
 import Header from './Header/Header';
 import React from 'react';
-import {Route, Switch, withRouter} from 'react-router-dom';
-import {inject, observer} from 'mobx-react';
+import {Route, Switch} from 'react-router-dom';
+import {observer} from 'mobx-react';
 
 import Project from './Project';
 import Home from './Home';
@@ -32,4 +32,4 @@ class App extends React.Component {
     }
 }
 
-export default inject('projectStore')(withRouter(observer(App)));
+export default observer(App);

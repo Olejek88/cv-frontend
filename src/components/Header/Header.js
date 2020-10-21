@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import MenuNew from "../MenuNew";
 import MenuMobile from "../MenuMobile";
 
@@ -44,7 +43,7 @@ class Header extends React.Component {
                     <div className="container">
                         <div className="row">
                             <div className="col-md-4 col-sm-8 col-xs-8">
-                                <Link to="/">
+                                <a href="/">
                                     {this.state.width >= 1000 &&
                                     <img className="site-logo"
                                          alt="olejek"
@@ -55,7 +54,7 @@ class Header extends React.Component {
                                          alt="olejek"
                                          src={"images/code_olejek.png"}/>
                                     }
-                                </Link>
+                                </a>
                             </div>
                             <div className="col-md-8 col-sm-4 col-xs-12">
                                 {this.state.width >= 1010 && <MenuNew/>}

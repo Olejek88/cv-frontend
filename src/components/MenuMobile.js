@@ -1,6 +1,6 @@
 import React from 'react';
 import {inject} from 'mobx-react';
-import Link from "react-router-dom/es/Link";
+import {Link} from "react-router-dom";
 import {withTranslation} from 'react-i18next';
 import {withCookies} from "react-cookie";
 

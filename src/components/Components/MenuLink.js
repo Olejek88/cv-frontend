@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from "react-router-dom/es/Link";
+import {Link} from "react-router-dom";
 
 class MenuLink extends React.Component {
     constructor(props) {

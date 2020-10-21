@@ -2,7 +2,7 @@ import React from 'react';
 import {inject} from "mobx-react/index";
 import Tag from "../Home/Tag";
 import {Link} from "react-router-dom";
-import ROOT from "../../index";
+import {ROOT} from "../../constants";
 import {withCookies} from "react-cookie";
 
 class Experience extends React.Component {

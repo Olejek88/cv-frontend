@@ -1,6 +1,6 @@
 import React from 'react';
 import {withTranslation} from "react-i18next";
-import ROOT from "../../index";
+import {ROOT} from "../../constants";
 
 class ProjectHeader extends React.Component {
     constructor(props) {
@@ -35,10 +35,10 @@ class ProjectHeader extends React.Component {
                                             <div className="elementor-widget-container">
                                                 <div className="elementor-image">
                                                     <img style={{borderRadius: '5%'}}
-                                                         src={this.state.project && ROOT + this.state.project.photo}
+                                                         src={this.state.project && (ROOT + this.state.project.photo)}
                                                          alt={this.state.project && this.state.project.title}
                                                          className="attachment-large size-large"
-                                                         srcSet={this.state.project && ROOT + this.state.project.photo}
+                                                         srcSet={this.state.project && 'http://svc.shtrm88.ru/uploads/' + this.state.project.photo}
                                                          sizes="(max-width: 454px) 100vw, 454px"/>
                                                 </div>
                                             </div>
