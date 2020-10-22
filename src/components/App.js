@@ -1,6 +1,6 @@
 import Header from './Header/Header';
 import React from 'react';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import {Route, Switch, withRouter} from 'react-router-dom';
 import {observer} from 'mobx-react';
 
 import Project from './Project';
@@ -17,21 +17,19 @@ class App extends React.Component {
         return (
             <div>
                 <Header/>
-                <BrowserRouter>
-                    <Switch>
-                        <Route path="/cv" component={CV}/>
-                        <Route path="/career" component={Career}/>
-                        <Route path="/stack" component={Stack}/>
-                        <Route path="/projects/:filter/:id" component={Projects}/>
-                        <Route path="/project/:id" component={Project}/>
-                        <Route path="/about" component={About}/>
-                        <Route path="/" component={Home}/>
-                    </Switch>
-                </BrowserRouter>
+                <Switch>
+                    <Route path="/cv" component={CV}/>
+                    <Route path="/career" component={Career}/>
+                    <Route path="/stack" component={Stack}/>
+                    <Route path="/projects/:filter/:id" component={Projects}/>
+                    <Route path="/project/:id" component={Project}/>
+                    <Route path="/about" component={About}/>
+                    <Route path="/" component={Home}/>
+                </Switch>
                 <Footer/>
             </div>
         );
     }
 }
 
-export default observer(App);
+export default withRouter(observer(App));
