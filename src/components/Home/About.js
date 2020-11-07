@@ -14,11 +14,12 @@ class About extends React.Component {
 
     componentDidMount() {
         const {cookies} = this.props;
-        this.setState({lang: cookies.get('lang')});
-        if (this.state.lang === "en") {
+        let lang = cookies.get('lang');
+        this.setState({lang: lang});
+        if (lang === "en" || lang === undefined) {
             this.setState({link: "doc/cv_eng.pdf"});
         }
-        if (this.state.lang === "de") {
+        if (lang === "de") {
             this.setState({link: "doc/cv_de.pdf"});
         }
     }

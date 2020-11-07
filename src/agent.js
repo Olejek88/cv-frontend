@@ -13,8 +13,10 @@ const requests = {
     get: url =>
         superagent
             .get(`${API_ROOT}${url}`)
-            //.setHeader('')
             .then(responseBody)
+            .catch((error) => {
+                console.log("Api call error");
+            })
 };
 
 const Categories = {

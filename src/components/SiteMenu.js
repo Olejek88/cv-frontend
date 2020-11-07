@@ -33,7 +33,7 @@ class SiteMenu extends React.Component {
                                         <div className="col-three">
                                             <a href="http://shtrm.ru/cv/index_en.htm" rel="noopener noreferrer"
                                                target="_blank">{t('menu.old_site')}</a><br/>
-                                            <a href="http://mediacritic.ru/" rel="noopener noreferrer"
+                                            <a href="http://mediacritic.site/" rel="noopener noreferrer"
                                                target="_blank">{t('menu.media')}</a><br/>
                                         </div>
                                     </div>

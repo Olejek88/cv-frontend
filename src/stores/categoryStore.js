@@ -11,8 +11,10 @@ export class CategoryStore {
         return agent.Categories.all()
             .then(action((categories) => {
                 this.categoryRegistry.clear();
-                categories.forEach(category =>
-                    this.categoryRegistry.set(category.id, category));
+                if (categories !== undefined) {
+                    categories.forEach(category =>
+                        this.categoryRegistry.set(category.id, category));
+                }
             }))
             .finally(action(() => {
                 this.isLoading = false;
