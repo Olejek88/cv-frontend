@@ -58,7 +58,7 @@ class SiteMenu extends React.Component {
                                             <p className="get-text-footer">Github</p>
                                         </div>
                                         <div className="col-md-3" style={{textAlign: 'center'}}>
-                                            <a href="http://linkedin.com/shtrm" target="_blank"
+                                            <a href="http://linkedin.com/oleg-ivanov-959586141" target="_blank"
                                                rel="noopener noreferrer">
                                                 <img src={"images/linkedin2.png"} alt="linkedin"/></a>
                                             <p className="get-text-footer">Linkedin</p>

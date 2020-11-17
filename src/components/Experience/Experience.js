@@ -27,7 +27,7 @@ class Experience extends React.Component {
         if (this.props.project) {
             this.setState({project: this.props.project});
             this.props.project.tags.forEach(function (tag, i) {
-                tags.push(<Tag tag={tag.title} key={i}/>);
+                tags.push(<a href={'/#/projects/tags/' + tag.id} key={i}><Tag tag={tag.title} key={i}/></a>);
                 tags.push(' ');
             });
             self.state.tags = tags;
