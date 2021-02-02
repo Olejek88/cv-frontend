@@ -8,7 +8,8 @@ class About extends React.Component {
         super(props);
         this.state = {
             lang: "ru",
-            link: "doc/cv.pdf"
+            link: "doc/cv.pdf",
+            link_new: "doc/new_resume.pdf",
         };
     }
 
@@ -46,15 +47,25 @@ class About extends React.Component {
                                             <div className="elementor-widget-container">
                                                 <div className="elementor-button-wrapper">
                                                     <a className="elementor-button elementor-size-xs" role="button"
-                                                       href={this.state.link}>
+                                                       href={this.state.link_new}>
 						                            <span className="elementor-button-content-wrapper">
                             						    <span
                                                             className="elementor-button-text">{t('download_cv')}</span>
                                                     </span>
                                                     </a>
+                                                    <br/>
+                                                    <br/>
+                                                    <a className="elementor-button elementor-size-xs" role="button"
+                                                       href={this.state.link}>
+						                            <span className="elementor-button-content-wrapper">
+                            						    <span
+                                                            className="elementor-button-text">{t('download_full')}</span>
+                                                    </span>
+                                                    </a>
+                                                    <br/>
                                                     <img alt="avatar"
                                                          className="avatar avatar-user width-full border bg-white"
-                                                         src={"images/avatar.png"}
+                                                         src={"images/avatar.jpg"}
                                                          width="260" height="260"/>
                                                 </div>
                                             </div>
