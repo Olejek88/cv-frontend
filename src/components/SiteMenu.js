@@ -31,9 +31,10 @@ class SiteMenu extends React.Component {
                                             </div>
                                         </div>
                                         <div className="col-three">
-                                            <a href="http://shtrm.ru/cv/index_en.htm" rel="noopener noreferrer"
+                                            <a href="http://shtrm.olegrom.website/cv/index_en.htm"
+                                               rel="noopener noreferrer"
                                                target="_blank">{t('menu.old_site')}</a><br/>
-                                            <a href="http://mediacritic.site/" rel="noopener noreferrer"
+                                            <a href="http://media.olegrom.website/" rel="noopener noreferrer"
                                                target="_blank">{t('menu.media')}</a><br/>
                                         </div>
                                     </div>
@@ -58,7 +59,7 @@ class SiteMenu extends React.Component {
                                             <p className="get-text-footer">Github</p>
                                         </div>
                                         <div className="col-md-3" style={{textAlign: 'center'}}>
-                                            <a href="http://linkedin.com/oleg-ivanov-959586141" target="_blank"
+                                            <a href="https://www.linkedin.com/in/romanov-oleg-i/" target="_blank"
                                                rel="noopener noreferrer">
                                                 <img src={"images/linkedin2.png"} alt="linkedin"/></a>
                                             <p className="get-text-footer">Linkedin</p>

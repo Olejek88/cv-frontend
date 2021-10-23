@@ -3,7 +3,7 @@
   "version": "0.9.0",
   "type": "module",
   "private": true,
-  "homepage": "http://olejek.site",
+  "homepage": "http://olegrom.website",
   "license": "MIT",
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.12.1",
