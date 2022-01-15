@@ -24,7 +24,7 @@
     "i18next-xhr-backend": "^3.2.2",
     "isomorphic-fetch": "latest",
     "jquery": "^3.5.1",
-    "marked": "^0.7.0",
+    "marked": "^4.0.10",
     "mobx": "^5.5.3",
     "mobx-logger": "^0.7.1",
     "mobx-react": "^5.3.5",
