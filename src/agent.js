@@ -5,7 +5,7 @@ const superagent = superagentPromise(_superagent, global.Promise);
 
 const API_ROOT = (process.env.NODE_ENV === 'development')
     ? 'http://svc.shtrm88.ru/api/'
-    : 'http://api.olegrom.website/api/';
+    : 'http://api.olegrom.de/api/';
 
 const responseBody = res => res.body;
 

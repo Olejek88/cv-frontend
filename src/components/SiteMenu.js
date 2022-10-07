@@ -31,14 +31,14 @@ class SiteMenu extends React.Component {
                                             </div>
                                         </div>
                                         <div className="col-three">
-                                            <a href="http://shtrm.olegrom.website/cv/index_en.htm"
+                                            <a href="http://shtrm.olegrom.de/cv/index_en.htm"
                                                rel="noopener noreferrer"
                                                target="_blank">{t('menu.old_site')}</a><br/>
-                                            <a href="http://media.olegrom.website/" rel="noopener noreferrer"
+                                            <a href="http://media.olegrom.de/" rel="noopener noreferrer"
                                                target="_blank">{t('menu.media')}</a><br/>
                                         </div>
                                     </div>
-                                    <p className="copy-right">COPYRIGHT © 2020 OLE. This page based on Front
+                                    <p className="copy-right">COPYRIGHT © 2022 OLE. This page based on Front
                                         [React/MobX], Back [Laravel]</p>
                                 </div>
                             </aside>
