@@ -3,14 +3,15 @@ import React from 'react';
 import {Route, Switch, withRouter} from 'react-router-dom';
 import {observer} from 'mobx-react';
 
-import Project from './Project';
 import Home from './Home';
 import About from './About';
 import Footer from "./Footer";
 import Projects from "./Projects";
+import Project from "./Project";
 import Stack from "./Stack";
 import CV from "./Cv";
 import Career from "./Career";
+import Mobile from "./Mobile";
 
 class App extends React.Component {
     render() {
@@ -22,6 +23,7 @@ class App extends React.Component {
                     <Route path="/career" component={Career}/>
                     <Route path="/stack" component={Stack}/>
                     <Route path="/projects/:filter/:id" component={Projects}/>
+                    <Route path="/mobile" component={Mobile}/>
                     <Route path="/project/:id" component={Project}/>
                     <Route path="/about" component={About}/>
                     <Route path="/" component={Home}/>

@@ -22,7 +22,10 @@ export class ProjectStore {
             stack: '',
             role: '',
             usage: '',
-            tags: []
+            tags: [],
+            techs: '',
+            platform: '',
+            icon: ''
         };
 
     clear() {

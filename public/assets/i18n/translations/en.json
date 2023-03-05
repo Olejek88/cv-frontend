@@ -10,7 +10,7 @@
   "who": "Who",
   "who_description": "My name is Oleg and I wrote my first program about 30 years ago. Since then, I have implemented hundreds of my own and others' ideas, from simple sites to huge systems. I've worked for large industrial companies and small startups. I consider myself a Full-stack programmer and solution architect and I was the leader of the development team in almost all projects.",
   "what": "What",
-  "what_description": "I developed: various data acquisition systems, control systems, SCADA projects, data access interfaces, services for data aggregation from other systems, mobile applications (Android/iOS), APIs for my projects, device drivers , websites and online stores, programs for microcontrollers, PLC, OPC servers and clients.",
+  "what_description": "I developed: various data acquisition systems, control systems, SCADA projects, data access interfaces, services for data aggregation from other systems, mobile applications (Android), APIs for my projects, device drivers , websites and online stores, programs for microcontrollers, PLC, OPC servers and clients.",
   "how": "How",
   "how_description": "Stack: X-Platform (Flutter/Dart, iOS/Android), Android(Kotlin/MVVM, Java, Realm/OSM/Retrofit/AMPQ / Android Studio), PHP+Yii2+MySQL+RabbitMQ (Redis,MSSQL,Laravel / PHPStorm), react + MobX (WebStorm), node.js (keystone,express, mongoose+MongoDB / Netbeans), C/C++, for Windows/CE, Raspberry, Linux, Mac, (MVS 2003-2014, eVC++ 4.0, CLion, Eclipse),DHTML/CSS/Pug-Jade, Apache/Nginx,C# (AR projects (Vuforia, Kudan, Metaio, OpenCV) / Unity),Basic/VBA (SCADA), ORM (Realm, Sequelize, Mongoose), Assembler (PC, ARM4, i196), Pascal, ST/LAD/FB for PLC, Perl, sh/bat",
   "check_projects": "Check out my latest projects",
@@ -32,5 +32,6 @@
   "menu.projects": "PROJECTS",
   "menu.old_site": "OLD SITE",
   "menu.links": "LINKS",
+  "menu.mobile": "MOBILE",
   "career": "Career"
 }

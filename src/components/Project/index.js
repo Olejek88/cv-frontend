@@ -58,7 +58,7 @@ class Project extends React.Component {
 
                 project.photos.forEach(function (image, i) {
                     images.push(<img src={ROOT + image.path} key={i} alt={image.title} className='project_image'
-                                     style={{marginTop: '20px', maxWidth: self.state.width}}/>);
+                                     style={{marginTop: '20px', maxWidth: '550px'}}/>);
                 });
 
                 self.setState({imagesList: images});
@@ -134,9 +134,11 @@ class Project extends React.Component {
                                         <span style={{fontWeight: 400}}>
                                             <div dangerouslySetInnerHTML={{__html: this.state.description}}/>
                                         </span>
+                                        {/*
                                             <br/><b>{t('usage.label')}:</b> {this.state.project.usage}
                                             <br/><b>Github:</b> <a
                                                 href={this.state.project.git}>{this.state.project.git}</a>
+*/}
                                             <br/><b>Link:</b> <a
                                                 href={this.state.project.link}>{this.state.project.link}</a>
                                         <p> {this.state.imagesList}</p>
