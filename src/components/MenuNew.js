@@ -82,7 +82,6 @@ class SiteMenu extends React.Component {
                                     <li className="menu-item"><Link to="/about">{t('menu.about')}</Link></li>
                                     <li className="menu-item"><Link to="/cv">{t('menu.cv')}</Link></li>
                                     <li className="menu-item"><Link to="/stack">{t('menu.stack')}</Link></li>
-                                    <li className="menu-item"><Link to="/mobile">{t('menu.mobile')}</Link></li>
                                 </ul>
                             </li>
                             <li className="menu-item">
@@ -117,7 +116,6 @@ class SiteMenu extends React.Component {
                                                                                      alt={"en"}/>&nbsp;</span>English</span></a>
                                     </li>
                                 </ul>
-                                
                             </li>
                             <li className="menu-button estimate-menu menu-item menu-item-type-custom menu-item-object-custom">
                                 <span onClick={this.onContactClicked}

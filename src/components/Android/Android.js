@@ -34,11 +34,11 @@ class Android extends React.Component {
             self.state.tags = tags;
             this.props.project.photos.forEach(function (image, i) {
                 if (i <= 2) {
-                    images.push(<div className="col-md-4">
+                    images.push(<div className="col-md-4" key={i}>
                         <img src={ROOT + image.path}
                              key={i} alt={image.title}
                              className='project_image'
-                             style={{width: '100%', maxWidth: '140px', borderRadius: '5px'}}/></div>);
+                             style={{width: '100%', maxWidth: '140px', padding: '0px', borderRadius: '5px'}}/></div>);
                 }
             });
             self.setState({imagesList: images});
@@ -48,7 +48,7 @@ class Android extends React.Component {
     render() {
         return (
             <div className="col-md-4">
-                <div className="card" style={{height: '550px'}}>
+                <div className="card" style={{height: '600px'}}>
                     <div className="container cardcontent">
                         <Link to={"/project/" + this.state.project.id}>
                             <img src={ROOT + this.state.project.icon} alt="img" align="left"
@@ -74,10 +74,11 @@ class Android extends React.Component {
                                 </span>
                         </div>
                         <div className="newscontent">
-                            <span className="posted-on">Techs:</span>&nbsp;&nbsp;
+                            <b>Techs:</b>&nbsp;&nbsp;
                             {this.state.project.techs}
+                            <br/><br/>
                         </div>
-                        <div style={{marginTop: '10px'}}>
+                        <div style={{marginTop: '10px', overflow: 'auto'}}>
                             {this.state.imagesList}
                         </div>
                     </div>
