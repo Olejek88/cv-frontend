@@ -51,11 +51,9 @@ class ProjectHeader extends React.Component {
                                         <div
                                             className="elementor-element elementor-element-33e3be2 tab-banner elementor-widget elementor-widget-text-editor">
                                             <div className="elementor-widget-container">
-                                                <div
-                                                    className="elementor-text-editor elementor-clearfix">
-                                                    <p style={{textAlign: 'center'}}>
-                                                        <span style={{color: '#fff'}}>{t('my_projects.label')} </span>
-                                                    </p></div>
+                                                <div className="elementor-text-editor elementor-clearfix">
+                                                    <span style={{color: '#fff'}}>{t('my_projects.label')} </span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

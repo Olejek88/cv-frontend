@@ -31,9 +31,8 @@ class SiteMenu extends React.Component {
                                             </div>
                                         </div>
                                         <div className="col-three">
-                                            <a href="http://shtrm.olegrom.de/cv/index_en.htm"
-                                               rel="noopener noreferrer"
-                                               target="_blank">{t('menu.old_site')}</a><br/>
+                                            <a href={"/#/mobile"}>{t('menu.mobile')}</a><br/>
+                                            <a href={"http://linuxscada.olegrom.de/"}>Linux SCADA</a><br/>
                                             <a href="http://media.olegrom.de/" rel="noopener noreferrer"
                                                target="_blank">{t('menu.media')}</a><br/>
                                         </div>

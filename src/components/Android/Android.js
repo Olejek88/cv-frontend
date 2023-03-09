@@ -15,8 +15,15 @@ class Android extends React.Component {
             isMounted: false,
             project: '',
             tags: [],
+            width: document.documentElement.clientWidth,
             imagesList: []
         };
+        this.updateDimensions = this.updateDimensions.bind(this);
+    }
+
+    updateDimensions() {
+        let documentElement = document.documentElement;
+        this.setState({width: documentElement.clientWidth});
     }
 
     componentDidMount() {
@@ -33,7 +40,10 @@ class Android extends React.Component {
             });
             self.state.tags = tags;
             this.props.project.photos.forEach(function (image, i) {
-                if (i <= 2) {
+                let maxImage = 0;
+                if (self.state.width >= 800) maxImage = 1;
+                if (self.state.width >= 1600) maxImage = 2;
+                if (i <= maxImage) {
                     images.push(<div className="col-md-4" key={i}>
                         <img src={ROOT + image.path}
                              key={i} alt={image.title}
@@ -48,7 +58,7 @@ class Android extends React.Component {
     render() {
         return (
             <div className="col-md-4">
-                <div className="card" style={{height: '600px'}}>
+                <div className="card" style={{height: '550px'}}>
                     <div className="container cardcontent">
                         <Link to={"/project/" + this.state.project.id}>
                             <img src={ROOT + this.state.project.icon} alt="img" align="left"
